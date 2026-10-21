@@ -1,0 +1,489 @@
+{
+ "id": "2026-10-22-standard-deviation",
+ "topic": "standard deviation",
+ "hook_type": "speed promise",
+ "format": "two-friends comparison",
+ "post_after": "2026-10-22T13:00:00+00:00",
+ "duration": 35,
+ "fps": 30,
+ "voiceover": [
+  {
+   "t": 0.2,
+   "text": "Standard deviation in thirty seconds. No stats course."
+  },
+  {
+   "t": 3.2,
+   "text": "Two friends. Same average score: fifty."
+  },
+  {
+   "t": 6.6,
+   "text": "Riya scores forty-eight, forty-nine, fifty, fifty-one, fifty-two."
+  },
+  {
+   "t": 9.7,
+   "text": "Arjun scores ten, thirty, fifty, seventy, ninety."
+  },
+  {
+   "t": 12.7,
+   "text": "Same average. Completely different story."
+  },
+  {
+   "t": 15.7,
+   "text": "Standard deviation is just the typical distance from the average."
+  },
+  {
+   "t": 20.2,
+   "text": "Riya's is about one point four. Arjun's is about twenty-eight."
+  },
+  {
+   "t": 22.5,
+   "text": "So who would you bet on to score fifty tomorrow?"
+  },
+  {
+   "t": 27.0,
+   "text": "That's how Chalkwise teaches. No courses. Just ask, and it draws and explains."
+  },
+  {
+   "t": 31.0,
+   "text": "Learn anything you're curious about. We build the basics on the way."
+  }
+ ],
+ "caption": "Standard deviation in 30 seconds. No stats course, no syllabus 📈\n\nTwo friends, same average, totally different consistency. That gap has a name.\n\nChalkwise is a voice tutor that draws as it explains. Start from what you're curious about; we fill in the basics on the way.\n\nFollow for one idea a day ✏️ Waitlist link in bio.\n\n#learnoninstagram #statistics #studytok #adhdlearning #learnsomethingnew #mathmadeeasy #selflearning #edtech",
+ "events": [
+  {
+   "t": 0.0,
+   "type": "caption",
+   "text": "Standard deviation in 30 seconds.",
+   "highlight": [
+    "30 seconds."
+   ],
+   "y": 330,
+   "size": 80,
+   "until": 2.7
+  },
+  {
+   "t": 0.9,
+   "type": "caption",
+   "text": "No stats course. Promise.",
+   "y": 480,
+   "size": 52,
+   "color": "#6b6b6b",
+   "until": 2.7
+  },
+  {
+   "t": 0.3,
+   "type": "write",
+   "text": "SD = ?",
+   "x": 540,
+   "y": 960,
+   "size": 190,
+   "align": "center",
+   "d": 1.2
+  },
+  {
+   "t": 1.7,
+   "type": "circle",
+   "c": [
+    540,
+    960
+   ],
+   "r": 260,
+   "color": "orange",
+   "w": 9,
+   "d": 0.8
+  },
+  {
+   "t": 2.8,
+   "type": "clear"
+  },
+  {
+   "t": 3.2,
+   "type": "caption",
+   "text": "Two friends. Same average: 50.",
+   "highlight": [
+    "Same average:"
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 6.5
+  },
+  {
+   "t": 3.3,
+   "type": "write",
+   "text": "Riya",
+   "x": 60,
+   "y": 810,
+   "size": 56,
+   "color": "blue"
+  },
+  {
+   "t": 3.6,
+   "type": "numberline",
+   "id": "A",
+   "x0": 290,
+   "x1": 1000,
+   "y": 810,
+   "min": 0,
+   "max": 100,
+   "ticks": [
+    0,
+    50,
+    100
+   ]
+  },
+  {
+   "t": 4.7,
+   "type": "write",
+   "text": "Arjun",
+   "x": 40,
+   "y": 1110,
+   "size": 56,
+   "color": "orange"
+  },
+  {
+   "t": 5.0,
+   "type": "numberline",
+   "id": "B",
+   "x0": 290,
+   "x1": 1000,
+   "y": 1110,
+   "min": 0,
+   "max": 100,
+   "ticks": [
+    0,
+    50,
+    100
+   ]
+  },
+  {
+   "t": 6.6,
+   "type": "caption",
+   "text": "Riya: 48, 49, 50, 51, 52",
+   "highlight": [
+    "Riya:"
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 9.5
+  },
+  {
+   "t": 6.9,
+   "type": "dot",
+   "on": "A",
+   "v": 48,
+   "dy": -40,
+   "r": 12,
+   "color": "blue"
+  },
+  {
+   "t": 7.2,
+   "type": "dot",
+   "on": "A",
+   "v": 49,
+   "dy": -40,
+   "r": 12,
+   "color": "blue"
+  },
+  {
+   "t": 7.5,
+   "type": "dot",
+   "on": "A",
+   "v": 50,
+   "dy": -40,
+   "r": 12,
+   "color": "blue"
+  },
+  {
+   "t": 7.8,
+   "type": "dot",
+   "on": "A",
+   "v": 51,
+   "dy": -40,
+   "r": 12,
+   "color": "blue"
+  },
+  {
+   "t": 8.1,
+   "type": "dot",
+   "on": "A",
+   "v": 52,
+   "dy": -40,
+   "r": 12,
+   "color": "blue"
+  },
+  {
+   "t": 9.7,
+   "type": "caption",
+   "text": "Arjun: 10, 30, 50, 70, 90",
+   "highlight": [
+    "Arjun:"
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 12.5
+  },
+  {
+   "t": 10.0,
+   "type": "dot",
+   "on": "B",
+   "v": 10,
+   "dy": -40,
+   "r": 14,
+   "color": "orange"
+  },
+  {
+   "t": 10.3,
+   "type": "dot",
+   "on": "B",
+   "v": 30,
+   "dy": -40,
+   "r": 14,
+   "color": "orange"
+  },
+  {
+   "t": 10.6,
+   "type": "dot",
+   "on": "B",
+   "v": 50,
+   "dy": -40,
+   "r": 14,
+   "color": "orange"
+  },
+  {
+   "t": 10.9,
+   "type": "dot",
+   "on": "B",
+   "v": 70,
+   "dy": -40,
+   "r": 14,
+   "color": "orange"
+  },
+  {
+   "t": 11.2,
+   "type": "dot",
+   "on": "B",
+   "v": 90,
+   "dy": -40,
+   "r": 14,
+   "color": "orange"
+  },
+  {
+   "t": 12.7,
+   "type": "caption",
+   "text": "Same average. Totally different story.",
+   "highlight": [
+    "Totally different"
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 15.5
+  },
+  {
+   "t": 12.9,
+   "type": "line",
+   "points": [
+    [
+     645.0,
+     720
+    ],
+    [
+     645.0,
+     1170
+    ]
+   ],
+   "color": "red",
+   "w": 5,
+   "d": 0.6
+  },
+  {
+   "t": 13.7,
+   "type": "arrow",
+   "from": [
+    645.0,
+    1015
+   ],
+   "to": [
+    375.2,
+    1015
+   ],
+   "color": "ink",
+   "w": 6,
+   "d": 0.6
+  },
+  {
+   "t": 14.3,
+   "type": "arrow",
+   "from": [
+    645.0,
+    1015
+   ],
+   "to": [
+    914.8,
+    1015
+   ],
+   "color": "ink",
+   "w": 6,
+   "d": 0.6
+  },
+  {
+   "t": 15.7,
+   "type": "caption",
+   "text": "SD = the typical distance from the average.",
+   "highlight": [
+    "typical distance"
+   ],
+   "y": 330,
+   "size": 66,
+   "until": 20.0
+  },
+  {
+   "t": 16.2,
+   "type": "write",
+   "text": "SD = typical distance from mean",
+   "x": 540,
+   "y": 1290,
+   "size": 46,
+   "align": "center",
+   "d": 2.0,
+   "mark": "typical distance"
+  },
+  {
+   "t": 20.2,
+   "type": "write",
+   "text": "Riya:  SD ~ 1.4",
+   "x": 150,
+   "y": 1410,
+   "size": 62,
+   "color": "blue",
+   "d": 1.0
+  },
+  {
+   "t": 21.2,
+   "type": "write",
+   "text": "Arjun: SD ~ 28",
+   "x": 150,
+   "y": 1510,
+   "size": 62,
+   "color": "orange",
+   "d": 1.0
+  },
+  {
+   "t": 20.2,
+   "type": "caption",
+   "text": "Riya ~ 1.4. Arjun ~ 28.",
+   "y": 330,
+   "size": 70,
+   "until": 22.4
+  },
+  {
+   "t": 22.5,
+   "type": "caption",
+   "text": "Who would you bet on to score 50 tomorrow?",
+   "highlight": [
+    "50 tomorrow?"
+   ],
+   "y": 330,
+   "size": 66,
+   "until": 26.5
+  },
+  {
+   "t": 23.4,
+   "type": "circle",
+   "c": [
+    645.0,
+    770
+   ],
+   "r": 80,
+   "color": "green",
+   "w": 8,
+   "d": 0.7
+  },
+  {
+   "t": 24.4,
+   "type": "write",
+   "text": "?",
+   "x": 765.0,
+   "y": 720,
+   "size": 90,
+   "color": "green",
+   "d": 0.4
+  },
+  {
+   "t": 26.5,
+   "type": "clear"
+  },
+  {
+   "t": 27.0,
+   "type": "caption",
+   "text": "That's how Chalkwise teaches.",
+   "highlight": [
+    "Chalkwise"
+   ],
+   "y": 330,
+   "size": 72,
+   "until": 30.0
+  },
+  {
+   "t": 27.1,
+   "type": "write",
+   "text": "chalkwise",
+   "x": 540,
+   "y": 820,
+   "size": 140,
+   "align": "center",
+   "d": 1.3
+  },
+  {
+   "t": 28.5,
+   "type": "underline",
+   "x0": 230,
+   "x1": 850,
+   "y": 920,
+   "color": "orange",
+   "w": 9,
+   "d": 0.5
+  },
+  {
+   "t": 29.0,
+   "type": "write",
+   "text": "no courses. no syllabus.",
+   "x": 540,
+   "y": 1030,
+   "size": 54,
+   "align": "center",
+   "color": "ink",
+   "d": 1.1
+  },
+  {
+   "t": 30.2,
+   "type": "write",
+   "text": "just ask. it draws + explains.",
+   "x": 540,
+   "y": 1120,
+   "size": 54,
+   "align": "center",
+   "color": "blue",
+   "d": 1.3
+  },
+  {
+   "t": 30.2,
+   "type": "caption",
+   "text": "Learn anything you're curious about. We build the basics on the way.",
+   "highlight": [
+    "anything"
+   ],
+   "y": 350,
+   "size": 60,
+   "until": 35
+  },
+  {
+   "t": 32.2,
+   "type": "caption",
+   "text": "Follow for 1 idea a day",
+   "y": 1300,
+   "size": 54,
+   "box": "yellow",
+   "until": 35
+  }
+ ]
+}

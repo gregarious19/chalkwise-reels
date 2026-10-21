@@ -1,0 +1,6 @@
+out/
+node_modules/
+package*.json
+assets/fonts/
+__pycache__/
+*.voice.wav

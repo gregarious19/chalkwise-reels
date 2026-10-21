@@ -1,0 +1,75 @@
+name: Post reel to Instagram
+
+# Every day at 19:00 IST, posts the oldest queued reel whose post_after time has passed.
+# To pause all posting, add a file named PAUSED at the repo root (delete it to resume).
+on:
+  schedule:
+    - cron: "30 13 * * *"   # 13:30 UTC = 19:00 IST
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: "Post this spec now (path), ignoring post_after"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-writes
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pick the next reel
+        id: pick
+        run: |
+          if [ -f PAUSED ]; then echo "Posting is paused (PAUSED file present)."; exit 0; fi
+          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import glob, json, os, datetime
+          forced = os.environ.get("FORCED", "")
+          now = datetime.datetime.now(datetime.timezone.utc)
+          pick = None
+          if forced:
+              pick = forced
+          else:
+              for p in sorted(glob.glob("scripts/queue/*.json")):
+                  s = json.load(open(p))
+                  pa = s.get("post_after")
+                  if s.get("hold"):
+                      continue
+                  if pa and datetime.datetime.fromisoformat(pa) > now:
+                      continue
+                  pick = p
+                  break
+          if pick:
+              s = json.load(open(pick))
+              print(f"spec={pick}")
+              print(f"id={s['id']}")
+          EOF
+        env:
+          FORCED: ${{ github.event.inputs.spec }}
+
+      - name: Publish
+        if: steps.pick.outputs.spec != ''
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_API_VERSION: ${{ vars.IG_API_VERSION || 'v24.0' }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          id="${{ steps.pick.outputs.id }}"
+          spec="${{ steps.pick.outputs.spec }}"
+          gh release view "reel-$id" >/dev/null || { echo "No rendered video for $id yet (release reel-$id missing)"; exit 1; }
+          url="https://github.com/${{ github.repository }}/releases/download/reel-$id/$id.mp4"
+          python3 ig.py publish "$spec" "$url"
+          mkdir -p scripts/posted
+          git mv "$spec" "scripts/posted/$(basename "$spec")"
+          git config user.name "chalkwise-bot"
+          git config user.email "chalkwise-bot@users.noreply.github.com"
+          git add -A scripts
+          git commit -m "Posted $id"
+          git pull --rebase -q && git push -q
