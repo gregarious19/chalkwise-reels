@@ -5,15 +5,16 @@ Daily 30–50 second Instagram reels for Chalkwise, made and posted automaticall
 ```
 Claude (daily, ~09:00 IST)                GitHub Actions
   read data/insights.json  ─────────┐       render.yml   on new spec → MP4 + voice → release reel-<id> (preview link)
-  update LEARNINGS.md               │       post.yml     19:00 IST → posts the oldest due reel → moves spec to scripts/posted/
+  update LEARNINGS.md               │       post.yml     19:00 IST → posts the oldest APPROVED due reel → moves spec to scripts/posted/
   write scripts/queue/<id>.json ────┼──▶    insights.yml 08:00 IST → metrics for every posted reel → data/insights.json
   push, send you a preview          └────── (and refreshes the Instagram token every Monday)
 ```
 
-A reel written today posts **tomorrow at 19:00 IST**, so there's always a day to look at it first.
+**Nothing posts without your approval.** Each reel is queued with `"approved": false`. Watch the preview, then tell Claude "approve" (or set `"approved": true` in the spec on GitHub). Approved reels post at the next 19:00 IST slot after their `post_after` time; unapproved ones wait in the queue.
 
 ## Pausing or stopping a reel
 
+- **Approve a reel:** tell Claude "approve", or edit its spec on GitHub and set `"approved": true`.
 - **One reel:** tell Claude "hold tomorrow's reel", or edit its spec on GitHub and add `"hold": true`.
 - **Everything:** create an empty file named `PAUSED` at the repo root (GitHub app → Add file). Delete it to resume.
 - **Post one now:** Actions → Post reel to Instagram → Run workflow, optionally giving a spec path.

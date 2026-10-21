@@ -1,6 +1,7 @@
 name: Post reel to Instagram
 
-# Every day at 19:00 IST, posts the oldest queued reel whose post_after time has passed.
+# Every day at 19:00 IST, posts the oldest queued reel that the founder has APPROVED
+# ("approved": true in its spec) and whose post_after time has passed. Unapproved reels never post.
 # To pause all posting, add a file named PAUSED at the repo root (delete it to resume).
 on:
   schedule:
@@ -8,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       spec:
-        description: "Post this spec now (path), ignoring post_after"
+        description: "Post this approved spec now (path), ignoring post_after"
         required: false
 
 permissions:
@@ -34,12 +35,14 @@ jobs:
           now = datetime.datetime.now(datetime.timezone.utc)
           pick = None
           if forced:
+              if json.load(open(forced)).get("approved") is not True:
+                  raise SystemExit(f"{forced} is not approved; refusing to post")
               pick = forced
           else:
               for p in sorted(glob.glob("scripts/queue/*.json")):
                   s = json.load(open(p))
                   pa = s.get("post_after")
-                  if s.get("hold"):
+                  if s.get("hold") or s.get("approved") is not True:
                       continue
                   if pa and datetime.datetime.fromisoformat(pa) > now:
                       continue

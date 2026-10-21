@@ -11,7 +11,8 @@ One JSON file per reel in `scripts/queue/`, named `YYYY-MM-DD-slug.json`. `rende
 | `hook_type` | Hook family from the playbook (e.g. "speed promise", "course pain", "prerequisite wall", "myth bust", "everyday mystery"). Used to compare performance. |
 | `format` | Story device (e.g. "two-friends comparison", "everyday object", "wrong-answer reveal"). |
 | `post_after` | ISO time with offset. The post workflow publishes at 19:00 IST once this has passed. |
-| `hold` | `true` keeps it in the queue without posting. |
+| `approved` | Must be `true` for the reel to post. Claude always writes `false`; it becomes `true` only when the founder approves that specific reel. |
+| `hold` | `true` keeps it in the queue without posting, even if approved. |
 | `duration` | Seconds (30 to 50). |
 | `voiceover` | List of `{"t": seconds, "text": "..."}` lines. Spoken by Deepgram if `DEEPGRAM_API_KEY` is set. Each line must finish before the next `t` (about 2.6 words per second). |
 | `caption` | Instagram caption, hashtags included (max 2,200 chars, max 30 hashtags; use 5 to 8). |

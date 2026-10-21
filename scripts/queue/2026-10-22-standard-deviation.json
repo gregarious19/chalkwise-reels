@@ -4,6 +4,7 @@
  "hook_type": "speed promise",
  "format": "two-friends comparison",
  "post_after": "2026-10-22T13:00:00+00:00",
+ "approved": false,
  "duration": 35,
  "fps": 30,
  "voiceover": [
