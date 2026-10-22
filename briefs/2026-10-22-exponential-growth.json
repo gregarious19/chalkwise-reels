@@ -1,0 +1,31 @@
+{
+ "id": "2026-10-22-exponential-growth",
+ "topic": "exponential growth",
+ "hook_type": "course pain",
+ "format": "course pain",
+ "caption": "You bought the maths course. You watched 2 videos. Sound familiar? 📚\n\nHere's the one idea you actually needed: doubling looks slow, then explodes. That's exponential growth.\n\nNo course. Just ask, and it draws + explains.\n\nFollow for one idea a day ✏️\n\n#exponentialgrowth #maths #studytips #learnoninstagram #selflearning #viral",
+ "hook": {"text": "You bought the maths course. Then...", "highlight": ["Then..."], "icon": "stack"},
+ "beats": [
+  {"caption": "40 hours to learn one idea.", "highlight": ["one idea."],
+   "show": [{"component": "progress", "pct": 12, "label": "Maths course progress", "at": [100, 900], "w": 760}],
+   "clear_after": true},
+  {"caption": "Skip it. Start with a post going viral.", "highlight": ["going viral."],
+   "show": [{"component": "icon", "name": "phone", "at": [540, 950], "size": 150}],
+   "clear_after": true},
+  {"caption": "You share it with 2 friends. Each shares with 2.", "highlight": ["2 friends."],
+   "show": [{"component": "bar_chart", "bars": [
+     {"label": "r0", "value": 1}, {"label": "r1", "value": 2}, {"label": "r2", "value": 4},
+     {"label": "r3", "value": 8}, {"label": "r4", "value": 16}, {"label": "r5", "value": 32, "color": "red"}],
+     "height": 500, "base": 1350, "x0": 140, "x1": 940}]},
+  {"caption": "Slow start. Then it takes off.", "highlight": ["takes off."], "clear_after": true,
+   "show": [{"component": "formula", "text": "1, 2, 4, 8, 16, 32...", "at": [540, 900], "size": 60}]},
+  {"caption": "After 10 rounds: 1,024 people.", "highlight": ["1,024"],
+   "show": [{"component": "formula", "text": "2^10 = 1,024", "at": [540, 700], "size": 64, "mark": "1,024"}]},
+  {"caption": "After 20 rounds: over 10 lakh.", "highlight": ["10 lakh."],
+   "show": [{"component": "formula", "text": "2^20 = 1,048,576", "at": [540, 900], "size": 64, "mark": "1,048,576", "box": true}],
+   "clear_after": true},
+  {"caption": "Would you guess 20 steps gets this big?", "highlight": ["20 steps"],
+   "show": [{"component": "icon", "name": "question", "at": [540, 1000], "size": 140}]}
+ ],
+ "outro": {}
+}

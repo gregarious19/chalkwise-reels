@@ -1,0 +1,228 @@
+{
+ "id": "2026-10-22-exponential-growth",
+ "topic": "exponential growth",
+ "hook_type": "course pain",
+ "format": "course pain",
+ "post_after": "2026-10-23T13:00:00+00:00",
+ "approved": false,
+ "duration": 50.22,
+ "caption": "You bought the maths course. You watched 2 videos. Sound familiar? 📚\n\nHere's the one idea you actually needed: doubling looks slow, then explodes. That's exponential growth.\n\nNo course. Just ask, and it draws + explains.\n\nFollow for one idea a day ✏️\n\n#exponentialgrowth #maths #studytips #learnoninstagram #selflearning #viral",
+ "brief": "briefs/2026-10-22-exponential-growth.json",
+ "events": [
+  {
+   "text": "You bought the maths course. Then...",
+   "highlight": [
+    "Then..."
+   ],
+   "icon": "stack",
+   "type": "use",
+   "component": "hook",
+   "t": 0
+  },
+  {
+   "component": "progress",
+   "pct": 12,
+   "label": "Maths course progress",
+   "at": [
+    100,
+    900
+   ],
+   "w": 760,
+   "type": "use",
+   "t": 5.6000000000000005
+  },
+  {
+   "type": "caption",
+   "t": 5.2,
+   "text": "40 hours to learn one idea.",
+   "highlight": [
+    "one idea."
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 11.09
+  },
+  {
+   "type": "clear",
+   "t": 11.09
+  },
+  {
+   "component": "icon",
+   "name": "phone",
+   "at": [
+    540,
+    950
+   ],
+   "size": 150,
+   "type": "use",
+   "t": 11.99
+  },
+  {
+   "type": "caption",
+   "t": 11.59,
+   "text": "Skip it. Start with a post going viral.",
+   "highlight": [
+    "going viral."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 15.99
+  },
+  {
+   "type": "clear",
+   "t": 15.99
+  },
+  {
+   "component": "bar_chart",
+   "bars": [
+    {
+     "label": "r0",
+     "value": 1
+    },
+    {
+     "label": "r1",
+     "value": 2
+    },
+    {
+     "label": "r2",
+     "value": 4
+    },
+    {
+     "label": "r3",
+     "value": 8
+    },
+    {
+     "label": "r4",
+     "value": 16
+    },
+    {
+     "label": "r5",
+     "value": 32,
+     "color": "red"
+    }
+   ],
+   "height": 500,
+   "base": 1350,
+   "x0": 140,
+   "x1": 940,
+   "type": "use",
+   "t": 16.89
+  },
+  {
+   "type": "caption",
+   "t": 16.490000000000002,
+   "text": "You share it with 2 friends. Each shares with 2.",
+   "highlight": [
+    "2 friends."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 23.39
+  },
+  {
+   "component": "formula",
+   "text": "1, 2, 4, 8, 16, 32...",
+   "at": [
+    540,
+    900
+   ],
+   "size": 60,
+   "type": "use",
+   "t": 23.79
+  },
+  {
+   "type": "caption",
+   "t": 23.39,
+   "text": "Slow start. Then it takes off.",
+   "highlight": [
+    "takes off."
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 26.88
+  },
+  {
+   "type": "clear",
+   "t": 26.88
+  },
+  {
+   "component": "formula",
+   "text": "2^10 = 1,024",
+   "at": [
+    540,
+    700
+   ],
+   "size": 64,
+   "mark": "1,024",
+   "type": "use",
+   "t": 27.779999999999998
+  },
+  {
+   "type": "caption",
+   "t": 27.38,
+   "text": "After 10 rounds: 1,024 people.",
+   "highlight": [
+    "1,024"
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 30.849999999999998
+  },
+  {
+   "component": "formula",
+   "text": "2^20 = 1,048,576",
+   "at": [
+    540,
+    900
+   ],
+   "size": 64,
+   "mark": "1,048,576",
+   "box": true,
+   "type": "use",
+   "t": 31.249999999999996
+  },
+  {
+   "type": "caption",
+   "t": 30.849999999999998,
+   "text": "After 20 rounds: over 10 lakh.",
+   "highlight": [
+    "10 lakh."
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 34.629999999999995
+  },
+  {
+   "type": "clear",
+   "t": 34.629999999999995
+  },
+  {
+   "component": "icon",
+   "name": "question",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 140,
+   "type": "use",
+   "t": 35.529999999999994
+  },
+  {
+   "type": "caption",
+   "t": 35.129999999999995,
+   "text": "Would you guess 20 steps gets this big?",
+   "highlight": [
+    "20 steps"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 39.769999999999996
+  },
+  {
+   "type": "use",
+   "component": "outro",
+   "t": 40.22,
+   "until": 50.22
+  }
+ ]
+}
