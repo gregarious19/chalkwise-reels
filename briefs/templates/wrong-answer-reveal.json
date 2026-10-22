@@ -1,0 +1,103 @@
+{
+ "id": "YYYY-MM-DD-coin-flips",
+ "topic": "probability of sequences",
+ "hook_type": "wrong-answer reveal",
+ "format": "wrong-answer reveal",
+ "_how_to_reuse": "Pose a question most people get wrong, show the intuitive answer, cross it out, explain, give the right answer. Swap the question, the two options and the explanation.",
+ "caption": "Which is more likely: HHHH or HTHT? Most people get this wrong 🪙\n\nEvery exact sequence of 4 fair flips is equally likely: 1 in 16.\n\nFollow for one idea a day ✏️\n\n#probability #learnoninstagram #mathmadeeasy #learnsomethingnew #brainteaser",
+ "hook": {
+  "text": "Most people get this wrong.",
+  "highlight": [
+   "wrong."
+  ],
+  "sub": "4 coin flips.",
+  "icon": "coin"
+ },
+ "beats": [
+  {
+   "caption": "Which is more likely?",
+   "show": [
+    {
+     "component": "vs",
+     "left": "HHHH",
+     "right": "HTHT",
+     "y": 760,
+     "line_to": 1000
+    }
+   ]
+  },
+  {
+   "caption": "Your gut says HTHT. It looks random.",
+   "highlight": [
+    "gut"
+   ],
+   "show": [
+    {
+     "component": "reveal",
+     "wrong": "HTHT is more likely",
+     "right": "Both: 1 in 16",
+     "at": [
+      540,
+      1150
+     ],
+     "size": 58
+    }
+   ]
+  },
+  {
+   "caption": "Each flip is 1/2. Four flips multiply.",
+   "highlight": [
+    "multiply."
+   ],
+   "clear_after": true,
+   "show": []
+  },
+  {
+   "caption": "Every exact sequence = 1/16.",
+   "highlight": [
+    "1/16."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "1/2 x 1/2 x 1/2 x 1/2 = 1/16",
+     "at": [
+      540,
+      900
+     ],
+     "size": 44,
+     "mark": "1/16",
+     "box": true
+    },
+    {
+     "component": "icon",
+     "name": "dice",
+     "at": [
+      540,
+      1230
+     ],
+     "size": 90,
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "caption": "'Looks random' is not 'more likely'.",
+   "highlight": [
+    "more likely"
+   ],
+   "show": [
+    {
+     "component": "icon",
+     "name": "lightbulb",
+     "at": [
+      540,
+      1250
+     ],
+     "size": 90,
+     "color": "orange"
+    }
+   ]
+  }
+ ]
+}

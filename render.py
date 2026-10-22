@@ -11,6 +11,8 @@ import json, math, subprocess, sys, argparse, os
 import numpy as np
 import cv2
 from PIL import Image, ImageDraw, ImageFont
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import components
 
 W, H = 1080, 1920
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -196,6 +198,50 @@ def caption_layer(text, size, highlight, color, maxw=940, box=None):
     _cap_cache[key] = arr
     return arr
 
+# ---------------------------------------------------------------- sound effects
+SFX_NAMES = ("ding", "whoosh", "tick", "success", "thud", "pop", "swoosh_up")
+
+def sfx(name, sr, rng):
+    """Procedural sound effects (our own, no licensing). Returns float32 mono."""
+    def tone(freqs, dur, decay, vol):
+        tt = np.arange(int(dur * sr)) / sr
+        s = sum(np.sin(2 * np.pi * f * tt) * (0.6 ** k) for k, f in enumerate(freqs))
+        return (s * np.exp(-tt * decay) * np.minimum(1, tt / 0.004) * vol).astype(np.float32)
+    from scipy.signal import butter, sosfilt
+    if name == "ding":
+        return tone([1318.5, 2637, 3955], 0.9, 6, 0.16)
+    if name == "success":
+        a = tone([784, 1568], 0.25, 14, 0.14)
+        b = tone([1175, 2350], 0.6, 7, 0.15)
+        out = np.zeros(int(0.12 * sr) + len(b), np.float32)
+        out[:len(a)] += a
+        out[int(0.12 * sr):] += b
+        return out
+    if name == "tick":
+        return tone([2200, 4400], 0.04, 120, 0.12)
+    if name == "pop":
+        tt = np.arange(int(0.09 * sr)) / sr
+        return (np.sin(2 * np.pi * 600 * tt * (1 + 3 * tt)) * np.exp(-tt * 45) * 0.2).astype(np.float32)
+    if name == "thud":
+        tt = np.arange(int(0.25 * sr)) / sr
+        return (np.sin(2 * np.pi * (140 - 200 * tt) * tt) * np.exp(-tt * 18) * 0.35).astype(np.float32)
+    if name in ("whoosh", "swoosh_up"):
+        dur = 0.45
+        L = int(dur * sr)
+        nz = rng.normal(0, 1, L)
+        out = np.zeros(L)
+        # sweep the band-pass by processing in chunks
+        chunks = 12
+        for k in range(chunks):
+            f = 400 + (2600 if name == "whoosh" else 4200) * (k / chunks if name == "swoosh_up" else math.sin(math.pi * k / chunks))
+            sos = butter(2, [max(80, f * 0.6), min(sr / 2 - 100, f * 1.6)], btype="band", fs=sr, output="sos")
+            a, b = k * L // chunks, (k + 1) * L // chunks
+            out[a:b] = sosfilt(sos, nz[a:b])
+        tt = np.arange(L) / sr
+        return (out * np.sin(np.pi * tt / dur) * 0.22).astype(np.float32)
+    raise ValueError(f"unknown sfx {name!r}; available: {', '.join(SFX_NAMES)}")
+
+
 # ---------------------------------------------------------------- scene model
 class Reel:
     def __init__(self, spec):
@@ -204,6 +250,15 @@ class Reel:
         self.duration = spec["duration"]
         self.lines = {}  # numberline id -> (x0, x1, y, vmin, vmax)
         self.events = []
+        spec["events"] = components.expand(spec["events"])
+        pace = spec.get("pace", 1.0)  # >1 stretches the whole reel (slower); duration scales too
+        if pace != 1.0:
+            for e in spec["events"]:
+                for k in ("t", "d", "until"):
+                    if k in e:
+                        e[k] = e[k] * pace
+            spec["duration"] = round(spec["duration"] * pace, 2)
+            self.duration = spec["duration"]
         for i, e in enumerate(spec["events"]):
             e = dict(e)
             e["_i"] = i
@@ -221,7 +276,7 @@ class Reel:
                     continue
                 pre = hand_text_mask(e["text"][:idx], e.get("size", 64))[1] if idx else 0
                 sub = hand_text_mask(e["mark"], e.get("size", 64))[1]
-                x = e["x"] - (fw / 2 if e.get("align") == "center" else 0)
+                x = e["x"] - {"center": fw / 2, "right": fw}.get(e.get("align"), 0)
                 hx0 = x + max(pre - 12, 0)
                 hx1 = x + pre + sub - (12 if idx else 0)
                 hh = e.get("size", 64) * 0.75
@@ -235,8 +290,9 @@ class Reel:
     def default_dur(self, e):
         t = e["type"]
         if t == "write":
-            return max(0.35, 0.055 * len(e["text"]))
-        return {"dot": 0.25, "caption": 0.22, "clear": 0.35, "numberline": 0.9}.get(t, 0.6)
+            return components.write_dur(e["text"])
+        return {"dot": 0.25, "caption": 0.22, "clear": 0.35, "numberline": 0.9, "sfx": 0.3, "count": 1.0,
+                "hbar": 1.0}.get(t, 0.6)
 
     def make_bg(self):
         rng = np.random.default_rng(7)
@@ -254,6 +310,28 @@ class Reel:
         blit_rgba(img, lay, 40, 70, alpha=0.55)
         return img
 
+    def pacing_report(self):
+        """Warnings for anything too fast to read. Returns a list of strings (empty = OK)."""
+        warn = []
+        caps = [e for e in self.events if e["type"] == "caption"]
+        for e in caps:
+            shown = e.get("until", e["t"] + 2.5) - e["t"]
+            need = components.caption_hold(e["text"])
+            if shown + 0.05 < need:
+                warn.append(f"{e['t']:.1f}s caption shown {shown:.1f}s, needs {need:.1f}s: {e['text']!r}")
+            if len(e["text"].split()) > 12:
+                warn.append(f"{e['t']:.1f}s caption has {len(e['text'].split())} words (max 12): {e['text']!r}")
+        for e in self.events:
+            if e["type"] == "write" and e["d"] + 1e-6 < components.WRITE_S_PER_CHAR * len(e["text"]) * 0.8 and e["d"] < 3.0:
+                warn.append(f"{e['t']:.1f}s handwriting too fast ({e['d']:.1f}s for {len(e['text'])} chars): {e['text']!r}")
+        # on-screen captions changing faster than every 2.5 s on average is too much
+        tops = sorted(e["t"] for e in caps if e.get("y", 330) < 600)
+        if len(tops) > 2:
+            avg = (tops[-1] - tops[0]) / (len(tops) - 1)
+            if avg < components.MIN_CAPTION_S:
+                warn.append(f"captions change every {avg:.1f}s on average (min {components.MIN_CAPTION_S}s)")
+        return warn
+
     def vx(self, line_id, v):
         x0, x1, y, a, b = self.lines[line_id]
         return x0 + (v - a) / (b - a) * (x1 - x0), y
@@ -269,6 +347,8 @@ class Reel:
             x, y = e["x"], e["y"]
             if e.get("align") == "center":
                 x -= mw / 2
+            elif e.get("align") == "right":
+                x -= mw
             reveal = int(mw * ease(p) if p < 1 else mw)
             if reveal <= 0:
                 return None
@@ -358,6 +438,26 @@ class Reel:
             a = e.get("alpha", 0.45)
             img[:] = cv2.addWeighted(over, a, img, 1 - a, 0)
             return (xe, (y0 + y1) / 2) if p < 1 else None
+        if t == "bar":  # vertical bar growing up from base
+            h = e["h"] * back_out(p) if p < 1 else e["h"]
+            x0, x1 = int(e["x"]), int(e["x"] + e["w"])
+            yb = int(e["base"])
+            if h > 1:
+                cv2.rectangle(img, (x0, int(yb - h)), (x1, yb), c[::-1], -1, cv2.LINE_AA)
+                draw_poly(img, wobble([(x0, yb), (x0, yb - h), (x1, yb - h), (x1, yb)], seed, amp=1.2), col("ink"), 5)
+            return None
+        if t == "hbar":  # horizontal fill growing right
+            wd = e["w"] * ease(p)
+            if wd > 1:
+                cv2.rectangle(img, (int(e["x"]), int(e["y"])), (int(e["x"] + wd), int(e["y"] + e["h"])), c[::-1], -1, cv2.LINE_AA)
+            return None
+        if t == "count":  # number counting from 'from' to 'to'
+            v = e["from"] + (e["to"] - e["from"]) * ease(p)
+            txt = e.get("prefix", "") + e.get("fmt", "{:.0f}").format(v) + e.get("suffix", "")
+            m, mw, mh = hand_text_mask(txt, e.get("size", 64))
+            x = e["x"] - {"center": mw / 2, "right": mw}.get(e.get("align"), 0)
+            blit_mask(img, m, x, e["y"] - mh / 2, c)
+            return None
         return None
 
     def render_frames(self, out_raw, preview=False):
@@ -452,6 +552,18 @@ class Reel:
                 env = np.minimum(1, np.minimum(tt / 0.03, (e["d"] - tt) / 0.05)).clip(0, 1)
                 seg = nz * flutter * env * 0.09
                 out[s0:s0 + L] += seg[:max(0, min(L, n - s0))]
+            elif t == "sfx":
+                seg = sfx(e["name"], sr, rng) * e.get("volume", 1.0)
+                L = len(seg)
+                out[s0:s0 + L] += seg[:max(0, min(L, n - s0))]
+            elif t == "count":
+                # soft ticks while counting
+                k = 0
+                while k * 0.09 < e["d"]:
+                    seg = sfx("tick", sr, rng) * 0.35
+                    a0 = s0 + int(k * 0.09 * sr)
+                    out[a0:a0 + len(seg)] += seg[:max(0, min(len(seg), n - a0))]
+                    k += 1
             elif t in ("dot", "caption"):
                 L = int(0.09 * sr)
                 tt = np.arange(L) / sr
@@ -492,9 +604,15 @@ def main():
     ap.add_argument("spec")
     ap.add_argument("out")
     ap.add_argument("--preview", action="store_true")
+    ap.add_argument("--strict", action="store_true", help="fail on pacing warnings")
     a = ap.parse_args()
     spec = json.load(open(a.spec))
     reel = Reel(spec)
+    warnings = reel.pacing_report()
+    for w in warnings:
+        print("PACING:", w)
+    if warnings and a.strict:
+        raise SystemExit(f"{len(warnings)} pacing problem(s); fix the spec (or raise \"pace\") and re-render")
     tmp_v = a.out + ".video.mp4"
     tmp_a = a.out + ".audio.wav"
     reel.render_frames(tmp_v, preview=a.preview)

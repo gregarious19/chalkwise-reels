@@ -1,0 +1,213 @@
+{
+ "id": "YYYY-MM-DD-standard-deviation",
+ "topic": "standard deviation",
+ "hook_type": "speed promise",
+ "format": "two-friends comparison",
+ "_how_to_reuse": "Two people/things with the SAME headline number but a different hidden property. Swap names, data, the named idea and the question. Keep the beat order.",
+ "caption": "Standard deviation in 45 seconds. No stats course, no syllabus 📈\n\nTwo friends, same average, totally different consistency. That gap has a name.\n\nFollow for one idea a day ✏️\n\n#statistics #learnoninstagram #studytips #learnsomethingnew #mathmadeeasy #selflearning",
+ "hook": {
+  "text": "Standard deviation in 45 seconds.",
+  "highlight": [
+   "45 seconds."
+  ],
+  "sub": "No stats course. Promise.",
+  "big": "SD = ?"
+ },
+ "beats": [
+  {
+   "caption": "Two friends. Same average: 50.",
+   "highlight": [
+    "Same average:"
+   ],
+   "show": [
+    {
+     "component": "numberline",
+     "id": "A",
+     "y": 800,
+     "label": "Riya",
+     "color": "blue",
+     "ticks": [
+      0,
+      50,
+      100
+     ]
+    },
+    {
+     "component": "numberline",
+     "id": "B",
+     "y": 1110,
+     "label": "Arjun",
+     "color": "orange",
+     "ticks": [
+      0,
+      50,
+      100
+     ]
+    }
+   ]
+  },
+  {
+   "caption": "Riya: 48, 49, 50, 51, 52",
+   "highlight": [
+    "Riya:"
+   ],
+   "show": [
+    {
+     "component": "dots",
+     "on": "A",
+     "values": [
+      48,
+      49,
+      50,
+      51,
+      52
+     ],
+     "color": "blue",
+     "r": 12
+    }
+   ]
+  },
+  {
+   "caption": "Arjun: 10, 30, 50, 70, 90",
+   "highlight": [
+    "Arjun:"
+   ],
+   "show": [
+    {
+     "component": "dots",
+     "on": "B",
+     "values": [
+      10,
+      30,
+      50,
+      70,
+      90
+     ],
+     "color": "orange"
+    }
+   ]
+  },
+  {
+   "caption": "Same average. Totally different story.",
+   "highlight": [
+    "Totally different"
+   ],
+   "show": [
+    {
+     "type": "line",
+     "points": [
+      [
+       645.0,
+       710
+      ],
+      [
+       645.0,
+       1170
+      ]
+     ],
+     "color": "red",
+     "w": 5,
+     "d": 0.7
+    },
+    {
+     "type": "arrow",
+     "from": [
+      645.0,
+      1015
+     ],
+     "to": [
+      375,
+      1015
+     ],
+     "color": "ink",
+     "w": 6,
+     "d": 0.7
+    },
+    {
+     "type": "arrow",
+     "from": [
+      645.0,
+      1015
+     ],
+     "to": [
+      915,
+      1015
+     ],
+     "color": "ink",
+     "w": 6,
+     "d": 0.7,
+     "with_previous": true
+    }
+   ]
+  },
+  {
+   "caption": "SD = the typical distance from the average.",
+   "highlight": [
+    "typical distance"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "SD = typical distance from mean",
+     "at": [
+      540,
+      1290
+     ],
+     "size": 46,
+     "mark": "typical distance"
+    }
+   ]
+  },
+  {
+   "caption": "Riya ~ 1.4. Arjun ~ 28.",
+   "show": [
+    {
+     "type": "write",
+     "text": "Riya:  SD ~ 1.4",
+     "x": 150,
+     "y": 1400,
+     "size": 62,
+     "color": "blue"
+    },
+    {
+     "type": "write",
+     "text": "Arjun: SD ~ 28",
+     "x": 150,
+     "y": 1490,
+     "size": 62,
+     "color": "orange"
+    }
+   ]
+  },
+  {
+   "caption": "Who would you bet on to score 50 tomorrow?",
+   "highlight": [
+    "50 tomorrow?"
+   ],
+   "show": [
+    {
+     "type": "ellipse",
+     "c": [
+      645.0,
+      760
+     ],
+     "rx": 95,
+     "ry": 80,
+     "color": "green",
+     "w": 8,
+     "d": 0.8
+    },
+    {
+     "component": "icon",
+     "name": "question",
+     "at": [
+      795.0,
+      700
+     ],
+     "size": 55,
+     "color": "green"
+    }
+   ]
+  }
+ ]
+}

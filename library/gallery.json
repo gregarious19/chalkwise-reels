@@ -1,0 +1,847 @@
+{
+ "id": "library-gallery",
+ "topic": "component gallery",
+ "duration": 41,
+ "events": [
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.1,
+   "name": "battery",
+   "at": [
+    130,
+    620
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.3,
+   "text": "battery",
+   "x": 130,
+   "y": 704,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.15000000000000002,
+   "name": "bolt",
+   "at": [
+    335,
+    620
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.35,
+   "text": "bolt",
+   "x": 335,
+   "y": 704,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.2,
+   "name": "book",
+   "at": [
+    540,
+    620
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.4,
+   "text": "book",
+   "x": 540,
+   "y": 704,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.25,
+   "name": "brain",
+   "at": [
+    745,
+    620
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.45,
+   "text": "brain",
+   "x": 745,
+   "y": 704,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.30000000000000004,
+   "name": "calendar",
+   "at": [
+    950,
+    620
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.5,
+   "text": "calendar",
+   "x": 950,
+   "y": 704,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.35,
+   "name": "cap",
+   "at": [
+    130,
+    810
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.55,
+   "text": "cap",
+   "x": 130,
+   "y": 894,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.4,
+   "name": "chai",
+   "at": [
+    335,
+    810
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.6000000000000001,
+   "text": "chai",
+   "x": 335,
+   "y": 894,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.45000000000000007,
+   "name": "chat",
+   "at": [
+    540,
+    810
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.65,
+   "text": "chat",
+   "x": 540,
+   "y": 894,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.5,
+   "name": "check",
+   "at": [
+    745,
+    810
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.7,
+   "text": "check",
+   "x": 745,
+   "y": 894,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.55,
+   "name": "clock",
+   "at": [
+    950,
+    810
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.75,
+   "text": "clock",
+   "x": 950,
+   "y": 894,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.6,
+   "name": "coin",
+   "at": [
+    130,
+    1000
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.8,
+   "text": "coin",
+   "x": 130,
+   "y": 1084,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.65,
+   "name": "cross",
+   "at": [
+    335,
+    1000
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.8500000000000001,
+   "text": "cross",
+   "x": 335,
+   "y": 1084,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.7000000000000001,
+   "name": "dice",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.9000000000000001,
+   "text": "dice",
+   "x": 540,
+   "y": 1084,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.75,
+   "name": "heart",
+   "at": [
+    745,
+    1000
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 0.95,
+   "text": "heart",
+   "x": 745,
+   "y": 1084,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.8,
+   "name": "lightbulb",
+   "at": [
+    950,
+    1000
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 1.0,
+   "text": "lightbulb",
+   "x": 950,
+   "y": 1084,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.85,
+   "name": "lock",
+   "at": [
+    130,
+    1190
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 1.05,
+   "text": "lock",
+   "x": 130,
+   "y": 1274,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.9,
+   "name": "magnifier",
+   "at": [
+    335,
+    1190
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 1.1,
+   "text": "magnifier",
+   "x": 335,
+   "y": 1274,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 0.9500000000000001,
+   "name": "phone",
+   "at": [
+    540,
+    1190
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 1.1500000000000001,
+   "text": "phone",
+   "x": 540,
+   "y": 1274,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 1.0,
+   "name": "play",
+   "at": [
+    745,
+    1190
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 1.2,
+   "text": "play",
+   "x": 745,
+   "y": 1274,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 1.05,
+   "name": "question",
+   "at": [
+    950,
+    1190
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 1.25,
+   "text": "question",
+   "x": 950,
+   "y": 1274,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 1.1,
+   "name": "stack",
+   "at": [
+    130,
+    1380
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 1.3,
+   "text": "stack",
+   "x": 130,
+   "y": 1464,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 1.1500000000000001,
+   "name": "star",
+   "at": [
+    335,
+    1380
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 1.35,
+   "text": "star",
+   "x": 335,
+   "y": 1464,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 1.2000000000000002,
+   "name": "target",
+   "at": [
+    540,
+    1380
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 1.4000000000000001,
+   "text": "target",
+   "x": 540,
+   "y": 1464,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 1.2500000000000002,
+   "name": "trend_up",
+   "at": [
+    745,
+    1380
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 1.4500000000000002,
+   "text": "trend_up",
+   "x": 745,
+   "y": 1464,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "use",
+   "component": "icon",
+   "t": 1.3000000000000003,
+   "name": "warning",
+   "at": [
+    950,
+    1380
+   ],
+   "size": 54,
+   "d": 0.4
+  },
+  {
+   "type": "write",
+   "t": 1.5000000000000002,
+   "text": "warning",
+   "x": 950,
+   "y": 1464,
+   "size": 30,
+   "align": "center",
+   "color": "grey",
+   "d": 0.4
+  },
+  {
+   "type": "caption",
+   "t": 0,
+   "text": "icons",
+   "y": 330,
+   "size": 70,
+   "until": 3.9
+  },
+  {
+   "type": "clear",
+   "t": 4
+  },
+  {
+   "type": "use",
+   "component": "hook",
+   "t": 4.4,
+   "text": "Hook: speed promise.",
+   "highlight": [
+    "speed promise."
+   ],
+   "sub": "sub line",
+   "big": "SD = ?"
+  },
+  {
+   "type": "caption",
+   "t": 7.6,
+   "text": "numberline + person + bubble",
+   "y": 330,
+   "size": 56,
+   "until": 11.6
+  },
+  {
+   "type": "use",
+   "component": "numberline",
+   "t": 7.6,
+   "id": "A",
+   "y": 700,
+   "label": "Riya",
+   "values": [
+    48,
+    49,
+    50,
+    51,
+    52
+   ],
+   "color": "blue",
+   "ticks": [
+    0,
+    50,
+    100
+   ]
+  },
+  {
+   "type": "use",
+   "component": "person",
+   "t": 8.1,
+   "at": [
+    250,
+    1350
+   ],
+   "size": 300,
+   "label": "Arjun",
+   "color": "orange"
+  },
+  {
+   "type": "use",
+   "component": "bubble",
+   "t": 9.4,
+   "text": "wait, what?",
+   "box": [
+    430,
+    900,
+    940,
+    1060
+   ],
+   "tail": [
+    320,
+    1100
+   ]
+  },
+  {
+   "type": "clear",
+   "t": 11.5
+  },
+  {
+   "type": "caption",
+   "t": 11.9,
+   "text": "bar_chart",
+   "y": 330,
+   "size": 64,
+   "until": 15.5
+  },
+  {
+   "type": "use",
+   "component": "bar_chart",
+   "t": 11.9,
+   "bars": [
+    {
+     "label": "Mon",
+     "value": 3,
+     "color": "blue"
+    },
+    {
+     "label": "Tue",
+     "value": 7,
+     "color": "orange"
+    },
+    {
+     "label": "Wed",
+     "value": 5,
+     "color": "green"
+    }
+   ],
+   "suffix": "h"
+  },
+  {
+   "type": "clear",
+   "t": 15.5
+  },
+  {
+   "type": "caption",
+   "t": 15.9,
+   "text": "plot + formula",
+   "y": 330,
+   "size": 64,
+   "until": 19.9
+  },
+  {
+   "type": "use",
+   "component": "plot",
+   "t": 15.9,
+   "expr": "exp(-u**2/2)",
+   "box": [
+    140,
+    650,
+    960,
+    1150
+   ],
+   "xlabel": "marks",
+   "ylabel": "students"
+  },
+  {
+   "type": "use",
+   "component": "formula",
+   "t": 18.3,
+   "text": "z = (x - mean) / SD",
+   "at": [
+    540,
+    1330
+   ],
+   "size": 60,
+   "mark": "SD",
+   "box": true
+  },
+  {
+   "type": "clear",
+   "t": 19.900000000000002
+  },
+  {
+   "type": "caption",
+   "t": 20.3,
+   "text": "flow",
+   "y": 330,
+   "size": 64,
+   "until": 23.900000000000002
+  },
+  {
+   "type": "use",
+   "component": "flow",
+   "t": 20.3,
+   "items": [
+    "curious",
+    "ask",
+    "see it drawn",
+    "get it"
+   ],
+   "colors": [
+    "ink",
+    "blue",
+    "orange",
+    "green"
+   ],
+   "at": [
+    540,
+    650
+   ]
+  },
+  {
+   "type": "clear",
+   "t": 23.900000000000002
+  },
+  {
+   "type": "caption",
+   "t": 24.3,
+   "text": "checklist + progress",
+   "y": 330,
+   "size": 60,
+   "until": 28.9
+  },
+  {
+   "type": "use",
+   "component": "checklist",
+   "t": 24.3,
+   "items": [
+    "bought the course",
+    {
+     "text": "finished it",
+     "mark": "cross"
+    }
+   ],
+   "at": [
+    140,
+    640
+   ]
+  },
+  {
+   "type": "use",
+   "component": "progress",
+   "t": 26.1,
+   "pct": 12,
+   "label": "Course progress",
+   "at": [
+    100,
+    1050
+   ],
+   "w": 760
+  },
+  {
+   "type": "clear",
+   "t": 28.900000000000002
+  },
+  {
+   "type": "caption",
+   "t": 29.3,
+   "text": "vs + reveal",
+   "y": 330,
+   "size": 64,
+   "until": 34.3
+  },
+  {
+   "type": "use",
+   "component": "vs",
+   "t": 29.3,
+   "left": "courses",
+   "right": "chalkwise",
+   "line_to": 900
+  },
+  {
+   "type": "use",
+   "component": "reveal",
+   "t": 30.900000000000002,
+   "wrong": "HHHH is rarer",
+   "right": "both are 1 in 16",
+   "at": [
+    540,
+    1100
+   ],
+   "size": 60
+  },
+  {
+   "type": "use",
+   "component": "outro",
+   "t": 34.7,
+   "until": 41.0
+  }
+ ]
+}

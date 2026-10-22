@@ -5,7 +5,7 @@ name: Render reels
 # download URL is what Instagram fetches when the reel is posted.
 on:
   push:
-    paths: ["scripts/queue/**.json", "render.py"]
+    paths: ["scripts/queue/**.json", "render.py", "components.py"]
   workflow_dispatch:
     inputs:
       all:
@@ -40,7 +40,7 @@ jobs:
         id: find
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ] \
-             || git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -qE '^render\.py$'; then
+             || git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -qE '^(render|components)\.py$'; then
             ls scripts/queue/*.json 2>/dev/null > specs.txt || true
           else
             git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.sha }} -- 'scripts/queue/*.json' > specs.txt || true

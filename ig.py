@@ -45,7 +45,8 @@ def cmd_publish(spec_path, video_url):
     spec = json.load(open(spec_path))
     uid = user_id()
     c = call("POST", f"{uid}/media", media_type="REELS", video_url=video_url,
-             caption=spec.get("caption", ""), share_to_feed="true")
+             caption=spec.get("caption", ""), share_to_feed="true",
+             thumb_offset=str(int(spec.get("cover_at", 2.0) * 1000)))
     cid = c["id"]
     print("container", cid)
     for _ in range(60):  # up to ~10 minutes

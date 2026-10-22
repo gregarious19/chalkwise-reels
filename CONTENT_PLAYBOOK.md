@@ -10,7 +10,7 @@ Every reel shows that, by *doing* it: teach one real idea fast, from zero backgr
 
 Gen Z and millennials in India and beyond (18–34). Curious, busy, burned by courses and long lectures; many learn better by seeing and hearing than by reading. Talk like a smart friend, not a teacher. Short sentences. Indian names and everyday Indian settings are welcome (chai, cricket, exams, UPI, trains, Swiggy).
 
-## Reel structure (30–50 s)
+## Reel structure (35–55 s)
 
 1. **Hook, 0–2.5 s.** On-screen text plus a bold first drawing. It must make a promise or open a question. No logo, no greeting.
 2. **Setup, to ~8 s.** A concrete situation the viewer knows.
@@ -47,7 +47,7 @@ Rotate: about half from the statistics MVP (it previews the real product), half 
 - **No medical or diagnostic claims, no condition labels.** Never say a reel or the app treats, fixes or diagnoses anything. Learning strategies are fine.
 - **No voiceover.** Captions carry every word; audio is only our own marker sounds, pops, paper swipes and the soft pad. Write captions to be read in one glance (max ~8 words) and hold each long enough to read: about 0.4 s per word, minimum 1.5 s.
 - **Original only.** No copyrighted characters, music, or other creators' content.
-- **Readable on a phone.** Captions 60+ px, board text 46+ px, max ~8 words per caption.
+- **Readable on a phone, at a human pace.** Captions 60+ px, board text 46+ px, max ~10 words per caption. One idea per beat; the viewer must be able to read the caption AND watch the drawing. `make.py` enforces the timing (0.55 s per word, min 2.5 s per caption, 1.2 s rest after each drawing), so don't fight it: if a reel runs over 60 s, cut a beat.
 
 ## How performance is judged
 

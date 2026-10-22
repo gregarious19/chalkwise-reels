@@ -1,0 +1,94 @@
+{
+ "id": "YYYY-MM-DD-course-pain",
+ "topic": "why courses don't get finished",
+ "hook_type": "course pain",
+ "format": "course pain",
+ "_how_to_reuse": "Open on the unfinished-course feeling, then teach ONE useful idea fast, then the brand. Swap the idea taught in the last two beats.",
+ "caption": "You bought the course. You watched 2 videos. Sound familiar? 📚\n\nYou didn't need 40 hours. You needed the one idea you were curious about.\n\nFollow for one idea a day ✏️\n\n#studytips #learnoninstagram #selflearning #onlinecourses #learnsomethingnew",
+ "hook": {
+  "text": "You bought the course. Then...",
+  "highlight": [
+   "Then..."
+  ],
+  "icon": "stack"
+ },
+ "beats": [
+  {
+   "caption": "Most online courses never get finished.",
+   "highlight": [
+    "never"
+   ],
+   "show": [
+    {
+     "component": "checklist",
+     "items": [
+      "bought the course",
+      "watched video 1",
+      {
+       "text": "finished it",
+       "mark": "cross"
+      }
+     ],
+     "at": [
+      140,
+      700
+     ]
+    }
+   ]
+  },
+  {
+   "caption": "Not because you're lazy.",
+   "highlight": [
+    "lazy."
+   ],
+   "show": [
+    {
+     "component": "progress",
+     "pct": 12,
+     "label": "Course progress",
+     "at": [
+      100,
+      1200
+     ],
+     "w": 760
+    }
+   ]
+  },
+  {
+   "caption": "Because you had to sit through 40 hours to get 1 idea.",
+   "highlight": [
+    "1 idea."
+   ],
+   "clear_after": true,
+   "show": []
+  },
+  {
+   "caption": "What if you just started with the question?",
+   "highlight": [
+    "the question?"
+   ],
+   "show": [
+    {
+     "component": "flow",
+     "items": [
+      "your question",
+      "basics you need",
+      "the idea",
+      "done"
+     ],
+     "colors": [
+      "ink",
+      "blue",
+      "orange",
+      "green"
+     ],
+     "at": [
+      540,
+      700
+     ],
+     "gap": 220
+    }
+   ]
+  }
+ ]
+}
