@@ -45,7 +45,8 @@ Rotate: about half from the statistics MVP (it previews the real product), half 
 - **Correct first.** Every fact and number is checked; numbers are recomputed in code before queueing.
 - **Honest about the product.** Chalkwise isn't public yet. Say "join the waitlist" or "follow for 1 idea a day", never "download now" or "try it today".
 - **No medical or diagnostic claims, no condition labels.** Never say a reel or the app treats, fixes or diagnoses anything. Learning strategies are fine.
-- **Original only.** No copyrighted characters, music, or other creators' content. Audio is our own pad and marker sounds plus our voiceover.
+- **No voiceover.** Captions carry every word; audio is only our own marker sounds, pops, paper swipes and the soft pad. Write captions to be read in one glance (max ~8 words) and hold each long enough to read: about 0.4 s per word, minimum 1.5 s.
+- **Original only.** No copyrighted characters, music, or other creators' content.
 - **Readable on a phone.** Captions 60+ px, board text 46+ px, max ~8 words per caption.
 
 ## How performance is judged

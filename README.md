@@ -4,7 +4,7 @@ Daily 30–50 second Instagram reels for Chalkwise, made and posted automaticall
 
 ```
 Claude (daily, ~09:00 IST)                GitHub Actions
-  read data/insights.json  ─────────┐       render.yml   on new spec → MP4 + voice → release reel-<id> (preview link)
+  read data/insights.json  ─────────┐       render.yml   on new spec → MP4 → release reel-<id> (preview link)
   update LEARNINGS.md               │       post.yml     19:00 IST → posts the oldest APPROVED due reel → moves spec to scripts/posted/
   write scripts/queue/<id>.json ────┼──▶    insights.yml 08:00 IST → metrics for every posted reel → data/insights.json
   push, send you a preview          └────── (and refreshes the Instagram token every Monday)
@@ -40,10 +40,9 @@ Repo → Settings → *Secrets and variables* → Actions → **New repository s
 | --- | --- | --- |
 | `IG_ACCESS_TOKEN` | the token from step 2.5 | posting, insights |
 | `IG_USER_ID` | the Instagram user ID | posting, insights (optional, looked up if missing) |
-| `DEEPGRAM_API_KEY` | a Deepgram API key ([console.deepgram.com](https://console.deepgram.com)) | voiceover (optional; without it reels have no voice) |
 | `GH_PAT` | a fine-grained GitHub token with **Secrets: read and write** on this repo | saving the refreshed Instagram token every Monday |
 
-Optional *variables* (same page, Variables tab): `DEEPGRAM_VOICE` (default `aura-2-thalia-en`), `IG_API_VERSION` (default `v24.0`).
+Optional *variable* (same page, Variables tab): `IG_API_VERSION` (default `v24.0`).
 
 ### 4. Test
 Actions → **Pull Instagram insights** → Run workflow. A green run means the token works.
@@ -52,8 +51,7 @@ Actions → **Pull Instagram insights** → Run workflow. A green run means the 
 
 | Path | What |
 | --- | --- |
-| `render.py` | Spec → MP4 (self-drawing whiteboard, captions, marker sounds, pad, voice) |
-| `tts.py` | Spec voiceover lines → voice track (Deepgram Aura) |
+| `render.py` | Spec → MP4 (self-drawing whiteboard, captions, marker sounds, soft pad; no voiceover) |
 | `ig.py` | Instagram API: check, publish, insights, token refresh |
 | `scripts/queue/` | Reels waiting to post |
 | `scripts/posted/` | Posted reels, with media ID and permalink |

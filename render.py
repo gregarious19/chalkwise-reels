@@ -3,9 +3,9 @@
 
 Turns a JSON reel spec (scripts/*.json) into a 1080x1920 MP4: a self-drawing
 whiteboard with marker-written text, hand-drawn shapes, pop-in captions,
-marker sounds and a soft background pad. Optional voiceover WAV/MP3 is mixed in.
+marker sounds and a soft background pad. No voiceover: captions carry the words, sounds carry the feel.
 
-Usage: python3 render.py scripts/reel.json out.mp4 [--voice voice.mp3] [--preview]
+Usage: python3 render.py scripts/reel.json out.mp4 [--preview]
 """
 import json, math, subprocess, sys, argparse, os
 import numpy as np
@@ -433,7 +433,7 @@ class Reel:
                  (29, 29, 31), 10, cv2.LINE_AA)
 
     # ------------------------------------------------------------ audio
-    def render_audio(self, path, voice=None):
+    def render_audio(self, path):
         sr = 48000
         n = int(self.duration * sr)
         out = np.zeros(n, np.float32)
@@ -481,17 +481,6 @@ class Reel:
         # fade in/out
         fade = np.minimum(1, np.minimum(tt / 1.0, (self.duration - tt) / 1.2)).clip(0, 1)
         mix = out + pad * fade
-        if voice:
-            # decode voice to mono float and duck the pad under it
-            raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", voice, "-f", "f32le", "-ac", "1", "-ar",
-                                  str(sr), "-"], capture_output=True).stdout
-            v = np.frombuffer(raw, np.float32)
-            vo = np.zeros(n, np.float32)
-            off = int(self.spec.get("voice_offset", 0.0) * sr)
-            vo[off:off + len(v)] = v[:max(0, n - off)]
-            env = cv2.blur(np.abs(vo).reshape(1, -1), (int(0.3 * sr), 1)).ravel()
-            duck = 1 - 0.6 * np.clip(env * 8, 0, 1)
-            mix = out * 0.6 + pad * fade * duck + vo * 0.95
         peak = np.max(np.abs(mix)) + 1e-9
         mix = (mix / peak * 0.89).astype(np.float32)
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "f32le", "-ar", str(sr), "-ac", "1", "-i", "-",
@@ -502,7 +491,6 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("spec")
     ap.add_argument("out")
-    ap.add_argument("--voice")
     ap.add_argument("--preview", action="store_true")
     a = ap.parse_args()
     spec = json.load(open(a.spec))
@@ -510,7 +498,7 @@ def main():
     tmp_v = a.out + ".video.mp4"
     tmp_a = a.out + ".audio.wav"
     reel.render_frames(tmp_v, preview=a.preview)
-    reel.render_audio(tmp_a, voice=a.voice)
+    reel.render_audio(tmp_a)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", tmp_v, "-i", tmp_a, "-c:v", "copy", "-c:a", "aac",
                     "-b:a", "192k", "-ar", "48000", "-shortest", "-movflags", "+faststart", a.out], check=True)
     os.remove(tmp_v); os.remove(tmp_a)
