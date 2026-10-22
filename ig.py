@@ -69,11 +69,43 @@ def cmd_publish(spec_path, video_url):
 METRICS = ["views", "reach", "likes", "comments", "shares", "saved", "total_interactions",
            "ig_reels_avg_watch_time", "ig_reels_video_view_total_time"]
 
+def link_manual_posts():
+    """Specs posted by hand have "posted": {"manual": true} and no media_id. Match each to the
+    earliest unclaimed reel on the account published on/after the spec's date, and record it."""
+    specs = []
+    claimed = set()
+    for sp in sorted(glob.glob("scripts/posted/*.json")):
+        s = json.load(open(sp))
+        mid = (s.get("posted") or {}).get("media_id")
+        if mid:
+            claimed.add(mid)
+        elif (s.get("posted") or {}).get("manual"):
+            specs.append((sp, s))
+    if not specs:
+        return
+    media = call("GET", f"{user_id()}/media", fields="id,media_type,media_product_type,permalink,timestamp",
+                 limit=50).get("data", [])
+    reels = sorted([m for m in media if m.get("media_product_type") == "REELS" or m.get("media_type") == "VIDEO"],
+                   key=lambda m: m["timestamp"])
+    for sp, s in specs:
+        day = s["id"][:10]
+        for m in reels:
+            if m["id"] in claimed or m["timestamp"][:10] < day:
+                continue
+            s["posted"].update({"media_id": m["id"], "permalink": m.get("permalink"), "timestamp": m["timestamp"]})
+            claimed.add(m["id"])
+            json.dump(s, open(sp, "w"), indent=1, ensure_ascii=False)
+            print("linked manual post", s["id"], "->", m.get("permalink"))
+            break
+        else:
+            print("no matching reel yet for manual post", s["id"])
+
 def cmd_insights():
     os.makedirs("data", exist_ok=True)
     path = "data/insights.json"
     db = json.load(open(path)) if os.path.exists(path) else {}
     now = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="minutes")
+    link_manual_posts()
     for sp in sorted(glob.glob("scripts/posted/*.json")):
         spec = json.load(open(sp))
         mid = (spec.get("posted") or {}).get("media_id")
