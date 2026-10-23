@@ -17,6 +17,12 @@
    "followers_count": 7,
    "media_count": 3,
    "id": "28194897960187724"
+  },
+  {
+   "fetched": "2026-10-23T07:46+00:00",
+   "followers_count": 8,
+   "media_count": 3,
+   "id": "28194897960187724"
   }
  ],
  "2026-10-22-exponential-growth": {
@@ -38,19 +44,31 @@
     "total_interactions": 20,
     "ig_reels_avg_watch_time": 6346,
     "ig_reels_video_view_total_time": 755183
+   },
+   {
+    "fetched": "2026-10-23T07:46+00:00",
+    "views": 202,
+    "reach": 176,
+    "likes": 8,
+    "comments": 0,
+    "shares": 0,
+    "saved": 6,
+    "total_interactions": 20,
+    "ig_reels_avg_watch_time": 5750,
+    "ig_reels_video_view_total_time": 1075373
    }
   ],
   "latest": {
-   "fetched": "2026-10-22T07:47+00:00",
-   "views": 132,
-   "reach": 111,
+   "fetched": "2026-10-23T07:46+00:00",
+   "views": 202,
+   "reach": 176,
    "likes": 8,
    "comments": 0,
    "shares": 0,
    "saved": 6,
    "total_interactions": 20,
-   "ig_reels_avg_watch_time": 6346,
-   "ig_reels_video_view_total_time": 755183
+   "ig_reels_avg_watch_time": 5750,
+   "ig_reels_video_view_total_time": 1075373
   }
  }
 }
