@@ -1,10 +1,11 @@
 name: Post reel to Instagram
 
-# Every day at 19:00 IST, posts the oldest queued reel that the founder has APPROVED
+# Every day at 12:00 IST and 19:00 IST, posts the oldest queued reel that the founder has APPROVED
 # ("approved": true in its spec) and whose post_after time has passed. Unapproved reels never post.
 # To pause all posting, add a file named PAUSED at the repo root (delete it to resume).
 on:
   schedule:
+    - cron: "30 6 * * *"    # 06:30 UTC = 12:00 IST
     - cron: "30 13 * * *"   # 13:30 UTC = 19:00 IST
   workflow_dispatch:
     inputs:

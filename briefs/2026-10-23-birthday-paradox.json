@@ -3,7 +3,7 @@
  "topic": "birthday paradox",
  "hook_type": "wrong-answer reveal",
  "format": "wrong-answer reveal",
- "post_after": "2026-10-23T13:00:00+00:00",
+ "post_after": "2026-10-23T06:00:00+00:00",
  "caption": "How many people before two share a birthday? Most people guess way too high 🎂\n\nThe trick: count pairs, not people. 23 people make 253 pairs, and that's already a 50% chance of a match.\n\nNo course. Just ask, and it draws + explains.\n\nFollow for one idea a day ✏️\n\n#birthdayparadox #probability #maths #learnoninstagram #brainteaser #selflearning",
  "hook": {"text": "Your guess is wrong.", "highlight": ["wrong."], "sub": "Birthday paradox.", "icon": "calendar"},
  "beats": [
