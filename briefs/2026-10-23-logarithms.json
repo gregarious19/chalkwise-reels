@@ -1,0 +1,33 @@
+{
+ "id": "2026-10-23-logarithms",
+ "topic": "logarithms",
+ "hook_type": "prerequisite wall",
+ "format": "step-by-step build",
+ "caption": "You don't need a maths degree to understand logarithms 🔢\n\nA log just counts the zeros. 1,000 has 3. A lakh has 5. A crore has 7.\n\nNo course. Just ask, and it draws + explains.\n\nFollow for one idea a day ✏️\n\n#logarithms #maths #studytips #learnoninstagram #selflearning #mathmadeeasy",
+ "hook": {"text": "You don't need calculus for logs.", "highlight": ["logs."], "sub": "Just count zeros.", "big": "log = ?"},
+ "beats": [
+  {"caption": "Count the zeros in 1,000.", "highlight": ["zeros"],
+   "show": [{"component": "formula", "text": "1,000", "at": [540, 800], "size": 110},
+            {"component": "formula", "text": "3 zeros", "at": [540, 1000], "size": 70, "mark": "3"}]},
+  {"caption": "3 zeros. So log of 1,000 is 3.", "highlight": ["is 3."],
+   "show": [{"component": "formula", "text": "log(1,000) = 3", "at": [540, 1250], "size": 66, "box": true}],
+   "clear_after": true},
+  {"caption": "1 lakh is 100,000. That's 5 zeros.", "highlight": ["5 zeros."],
+   "show": [{"component": "formula", "text": "1 lakh = 100,000", "at": [540, 800], "size": 64},
+            {"component": "formula", "text": "log = 5", "at": [540, 1000], "size": 90, "mark": "5"}],
+   "clear_after": true},
+  {"caption": "1 crore has 7 zeros. Log is 7.", "highlight": ["Log is 7."],
+   "show": [{"component": "formula", "text": "1 crore = 10,000,000", "at": [540, 800], "size": 60},
+            {"component": "formula", "text": "log = 7", "at": [540, 1000], "size": 90, "mark": "7"}],
+   "clear_after": true},
+  {"caption": "Giant numbers shrink into tiny ones.", "highlight": ["shrink"],
+   "show": [{"component": "bar_chart", "bars": [{"label": "1K", "value": 3}, {"label": "1 lakh", "value": 5}, {"label": "1 cr", "value": 7, "color": "red"}], "height": 450, "base": 1350, "x0": 200, "x1": 880}],
+   "clear_after": true},
+  {"caption": "Each +1 means 10 times bigger.", "highlight": ["10 times bigger."],
+   "show": [{"component": "formula", "text": "log +1  =  x10", "at": [540, 900], "size": 80, "mark": "x10", "box": true}],
+   "clear_after": true},
+  {"caption": "What is the log of 10 crore?", "highlight": ["10 crore?"],
+   "show": [{"component": "icon", "name": "question", "at": [540, 1000], "size": 140}]}
+ ],
+ "outro": {}
+}
