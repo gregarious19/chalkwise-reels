@@ -4,7 +4,7 @@
  "hook_type": "prerequisite wall",
  "format": "step-by-step build",
  "post_after": "2026-10-24T13:00:00+00:00",
- "approved": false,
+ "approved": true,
  "duration": 48.62,
  "caption": "You don't need a maths degree to understand logarithms 🔢\n\nA log just counts the zeros. 1,000 has 3. A lakh has 5. A crore has 7.\n\nNo course. Just ask, and it draws + explains.\n\nFollow for one idea a day ✏️\n\n#logarithms #maths #studytips #learnoninstagram #selflearning #mathmadeeasy",
  "brief": "briefs/2026-10-23-logarithms.json",
