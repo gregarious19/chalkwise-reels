@@ -1,0 +1,256 @@
+{
+ "id": "2026-10-23-birthday-paradox",
+ "topic": "birthday paradox",
+ "hook_type": "wrong-answer reveal",
+ "format": "wrong-answer reveal",
+ "post_after": "2026-10-23T13:00:00+00:00",
+ "approved": false,
+ "duration": 50.63,
+ "caption": "How many people before two share a birthday? Most people guess way too high 🎂\n\nThe trick: count pairs, not people. 23 people make 253 pairs, and that's already a 50% chance of a match.\n\nNo course. Just ask, and it draws + explains.\n\nFollow for one idea a day ✏️\n\n#birthdayparadox #probability #maths #learnoninstagram #brainteaser #selflearning",
+ "brief": "briefs/2026-10-23-birthday-paradox.json",
+ "events": [
+  {
+   "text": "Your guess is wrong.",
+   "highlight": [
+    "wrong."
+   ],
+   "sub": "Birthday paradox.",
+   "icon": "calendar",
+   "type": "use",
+   "component": "hook",
+   "t": 0
+  },
+  {
+   "component": "icon",
+   "name": "calendar",
+   "at": [
+    540,
+    900
+   ],
+   "size": 130,
+   "type": "use",
+   "t": 4.800000000000001
+  },
+  {
+   "component": "formula",
+   "text": "365 days",
+   "at": [
+    540,
+    1200
+   ],
+   "size": 70,
+   "type": "use",
+   "t": 6.214
+  },
+  {
+   "type": "caption",
+   "t": 4.4,
+   "text": "A room of strangers. 365 possible birthdays.",
+   "highlight": [
+    "365"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 8.610000000000001
+  },
+  {
+   "type": "clear",
+   "t": 8.610000000000001
+  },
+  {
+   "component": "reveal",
+   "wrong": "Gut: 183 people",
+   "right": "Truth: only 23",
+   "at": [
+    540,
+    900
+   ],
+   "size": 64,
+   "pause": 3.0,
+   "type": "use",
+   "t": 9.510000000000002
+  },
+  {
+   "type": "caption",
+   "t": 9.110000000000001,
+   "text": "How many for a 50% chance of a match?",
+   "highlight": [
+    "50%"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 17.12
+  },
+  {
+   "component": "formula",
+   "text": "365 / 2 = 182.5",
+   "at": [
+    540,
+    1250
+   ],
+   "size": 60,
+   "type": "use",
+   "t": 17.52
+  },
+  {
+   "type": "caption",
+   "t": 17.12,
+   "text": "Half of 365 feels right. It's not.",
+   "highlight": [
+    "It's not."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 21.330000000000002
+  },
+  {
+   "type": "clear",
+   "t": 21.330000000000002
+  },
+  {
+   "component": "formula",
+   "text": "23 people",
+   "at": [
+    540,
+    800
+   ],
+   "size": 80,
+   "type": "use",
+   "t": 22.23
+  },
+  {
+   "component": "formula",
+   "text": "= 253 pairs",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 80,
+   "mark": "253 pairs",
+   "box": true,
+   "type": "use",
+   "t": 23.04
+  },
+  {
+   "type": "caption",
+   "t": 21.830000000000002,
+   "text": "The trick: count pairs, not people.",
+   "highlight": [
+    "pairs,"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 25.93
+  },
+  {
+   "type": "clear",
+   "t": 25.93
+  },
+  {
+   "component": "formula",
+   "text": "253 chances",
+   "at": [
+    540,
+    900
+   ],
+   "size": 84,
+   "mark": "253",
+   "type": "use",
+   "t": 26.83
+  },
+  {
+   "component": "icon",
+   "name": "dice",
+   "at": [
+    540,
+    1200
+   ],
+   "size": 90,
+   "color": "blue",
+   "type": "use",
+   "t": 27.819999999999997
+  },
+  {
+   "type": "caption",
+   "t": 26.43,
+   "text": "Every pair is a chance to match.",
+   "highlight": [
+    "chance to match."
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 30.28
+  },
+  {
+   "type": "clear",
+   "t": 30.28
+  },
+  {
+   "component": "formula",
+   "text": "23 people: 51%",
+   "at": [
+    540,
+    800
+   ],
+   "size": 70,
+   "type": "use",
+   "t": 31.18
+  },
+  {
+   "component": "formula",
+   "text": "30 people: 71%",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 70,
+   "mark": "71%",
+   "type": "use",
+   "t": 32.44
+  },
+  {
+   "type": "caption",
+   "t": 30.78,
+   "text": "23 people: 51%. 30 people: 71%.",
+   "highlight": [
+    "51%.",
+    "71%."
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 35.04
+  },
+  {
+   "type": "clear",
+   "t": 35.04
+  },
+  {
+   "component": "icon",
+   "name": "question",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 140,
+   "type": "use",
+   "t": 35.94
+  },
+  {
+   "type": "caption",
+   "t": 35.54,
+   "text": "Would you bet on a match in 30?",
+   "highlight": [
+    "30?"
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 40.18
+  },
+  {
+   "type": "use",
+   "component": "outro",
+   "t": 40.63,
+   "until": 50.63
+  }
+ ]
+}
