@@ -1,0 +1,420 @@
+{
+ "id": "2026-10-24-why-ice-floats",
+ "topic": "why ice floats",
+ "hook_type": "everyday mystery",
+ "format": "everyday object",
+ "post_after": "2026-10-24T15:00:00+05:30",
+ "approved": true,
+ "duration": 53.32,
+ "caption": "Why does ice float in your nimbu paani? 🧊\n\nIt's not magic. Freezing makes water take up more room, so the same weight gets lighter per cup.\n\nNo course. Just ask, and it draws + explains.\n\nFollow for one idea a day ✏️\n\n#physics #science #icefloats #studytips #learnoninstagram #selflearning",
+ "brief": "briefs/2026-10-24-why-ice-floats.json",
+ "events": [
+  {
+   "text": "Why does ice float in your drink?",
+   "highlight": [
+    "ice float"
+   ],
+   "sub": "Most solids sink.",
+   "big": "ice?",
+   "type": "use",
+   "component": "hook",
+   "t": 0
+  },
+  {
+   "component": "formula",
+   "text": "lighter = floats",
+   "at": [
+    540,
+    800
+   ],
+   "size": 70,
+   "mark": "floats",
+   "type": "use",
+   "t": 6.15
+  },
+  {
+   "component": "formula",
+   "text": "heavier = sinks",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 70,
+   "mark": "sinks",
+   "type": "use",
+   "t": 7.59
+  },
+  {
+   "type": "caption",
+   "t": 5.75,
+   "text": "Lighter than water floats. Heavier sinks.",
+   "highlight": [
+    "Lighter",
+    "Heavier"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 10.139999999999999
+  },
+  {
+   "type": "clear",
+   "t": 10.139999999999999
+  },
+  {
+   "component": "bar_chart",
+   "bars": [
+    {
+     "label": "water",
+     "value": 100,
+     "color": "blue"
+    },
+    {
+     "label": "ice",
+     "value": 92,
+     "color": "red"
+    }
+   ],
+   "height": 520,
+   "base": 1350,
+   "x0": 220,
+   "x1": 860,
+   "type": "use",
+   "t": 11.04
+  },
+  {
+   "type": "caption",
+   "t": 10.639999999999999,
+   "text": "Same cup size: water weighs 100. Ice weighs 92.",
+   "highlight": [
+    "Ice weighs 92."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 16.189999999999998
+  },
+  {
+   "type": "clear",
+   "t": 16.189999999999998
+  },
+  {
+   "component": "icon",
+   "name": "question",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 140,
+   "type": "use",
+   "t": 17.089999999999996
+  },
+  {
+   "type": "caption",
+   "t": 16.689999999999998,
+   "text": "So ice is lighter. Why?",
+   "highlight": [
+    "Why?"
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 19.439999999999998
+  },
+  {
+   "type": "clear",
+   "t": 19.439999999999998
+  },
+  {
+   "component": "formula",
+   "text": "1000 ml water",
+   "at": [
+    540,
+    800
+   ],
+   "size": 70,
+   "type": "use",
+   "t": 20.339999999999996
+  },
+  {
+   "component": "formula",
+   "text": "freezes into",
+   "at": [
+    540,
+    940
+   ],
+   "size": 56,
+   "type": "use",
+   "t": 21.509999999999998
+  },
+  {
+   "component": "formula",
+   "text": "~1090 ml ice",
+   "at": [
+    540,
+    1100
+   ],
+   "size": 80,
+   "mark": "~1090",
+   "box": true,
+   "type": "use",
+   "t": 22.589999999999996
+  },
+  {
+   "type": "caption",
+   "t": 19.939999999999998,
+   "text": "Freezing makes water take up more room.",
+   "highlight": [
+    "more room."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 25.569999999999997
+  },
+  {
+   "type": "clear",
+   "t": 25.569999999999997
+  },
+  {
+   "type": "write",
+   "text": "water",
+   "x": 300,
+   "y": 700,
+   "size": 60,
+   "color": "blue",
+   "align": "center",
+   "t": 26.469999999999995
+  },
+  {
+   "type": "write",
+   "text": "ice",
+   "x": 780,
+   "y": 700,
+   "size": 60,
+   "color": "red",
+   "align": "center",
+   "t": 26.969999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    250,
+    900
+   ],
+   "r": 28,
+   "color": "blue",
+   "t": 27.469999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    310,
+    900
+   ],
+   "r": 28,
+   "color": "blue",
+   "t": 27.469999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    370,
+    900
+   ],
+   "r": 28,
+   "color": "blue",
+   "t": 27.469999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    250,
+    960
+   ],
+   "r": 28,
+   "color": "blue",
+   "t": 27.469999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    310,
+    960
+   ],
+   "r": 28,
+   "color": "blue",
+   "t": 27.469999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    370,
+    960
+   ],
+   "r": 28,
+   "color": "blue",
+   "t": 27.469999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    250,
+    1020
+   ],
+   "r": 28,
+   "color": "blue",
+   "t": 27.469999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    310,
+    1020
+   ],
+   "r": 28,
+   "color": "blue",
+   "t": 27.469999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    370,
+    1020
+   ],
+   "r": 28,
+   "color": "blue",
+   "t": 27.469999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    680,
+    880
+   ],
+   "r": 28,
+   "color": "red",
+   "t": 27.719999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    880,
+    880
+   ],
+   "r": 28,
+   "color": "red",
+   "t": 27.719999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    630,
+    1020
+   ],
+   "r": 28,
+   "color": "red",
+   "t": 27.719999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    930,
+    1020
+   ],
+   "r": 28,
+   "color": "red",
+   "t": 27.719999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    680,
+    1160
+   ],
+   "r": 28,
+   "color": "red",
+   "t": 27.719999999999995
+  },
+  {
+   "type": "dot",
+   "c": [
+    880,
+    1160
+   ],
+   "r": 28,
+   "color": "red",
+   "t": 27.719999999999995
+  },
+  {
+   "type": "caption",
+   "t": 26.069999999999997,
+   "text": "Its molecules lock into an open pattern with gaps.",
+   "highlight": [
+    "gaps."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 31.019999999999996
+  },
+  {
+   "type": "clear",
+   "t": 31.019999999999996
+  },
+  {
+   "component": "flow",
+   "items": [
+    "more room",
+    "less packed",
+    "ice floats"
+   ],
+   "at": [
+    540,
+    800
+   ],
+   "gap": 230,
+   "box_w": 600,
+   "type": "use",
+   "t": 31.919999999999995
+  },
+  {
+   "type": "caption",
+   "t": 31.519999999999996,
+   "text": "More room, same weight. Less packed. Floats.",
+   "highlight": [
+    "Floats."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 37.97
+  },
+  {
+   "type": "clear",
+   "t": 37.97
+  },
+  {
+   "component": "icon",
+   "name": "question",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 140,
+   "type": "use",
+   "t": 38.87
+  },
+  {
+   "type": "caption",
+   "t": 38.47,
+   "text": "If ice sank, what would happen to lakes?",
+   "highlight": [
+    "lakes?"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 42.87
+  },
+  {
+   "type": "use",
+   "component": "outro",
+   "t": 43.32,
+   "until": 53.32
+  }
+ ]
+}
