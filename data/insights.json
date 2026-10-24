@@ -23,6 +23,12 @@
    "followers_count": 8,
    "media_count": 3,
    "id": "28194897960187724"
+  },
+  {
+   "fetched": "2026-10-24T07:28+00:00",
+   "followers_count": 8,
+   "media_count": 4,
+   "id": "28194897960187724"
   }
  ],
  "2026-10-22-exponential-growth": {
@@ -56,19 +62,65 @@
     "total_interactions": 20,
     "ig_reels_avg_watch_time": 5750,
     "ig_reels_video_view_total_time": 1075373
+   },
+   {
+    "fetched": "2026-10-24T07:28+00:00",
+    "views": 203,
+    "reach": 177,
+    "likes": 8,
+    "comments": 0,
+    "shares": 0,
+    "saved": 6,
+    "total_interactions": 20,
+    "ig_reels_avg_watch_time": 5727,
+    "ig_reels_video_view_total_time": 1076781
    }
   ],
   "latest": {
-   "fetched": "2026-10-23T07:46+00:00",
-   "views": 202,
-   "reach": 176,
+   "fetched": "2026-10-24T07:28+00:00",
+   "views": 203,
+   "reach": 177,
    "likes": 8,
    "comments": 0,
    "shares": 0,
    "saved": 6,
    "total_interactions": 20,
-   "ig_reels_avg_watch_time": 5750,
-   "ig_reels_video_view_total_time": 1075373
+   "ig_reels_avg_watch_time": 5727,
+   "ig_reels_video_view_total_time": 1076781
+  }
+ },
+ "2026-10-23-birthday-paradox": {
+  "topic": "birthday paradox",
+  "hook_type": "wrong-answer reveal",
+  "hook": "Your guess is wrong.",
+  "duration": 50.63,
+  "posted": "2026-10-23T11:53:34+0000",
+  "permalink": "https://www.instagram.com/reel/De1fqBVleRa/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-24T07:28+00:00",
+    "views": 236,
+    "reach": 195,
+    "likes": 9,
+    "comments": 0,
+    "shares": 1,
+    "saved": 3,
+    "total_interactions": 18,
+    "ig_reels_avg_watch_time": 6053,
+    "ig_reels_video_view_total_time": 1271227
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-24T07:28+00:00",
+   "views": 236,
+   "reach": 195,
+   "likes": 9,
+   "comments": 0,
+   "shares": 1,
+   "saved": 3,
+   "total_interactions": 18,
+   "ig_reels_avg_watch_time": 6053,
+   "ig_reels_video_view_total_time": 1271227
   }
  }
 }
