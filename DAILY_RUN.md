@@ -11,8 +11,10 @@ Work fast: the 11:00 reel must be pushed and approved by about 10:30 so GitHub c
 
 ## 1. Read (5 min)
 
-Read `CONTENT_PLAYBOOK.md`, `BRIEF_FORMAT.md`, `LIBRARY.md`, `LEARNINGS.md` and `FEEDBACK.md`.
-FEEDBACK.md is the founder's word: it outranks everything else.
+Read `STRATEGY.md` first, then `CONTENT_PLAYBOOK.md`, `BRIEF_FORMAT.md`, `LIBRARY.md`, `LEARNINGS.md` and `FEEDBACK.md`.
+FEEDBACK.md is the founder's word: it outranks everything else. STRATEGY.md is rewritten every morning by the
+strategy review from the latest numbers: follow its engagement rules and its instructions for today's themes,
+formats, lengths and slots. Where it conflicts with CONTENT_PLAYBOOK.md, STRATEGY.md wins (it is newer).
 
 ## 2. Analyze
 
@@ -33,8 +35,8 @@ Never invent numbers: copy them from analyze.py.
 ## 4. Plan today's 4 reels
 
 Use analyze.py's "Plan for today's 4 reels": it gives one line per slot (11, 15, 19, 23) saying which hook to use,
-based on how past reels performed. Follow it. Pick 4 different topics from the playbook's topic bank, none in the
-"don't repeat" list.
+based on how past reels performed. Follow it for hooks. Pick themes, formats and lengths as STRATEGY.md says, and 4
+different topics, none in the "don't repeat" list. Add each new topic to `data/themes.json` with its theme.
 
 Skip a slot only if a reel for that slot today is already in the queue (`approve.py list`).
 
