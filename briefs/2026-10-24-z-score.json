@@ -1,0 +1,216 @@
+{
+ "id": "2026-10-24-z-score",
+ "topic": "z-score",
+ "hook_type": "prerequisite wall",
+ "format": "two-friends comparison",
+ "caption": "You don't need a stats course to compare 90 marks with 160 marks \ud83d\udcca\n\nRiya scored 90. Arjun scored 160. Different exams, different scales. A z-score counts how many 'typical steps' you are above average.\n\nNo course. Just ask, and it draws + explains.\n\nFollow for one idea a day \u270f\ufe0f\n\n#zscore #statistics #studytips #learnoninstagram #selflearning #mathmadeeasy",
+ "hook": {
+  "text": "Compare 90 marks with 160 marks.",
+  "highlight": [
+   "90 marks",
+   "160 marks."
+  ],
+  "sub": "No stats course needed.",
+  "big": "z = ?"
+ },
+ "beats": [
+  {
+   "caption": "Riya scored 90. Arjun scored 160.",
+   "highlight": [
+    "90.",
+    "160."
+   ],
+   "show": [
+    {
+     "component": "person",
+     "at": [
+      300,
+      1050
+     ],
+     "size": 260,
+     "label": "Riya",
+     "label_color": "blue",
+     "mood": "happy"
+    },
+    {
+     "component": "person",
+     "at": [
+      780,
+      1050
+     ],
+     "size": 260,
+     "label": "Arjun",
+     "label_color": "orange",
+     "mood": "happy"
+    },
+    {
+     "type": "write",
+     "text": "90",
+     "x": 245,
+     "y": 1250,
+     "size": 90,
+     "color": "blue"
+    },
+    {
+     "type": "write",
+     "text": "160",
+     "x": 700,
+     "y": 1250,
+     "size": 90,
+     "color": "orange"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Riya's exam: average 70. Typical gap 10.",
+   "highlight": [
+    "average 70.",
+    "gap 10."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "Riya: avg 70, gap 10",
+     "at": [
+      540,
+      800
+     ],
+     "size": 60,
+     "mark": "avg 70"
+    },
+    {
+     "component": "formula",
+     "text": "90 - 70 = 20 above",
+     "at": [
+      540,
+      1000
+     ],
+     "size": 60
+    }
+   ]
+  },
+  {
+   "caption": "20 above, in steps of 10: that's 2 steps.",
+   "highlight": [
+    "2 steps."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "20 / 10 = 2 steps",
+     "at": [
+      540,
+      1200
+     ],
+     "size": 66,
+     "box": true,
+     "box_color": "blue"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Arjun's exam: average 100. Typical gap 40.",
+   "highlight": [
+    "average 100.",
+    "gap 40."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "Arjun: avg 100, gap 40",
+     "at": [
+      540,
+      800
+     ],
+     "size": 60,
+     "mark": "avg 100"
+    },
+    {
+     "component": "formula",
+     "text": "160 - 100 = 60 above",
+     "at": [
+      540,
+      1000
+     ],
+     "size": 60
+    }
+   ]
+  },
+  {
+   "caption": "60 above, in steps of 40: 1.5 steps.",
+   "highlight": [
+    "1.5 steps."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "60 / 40 = 1.5 steps",
+     "at": [
+      540,
+      1200
+     ],
+     "size": 66,
+     "box": true,
+     "box_color": "orange"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Steps above average = z-score. Riya wins.",
+   "highlight": [
+    "z-score."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "z = steps above average",
+     "at": [
+      540,
+      800
+     ],
+     "size": 56,
+     "mark": "z",
+     "box": true
+    },
+    {
+     "type": "write",
+     "text": "Riya z = 2",
+     "x": 220,
+     "y": 1050,
+     "size": 70,
+     "color": "blue"
+    },
+    {
+     "type": "write",
+     "text": "Arjun z = 1.5",
+     "x": 220,
+     "y": 1170,
+     "size": 70,
+     "color": "orange"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Which of your marks has the best z-score?",
+   "highlight": [
+    "best z-score?"
+   ],
+   "show": [
+    {
+     "component": "icon",
+     "name": "question",
+     "at": [
+      540,
+      1000
+     ],
+     "size": 140
+    }
+   ]
+  }
+ ],
+ "outro": {}
+}
