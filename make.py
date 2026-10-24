@@ -3,6 +3,7 @@
 
     python3 make.py briefs/<id>.json            build, check, render, contact sheet
     python3 make.py briefs/<id>.json --no-render  build and check only (fast)
+    python3 make.py briefs/<id>.json --slot 15    post today at 15:00 IST (slots: 11, 15, 19, 23)
 
 A brief holds only content (see BRIEF_FORMAT.md). This script works out every start time and
 duration from the reading-pace rules, writes scripts/queue/<id>.json, checks layout, pacing,
@@ -20,6 +21,27 @@ OUTRO_LEN = 10.0
 ITEM_LEAD = 0.4          # caption appears this long before the first drawing of a beat
 MIN_DUR, MAX_DUR = 30, 60
 BANNED = ["download now", "try it now", "try it today", "available now", "sign up now", "cure", "treat", "diagnos"]
+
+
+IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
+SLOTS = (11, 15, 19, 23)  # posting times, IST. Must match the crons in .github/workflows/post.yml
+
+
+def slot_time(hour):
+    """Today's posting slot at <hour>:00 IST, as an ISO string."""
+    d = datetime.datetime.now(IST).date()
+    return datetime.datetime(d.year, d.month, d.day, hour, tzinfo=IST).isoformat()
+
+
+def next_slot():
+    """The next posting slot that hasn't started yet (today, or tomorrow's first)."""
+    now = datetime.datetime.now(IST)
+    for h in SLOTS:
+        t = now.replace(hour=h, minute=0, second=0, microsecond=0)
+        if t > now:
+            return t.isoformat()
+    t = (now + datetime.timedelta(days=1)).replace(hour=SLOTS[0], minute=0, second=0, microsecond=0)
+    return t.isoformat()
 
 
 def default_dur(e):
@@ -82,9 +104,8 @@ def build(brief):
     outro.update({"type": "use", "component": "outro", "t": o_start, "until": o_start + OUTRO_LEN})
     ev.append(outro)
     duration = round(o_start + OUTRO_LEN, 2)
-    tomorrow = (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=1)).date()
     spec = {"id": brief["id"], "topic": brief["topic"], "hook_type": brief["hook_type"], "format": brief["format"],
-            "post_after": brief.get("post_after", f"{tomorrow}T13:00:00+00:00"), "approved": False,
+            "post_after": brief.get("post_after") or next_slot(), "approved": False,
             "duration": duration, "caption": brief["caption"], "brief": f"briefs/{brief['id']}.json", "events": ev}
     return spec
 
@@ -182,8 +203,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("brief")
     ap.add_argument("--no-render", action="store_true")
+    ap.add_argument("--slot", type=int, choices=SLOTS, help="post today at this hour IST (11, 15, 19 or 23)")
     a = ap.parse_args()
     brief = json.load(open(a.brief))
+    if a.slot:
+        brief["post_after"] = slot_time(a.slot)
     for k in ("id", "topic", "hook_type", "format", "caption", "hook", "beats"):
         if k not in brief:
             raise SystemExit(f"FAIL: brief is missing {k!r} (see BRIEF_FORMAT.md)")

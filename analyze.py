@@ -4,15 +4,24 @@
     python3 analyze.py
 
 Reads data/insights.json and scripts/posted/*.json. For each posted reel: views, hold rate,
-share+save rate, comment rate. Then averages per hook_type, format and length bucket (only reels
-at least 48 h old count toward averages), and a suggestion for today's reel per the 70/30 rule
-in CONTENT_PLAYBOOK.md.
+share+save rate, comment rate. Then averages per hook_type, format, length bucket and posting slot
+(only reels at least 48 h old count toward averages), and a plan for today's 4 reels (one per slot)
+per the 70/30 rule in CONTENT_PLAYBOOK.md: 3 use the best hook so far, 1 explores.
 """
 import datetime, glob, json, os, random
 
 HOOKS = ["speed promise", "course pain", "prerequisite wall", "everyday mystery", "myth bust",
          "wrong-answer reveal", "curiosity jump"]
 MIN_PER_VARIANT = 3
+SLOTS = (11, 15, 19, 23)  # IST posting hours; must match make.py and post.yml
+IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
+
+
+def slot_of(ts):
+    """Posting slot (IST hour) a reel went out in: the latest slot at or before its post time."""
+    h = ts.astimezone(IST).hour
+    past = [x for x in SLOTS if x <= h]
+    return f"{past[-1] if past else SLOTS[-1]}:00"
 
 
 def load():
@@ -24,10 +33,12 @@ def load():
         rec = db.get(s["id"], {})
         lat = rec.get("latest", {})
         ts = (s.get("posted") or {}).get("timestamp")
-        age_h = None
+        age_h, slot = None, None
         if ts:
             try:
-                age_h = (now - datetime.datetime.fromisoformat(ts.replace("+0000", "+00:00"))).total_seconds() / 3600
+                t = datetime.datetime.fromisoformat(ts.replace("+0000", "+00:00"))
+                age_h = (now - t).total_seconds() / 3600
+                slot = slot_of(t)
             except ValueError:
                 pass
         reach = lat.get("reach") or 0
@@ -36,7 +47,7 @@ def load():
         rows.append({
             "id": s["id"], "topic": s.get("topic"), "hook_type": s.get("hook_type"), "format": s.get("format"),
             "duration": dur, "len_bucket": "30-39s" if dur < 40 else ("40-49s" if dur < 50 else "50s+"),
-            "age_h": age_h, "views": lat.get("views"), "reach": reach,
+            "age_h": age_h, "slot": slot, "views": lat.get("views"), "reach": reach,
             "hold": (awt / 1000 / dur) if (awt and dur) else None,
             "share_save": ((lat.get("shares") or 0) + (lat.get("saved") or 0)) / reach if reach else None,
             "comment": (lat.get("comments") or 0) / reach if reach else None,
@@ -78,7 +89,7 @@ def main():
     mature = [r for r in rows if r["has_data"] and (r["age_h"] or 0) >= 48 and r["hold"] is not None]
     print(f"## Averages (reels at least 48 h old: {len(mature)})\n")
     best = {}
-    for key in ("hook_type", "format", "len_bucket"):
+    for key in ("hook_type", "format", "len_bucket", "slot"):
         groups = {}
         for r in mature:
             groups.setdefault(r[key], []).append(r)
@@ -99,20 +110,30 @@ def main():
     if not mature:
         print("Not enough data yet (reels need 48 h).\n")
 
-    print("## Suggestion for today\n")
-    recent_topics = [r["topic"] for r in rows[-14:]]
+    print("## Plan for today's 4 reels\n")
+    recent_topics = [r["topic"] for r in rows[-28:]]
     counts = {h: sum(1 for r in rows if r["hook_type"] == h) for h in HOOKS}
-    if "hook_type" in best and random.Random(datetime.date.today().toordinal()).random() < 0.7:
-        print(f"- EXPLOIT (70%): use the best hook so far: **{best['hook_type']}**"
-              + (f", format **{best['format']}**" if "format" in best else "")
-              + (f", length **{best['len_bucket']}**" if "len_bucket" in best else "") + ".")
-        print("- Change one thing only: the topic.")
-    else:
-        least = min(HOOKS, key=lambda h: (counts[h], HOOKS.index(h)))
-        print(f"- EXPLORE: try hook **{least}** (used {counts[least]} times so far)."
-              + (f" Keep the best format so far: **{best['format']}**." if "format" in best else ""))
-    print(f"- Don't repeat these recent topics: {', '.join(t for t in recent_topics if t) or 'none'}.")
-
+    explore = sorted(HOOKS, key=lambda h: (counts[h], HOOKS.index(h)))  # least-used hooks first
+    keep = (f", format **{best['format']}**" if "format" in best else "") + \
+           (f", length **{best['len_bucket']}**" if "len_bucket" in best else "")
+    day = datetime.date.today().toordinal()
+    explore_slot = SLOTS[day % len(SLOTS)]  # rotate so no slot always gets the experiment
+    plan = []
+    for h in SLOTS:
+        if "hook_type" in best and h != explore_slot:
+            plan.append(f"- **{h}:00 IST** — EXPLOIT: hook **{best['hook_type']}**{keep}. Change only the topic.")
+        else:
+            hook = explore.pop(0)
+            if "hook_type" in best and hook == best["hook_type"]:
+                hook = explore.pop(0)
+            plan.append(f"- **{h}:00 IST** — EXPLORE: try hook **{hook}** (used {counts[hook]} times so far)"
+                        + (f"; keep format **{best['format']}**" if "format" in best else "") + ".")
+    print("\n".join(plan))
+    if "hook_type" not in best:
+        print("\n(No hook has 3+ mature reels yet, so all 4 explore different hooks.)")
+    if "slot" in best:
+        print(f"\nBest posting slot so far: **{best['slot']}** IST.")
+    print(f"\n- 4 different topics today. Don't repeat these recent topics: {', '.join(t for t in recent_topics if t) or 'none'}.")
 
 if __name__ == "__main__":
     main()
