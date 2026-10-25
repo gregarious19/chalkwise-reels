@@ -1,0 +1,199 @@
+{
+ "id": "2026-10-25-entropy",
+ "topic": "entropy",
+ "hook_type": "everyday mystery",
+ "format": "everyday object",
+ "caption": "Ice melting in your chai: entropy up or down? Comment your pick 👇\n\nEntropy sounds scary. It's just counting: how many ways can things be arranged? Tidy has 1 way. Mess has billions. So mess wins.\n\nSave this for your next physics exam.\n\nFollow for one idea a day ✏️\n\n#entropy #physics #thermodynamics #sciencemadesimple #studytips",
+ "hook": {
+  "text": "Why your room never tidies itself.",
+  "highlight": [
+   "never"
+  ],
+  "sub": "Entropy. Just counting.",
+  "big": "S = ?"
+ },
+ "beats": [
+  {
+   "caption": "4 coins. All heads? Only 1 way.",
+   "highlight": [
+    "Only 1 way."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "HHHH  =  1 way",
+     "at": [
+      540,
+      720
+     ],
+     "size": 70,
+     "mark": "1 way"
+    }
+   ]
+  },
+  {
+   "caption": "2 heads, 2 tails? 6 ways.",
+   "highlight": [
+    "6 ways."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "HHTT  HTHT  HTTH",
+     "at": [
+      540,
+      900
+     ],
+     "size": 60
+    },
+    {
+     "component": "formula",
+     "text": "THHT  THTH  TTHH",
+     "at": [
+      540,
+      1000
+     ],
+     "size": 60,
+     "with_previous": false
+    },
+    {
+     "component": "formula",
+     "text": "=  6 ways",
+     "at": [
+      540,
+      1140
+     ],
+     "size": 70,
+     "mark": "6 ways"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "100 coins, half heads: 10^29 ways.",
+   "highlight": [
+    "10^29 ways."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "all heads:  1 way",
+     "at": [
+      540,
+      760
+     ],
+     "size": 64
+    },
+    {
+     "component": "formula",
+     "text": "50/50:  ~10^29 ways",
+     "at": [
+      540,
+      940
+     ],
+     "size": 62,
+     "box": true,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "caption": "Shake them. Mixed wins, almost every time.",
+   "highlight": [
+    "Mixed wins,"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "not a force. just odds.",
+     "at": [
+      540,
+      1200
+     ],
+     "size": 60,
+     "mark": "just odds."
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Entropy = how many ways things can be arranged.",
+   "highlight": [
+    "how many ways"
+   ],
+   "show": [
+    {
+     "component": "flow",
+     "items": [
+      "few ways (tidy)",
+      "many ways (mess)"
+     ],
+     "at": [
+      540,
+      760
+     ],
+     "gap": 260,
+     "box_w": 640
+    },
+    {
+     "component": "formula",
+     "text": "nature drifts to more ways",
+     "at": [
+      540,
+      1180
+     ],
+     "size": 56,
+     "mark": "more ways"
+    }
+   ]
+  },
+  {
+   "caption": "Real physics counts molecules, not coins.",
+   "highlight": [
+    "molecules,"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "S = k log(ways)",
+     "at": [
+      540,
+      1370
+     ],
+     "size": 64,
+     "color": "blue",
+     "box": true
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Ice melting in chai: entropy up or down?",
+   "highlight": [
+    "up or down?"
+   ],
+   "show": [
+    {
+     "component": "icon",
+     "name": "chai",
+     "at": [
+      540,
+      900
+     ],
+     "size": 130
+    },
+    {
+     "component": "formula",
+     "text": "UP or DOWN? comment",
+     "at": [
+      540,
+      1200
+     ],
+     "size": 56,
+     "color": "blue"
+    }
+   ]
+  }
+ ],
+ "outro": {}
+}

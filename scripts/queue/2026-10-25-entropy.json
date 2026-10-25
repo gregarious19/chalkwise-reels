@@ -1,0 +1,264 @@
+{
+ "id": "2026-10-25-entropy",
+ "topic": "entropy",
+ "hook_type": "everyday mystery",
+ "format": "everyday object",
+ "post_after": "2026-10-25T17:00:00+05:30",
+ "approved": true,
+ "duration": 51.83,
+ "caption": "Ice melting in your chai: entropy up or down? Comment your pick 👇\n\nEntropy sounds scary. It's just counting: how many ways can things be arranged? Tidy has 1 way. Mess has billions. So mess wins.\n\nSave this for your next physics exam.\n\nFollow for one idea a day ✏️\n\n#entropy #physics #thermodynamics #sciencemadesimple #studytips",
+ "brief": "briefs/2026-10-25-entropy.json",
+ "events": [
+  {
+   "text": "Why your room never tidies itself.",
+   "highlight": [
+    "never"
+   ],
+   "sub": "Entropy. Just counting.",
+   "big": "S = ?",
+   "type": "use",
+   "component": "hook",
+   "t": 0
+  },
+  {
+   "component": "formula",
+   "text": "HHHH  =  1 way",
+   "at": [
+    540,
+    720
+   ],
+   "size": 70,
+   "mark": "1 way",
+   "type": "use",
+   "t": 5.6000000000000005
+  },
+  {
+   "type": "caption",
+   "t": 5.2,
+   "text": "4 coins. All heads? Only 1 way.",
+   "highlight": [
+    "Only 1 way."
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 9.290000000000001
+  },
+  {
+   "component": "formula",
+   "text": "HHTT  HTHT  HTTH",
+   "at": [
+    540,
+    900
+   ],
+   "size": 60,
+   "type": "use",
+   "t": 9.690000000000001
+  },
+  {
+   "component": "formula",
+   "text": "THHT  THTH  TTHH",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 60,
+   "type": "use",
+   "t": 11.13
+  },
+  {
+   "component": "formula",
+   "text": "=  6 ways",
+   "at": [
+    540,
+    1140
+   ],
+   "size": 70,
+   "mark": "6 ways",
+   "type": "use",
+   "t": 12.57
+  },
+  {
+   "type": "caption",
+   "t": 9.290000000000001,
+   "text": "2 heads, 2 tails? 6 ways.",
+   "highlight": [
+    "6 ways."
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 14.58
+  },
+  {
+   "type": "clear",
+   "t": 14.58
+  },
+  {
+   "component": "formula",
+   "text": "all heads:  1 way",
+   "at": [
+    540,
+    760
+   ],
+   "size": 64,
+   "type": "use",
+   "t": 15.48
+  },
+  {
+   "component": "formula",
+   "text": "50/50:  ~10^29 ways",
+   "at": [
+    540,
+    940
+   ],
+   "size": 62,
+   "box": true,
+   "color": "red",
+   "type": "use",
+   "t": 17.01
+  },
+  {
+   "type": "caption",
+   "t": 15.08,
+   "text": "100 coins, half heads: 10^29 ways.",
+   "highlight": [
+    "10^29 ways."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 20.620000000000005
+  },
+  {
+   "component": "formula",
+   "text": "not a force. just odds.",
+   "at": [
+    540,
+    1200
+   ],
+   "size": 60,
+   "mark": "just odds.",
+   "type": "use",
+   "t": 21.020000000000003
+  },
+  {
+   "type": "caption",
+   "t": 20.620000000000005,
+   "text": "Shake them. Mixed wins, almost every time.",
+   "highlight": [
+    "Mixed wins,"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 24.470000000000006
+  },
+  {
+   "type": "clear",
+   "t": 24.470000000000006
+  },
+  {
+   "component": "flow",
+   "items": [
+    "few ways (tidy)",
+    "many ways (mess)"
+   ],
+   "at": [
+    540,
+    760
+   ],
+   "gap": 260,
+   "box_w": 640,
+   "type": "use",
+   "t": 25.370000000000005
+  },
+  {
+   "component": "formula",
+   "text": "nature drifts to more ways",
+   "at": [
+    540,
+    1180
+   ],
+   "size": 56,
+   "mark": "more ways",
+   "type": "use",
+   "t": 28.960000000000008
+  },
+  {
+   "type": "caption",
+   "t": 24.970000000000006,
+   "text": "Entropy = how many ways things can be arranged.",
+   "highlight": [
+    "how many ways"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 32.50000000000001
+  },
+  {
+   "component": "formula",
+   "text": "S = k log(ways)",
+   "at": [
+    540,
+    1370
+   ],
+   "size": 64,
+   "color": "blue",
+   "box": true,
+   "type": "use",
+   "t": 32.900000000000006
+  },
+  {
+   "type": "caption",
+   "t": 32.50000000000001,
+   "text": "Real physics counts molecules, not coins.",
+   "highlight": [
+    "molecules,"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 36.15000000000001
+  },
+  {
+   "type": "clear",
+   "t": 36.15000000000001
+  },
+  {
+   "component": "icon",
+   "name": "chai",
+   "at": [
+    540,
+    900
+   ],
+   "size": 130,
+   "type": "use",
+   "t": 37.05000000000001
+  },
+  {
+   "component": "formula",
+   "text": "UP or DOWN? comment",
+   "at": [
+    540,
+    1200
+   ],
+   "size": 56,
+   "color": "blue",
+   "type": "use",
+   "t": 38.46750000000001
+  },
+  {
+   "type": "caption",
+   "t": 36.65000000000001,
+   "text": "Ice melting in chai: entropy up or down?",
+   "highlight": [
+    "up or down?"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 41.37750000000001
+  },
+  {
+   "type": "use",
+   "component": "outro",
+   "t": 41.827500000000015,
+   "until": 51.827500000000015
+  }
+ ]
+}
