@@ -51,8 +51,9 @@ Comments are 0.0% on every reel with data. Both are the targets; views and share
    the "test 30%" is one variable per reel, listed below. Follow analyze.py's hook for each slot.
 2. Length test (the one change from last time): make 6 of today's 12 reels 30–39 s with 4–5 beats; keep the other six
    at 45–55 s. Do not change format or theme to compensate on the short ones.
-3. Theme test: make 1 reel brain & learning (never tried). Spread the other 11 across stats MVP, physics & chemistry
-   and CS & AI so each gets several more reels. No math & probability today (it already has 3 reels).
+3. Theme test: make 2 reels brain & learning (never tried). Spread the other 10 across stats MVP, physics & chemistry
+   and CS & AI (3–4 each) so each reaches 3+ reels for a verdict. At most 1 math & probability (it already has 3).
 4. Every reel ends with a number-or-pick comment question (rule above), repeated as the caption's first line.
-5. Use formats with 0–1 reels so far; no format twice today. Never reuse a posted topic (FEEDBACK.md).
+5. Spread formats: favour those with 0–1 reels so far, no format more than 3 times today, never the same format in
+   consecutive slots. Never reuse a posted topic (FEEDBACK.md); all 12 topics different.
 6. When you pick a topic, add it to `data/themes.json` with its theme.
