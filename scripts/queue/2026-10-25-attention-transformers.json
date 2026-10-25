@@ -1,0 +1,279 @@
+{
+ "id": "2026-10-25-attention-transformers",
+ "topic": "attention in transformers",
+ "hook_type": "curiosity jump",
+ "format": "analogy build",
+ "post_after": "2026-10-25T21:00:00+05:30",
+ "approved": true,
+ "duration": 54.03,
+ "caption": "\"The trophy won't fit in the suitcase. It's too big.\" It = trophy or suitcase? 👇\n\nAttention is the scary-sounding idea inside ChatGPT. It's simple: every word scores every other word for relevance, then borrows meaning from the top scorers.\n\nSave this before your next AI interview.\n\nFollow for one idea a day ✏️\n\n#attention #transformers #chatgpt #machinelearning #aiexplained",
+ "brief": "briefs/2026-10-25-attention-transformers.json",
+ "events": [
+  {
+   "text": "How ChatGPT knows what 'it' means. 45 s.",
+   "highlight": [
+    "'it'"
+   ],
+   "sub": "Attention. The idea behind AI.",
+   "big": "it = ?",
+   "type": "use",
+   "component": "hook",
+   "t": 0
+  },
+  {
+   "component": "formula",
+   "text": "The cat didn't cross",
+   "at": [
+    540,
+    700
+   ],
+   "size": 62,
+   "type": "use",
+   "t": 6.94
+  },
+  {
+   "component": "formula",
+   "text": "the road. It was tired.",
+   "at": [
+    540,
+    800
+   ],
+   "size": 62,
+   "mark": "It",
+   "type": "use",
+   "t": 8.74
+  },
+  {
+   "type": "caption",
+   "t": 6.54,
+   "text": "The cat didn't cross the road. It was tired.",
+   "highlight": [
+    "It"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 12.01
+  },
+  {
+   "type": "arrow",
+   "color": "orange",
+   "w": 7,
+   "from": [
+    600,
+    860
+   ],
+   "to": [
+    420,
+    1000
+   ],
+   "t": 12.41
+  },
+  {
+   "type": "write",
+   "text": "cat?",
+   "x": 380,
+   "y": 1060,
+   "size": 60,
+   "color": "orange",
+   "align": "center",
+   "t": 12.41
+  },
+  {
+   "type": "arrow",
+   "color": "orange",
+   "w": 7,
+   "from": [
+    640,
+    860
+   ],
+   "to": [
+    760,
+    1000
+   ],
+   "t": 13.01
+  },
+  {
+   "type": "write",
+   "text": "road?",
+   "x": 780,
+   "y": 1060,
+   "size": 60,
+   "color": "orange",
+   "align": "center",
+   "t": 13.01
+  },
+  {
+   "type": "caption",
+   "t": 12.01,
+   "text": "'It' asks every word: are you about me?",
+   "highlight": [
+    "are you about me?"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 16.41
+  },
+  {
+   "type": "clear",
+   "t": 16.41
+  },
+  {
+   "component": "bar_chart",
+   "bars": [
+    {
+     "label": "cat",
+     "value": 79,
+     "color": "red"
+    },
+    {
+     "label": "road",
+     "value": 16
+    },
+    {
+     "label": "tired",
+     "value": 5
+    }
+   ],
+   "suffix": "%",
+   "height": 480,
+   "base": 1300,
+   "x0": 200,
+   "x1": 880,
+   "type": "use",
+   "t": 17.31
+  },
+  {
+   "type": "caption",
+   "t": 16.91,
+   "text": "Each word gets a score. They add to 100%.",
+   "highlight": [
+    "100%."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 22.22
+  },
+  {
+   "component": "formula",
+   "text": "example scores",
+   "at": [
+    540,
+    1470
+   ],
+   "size": 44,
+   "color": "blue",
+   "type": "use",
+   "t": 22.619999999999997
+  },
+  {
+   "type": "caption",
+   "t": 22.22,
+   "text": "So 'it' borrows meaning mostly from 'cat'.",
+   "highlight": [
+    "mostly from 'cat'."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 26.07
+  },
+  {
+   "type": "clear",
+   "t": 26.07
+  },
+  {
+   "component": "flow",
+   "items": [
+    "score every word",
+    "blend by score",
+    "smarter word"
+   ],
+   "at": [
+    540,
+    720
+   ],
+   "gap": 220,
+   "box_w": 620,
+   "type": "use",
+   "t": 26.97
+  },
+  {
+   "component": "formula",
+   "text": "real AI learns the scores",
+   "at": [
+    540,
+    1330
+   ],
+   "size": 50,
+   "color": "blue",
+   "type": "use",
+   "t": 32.0
+  },
+  {
+   "type": "caption",
+   "t": 26.57,
+   "text": "That's attention: score, then blend.",
+   "highlight": [
+    "score, then blend."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 35.45
+  },
+  {
+   "type": "clear",
+   "t": 35.45
+  },
+  {
+   "component": "formula",
+   "text": "The trophy won't fit in",
+   "at": [
+    540,
+    760
+   ],
+   "size": 60,
+   "type": "use",
+   "t": 36.35
+  },
+  {
+   "component": "formula",
+   "text": "the suitcase. It's too big.",
+   "at": [
+    540,
+    860
+   ],
+   "size": 60,
+   "mark": "It's",
+   "type": "use",
+   "t": 38.42
+  },
+  {
+   "component": "formula",
+   "text": "comment your pick",
+   "at": [
+    540,
+    1080
+   ],
+   "size": 56,
+   "color": "blue",
+   "type": "use",
+   "t": 40.85
+  },
+  {
+   "type": "caption",
+   "t": 35.95,
+   "text": "Your turn: 'it' = trophy or suitcase?",
+   "highlight": [
+    "trophy or suitcase?"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 43.580000000000005
+  },
+  {
+   "type": "use",
+   "component": "outro",
+   "t": 44.03000000000001,
+   "until": 54.03000000000001
+  }
+ ]
+}
