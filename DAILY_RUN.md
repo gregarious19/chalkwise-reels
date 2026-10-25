@@ -18,6 +18,12 @@ formats, lengths and slots. Where it conflicts with CONTENT_PLAYBOOK.md, STRATEG
 
 ## 2. Analyze
 
+First check the numbers are today's: if the last `_account` entry's `fetched` date in `data/insights.json` is not
+today's UTC date, GitHub delayed the scheduled insights run. Trigger it yourself (GitHub MCP
+`actions_run_trigger`, method `run_workflow`, owner `gregarious19`, repo `chalkwise-reels`, workflow_id
+`insights.yml`, ref `main`), then `git pull` every minute for up to 5 minutes. If it still hasn't landed, carry on
+and say so in your final message.
+
 ```
 python3 analyze.py
 python3 approve.py list
