@@ -20,7 +20,7 @@ FEEDBACK.md outranks this file. analyze.py's plan still decides the hook for eac
 - Leaning: none. All TOO EARLY. Course pain: hold 11.4% (0.98×), share+save 3.4% (1.25×). Wrong-answer reveal: hold 12.0% (1.02×), share+save 2.1% (0.75×).
 
 ## Timings
-- Posting slots are now every 2 h, 11:00 to 09:00 IST, 12 a day (post.yml, from 2026-10-25). Old data: Every slot is TOO EARLY: 11:00 has 1 reel with data (202 views@24h), 19:00 has 1 (236), 15:00 and 23:00 none.
+- Posting slots are 11:00, 15:00, 19:00, 23:00 IST and 02:00 the night after, 5 a day (post.yml, from 2026-10-25). Old data: Every slot is TOO EARLY: 11:00 has 1 reel with data (202 views@24h), 19:00 has 1 (236), 15:00 and 23:00 none.
 
 ## Length
 - 50s+: NO CLEAR DIFFERENCE (4 reels, 2 with data, hold 11.7%). 30-39s and 40-49s: TOO EARLY (1 reel each, no data).
@@ -49,11 +49,10 @@ Comments are 0.0% on every reel with data. Both are the targets; views and share
 ## Instructions for today's posting run
 1. Nothing WORKS or LEANS yet, so today's "safe 70%" is the engagement rules above, applied in full on every reel;
    the "test 30%" is one variable per reel, listed below. Follow analyze.py's hook for each slot.
-2. Length test (the one change from last time): make 6 of today's 12 reels 30–39 s with 4–5 beats; keep the other six
+2. Length test (the one change from last time): make 3 of today's 5 reels 30–39 s with 4–5 beats; keep the other two
    at 45–55 s. Do not change format or theme to compensate on the short ones.
-3. Theme test: make 2 reels brain & learning (never tried). Spread the other 10 across stats MVP, physics & chemistry
-   and CS & AI (3–4 each) so each reaches 3+ reels for a verdict. At most 1 math & probability (it already has 3).
+3. Theme test: make 1 reel brain & learning (never tried). Spread the other 4 across stats MVP, physics & chemistry
+   and CS & AI so each gets another reel. No math & probability today (it already has 3 reels).
 4. Every reel ends with a number-or-pick comment question (rule above), repeated as the caption's first line.
-5. Spread formats: favour those with 0–1 reels so far, no format more than 3 times today, never the same format in
-   consecutive slots. Never reuse a posted topic (FEEDBACK.md); all 12 topics different.
+5. Use formats with 0–1 reels so far; no format twice today. Never reuse a posted topic (FEEDBACK.md); all 5 topics different.
 6. When you pick a topic, add it to `data/themes.json` with its theme.

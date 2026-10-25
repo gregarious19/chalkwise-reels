@@ -3,7 +3,7 @@
 
     python3 make.py briefs/<id>.json            build, check, render, contact sheet
     python3 make.py briefs/<id>.json --no-render  build and check only (fast)
-    python3 make.py briefs/<id>.json --slot 15    post at 15:00 IST (12 slots, every 2 h from 11:00 to 09:00 next morning)
+    python3 make.py briefs/<id>.json --slot 15    post at 15:00 IST (slots: 11, 15, 19, 23, 2; 02:00 is the night after)
 
 A brief holds only content (see BRIEF_FORMAT.md). This script works out every start time and
 duration from the reading-pace rules, writes scripts/queue/<id>.json, checks layout, pacing,
@@ -24,9 +24,9 @@ BANNED = ["download now", "try it now", "try it today", "available now", "sign u
 
 
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
-# Posting hours, IST, in posting order: every 2 h from 11:00 today to 09:00 the next morning.
+# Posting hours, IST, in posting order: 11:00, 15:00, 19:00, 23:00 today and 02:00 the night after.
 # Hours before 11 belong to the night after the daily run. Must match the crons in .github/workflows/post.yml.
-SLOTS = (11, 13, 15, 17, 19, 21, 23, 1, 3, 5, 7, 9)
+SLOTS = (11, 15, 19, 23, 2)
 
 
 def slot_time(hour, now=None):
@@ -209,7 +209,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("brief")
     ap.add_argument("--no-render", action="store_true")
-    ap.add_argument("--slot", type=int, choices=SLOTS, help="post at this hour IST (11, 13, 15, 17, 19, 21, 23, then 1, 3, 5, 7, 9 next morning)")
+    ap.add_argument("--slot", type=int, choices=SLOTS, help="post at this hour IST (11, 15, 19, 23, or 2 for 02:00 the night after)")
     a = ap.parse_args()
     brief = json.load(open(a.brief))
     if a.slot:

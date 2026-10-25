@@ -5,7 +5,7 @@
 
 Reads data/insights.json and scripts/posted/*.json. For each posted reel: views, hold rate,
 share+save rate, comment rate. Then averages per hook_type, format, length bucket and posting slot
-(only reels at least 48 h old count toward averages), and a plan for today's 12 reels (one per slot)
+(only reels at least 48 h old count toward averages), and a plan for today's 5 reels (one per slot)
 per the 70/30 rule in CONTENT_PLAYBOOK.md: 3 use the best hook so far, 1 explores.
 """
 import datetime, glob, json, os, random
@@ -13,7 +13,7 @@ import datetime, glob, json, os, random
 HOOKS = ["speed promise", "course pain", "prerequisite wall", "everyday mystery", "myth bust",
          "wrong-answer reveal", "curiosity jump"]
 MIN_PER_VARIANT = 3
-SLOTS = (11, 13, 15, 17, 19, 21, 23, 1, 3, 5, 7, 9)  # IST posting hours in posting order; must match make.py and post.yml
+SLOTS = (11, 15, 19, 23, 2)  # IST posting hours in posting order; must match make.py and post.yml
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
 
 
@@ -117,8 +117,9 @@ def main():
     keep = (f", format **{best['format']}**" if "format" in best else "") + \
            (f", length **{best['len_bucket']}**" if "len_bucket" in best else "")
     day = datetime.date.today().toordinal()
-    # 3 of the 12 slots (25%) explore, spread across the day and rotated so no slot always gets the experiment
-    explore_slots = {SLOTS[(day + k * 4) % len(SLOTS)] for k in range(3)}
+    # About a quarter of the slots (at least 1) explore, spread out and rotated so no slot always gets the experiment
+    n_explore = max(1, len(SLOTS) // 4)
+    explore_slots = {SLOTS[(day + k * (len(SLOTS) // n_explore)) % len(SLOTS)] for k in range(n_explore)}
     if "hook_type" in best:
         explore = [h for h in explore if h != best["hook_type"]]
     plan = []
@@ -127,7 +128,7 @@ def main():
             plan.append(f"- **{h:02d}:00 IST** — EXPLOIT: hook **{best['hook_type']}**{keep}. Change only the topic.")
         else:
             hook = explore.pop(0)
-            explore.append(hook)  # cycle: 12 slots, fewer hooks
+            explore.append(hook)  # cycle if slots outnumber hooks
             plan.append(f"- **{h:02d}:00 IST** — EXPLORE: try hook **{hook}** (used {counts[hook]} times so far)"
                         + (f"; keep format **{best['format']}**" if "format" in best else "") + ".")
     print("\n".join(plan))

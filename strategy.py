@@ -17,7 +17,7 @@ Verdict labels are mechanical, so the reviewer never has to guess:
 import datetime, glob, json, os, statistics
 
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
-SLOTS = (11, 13, 15, 17, 19, 21, 23, 1, 3, 5, 7, 9)  # every 2 h, 11:00 to 09:00 IST; must match make.py
+SLOTS = (11, 15, 19, 23, 2)  # IST, 02:00 is the night after; must match make.py
 MIN_MATURE = 3
 UP, DOWN = 1.15, 0.85
 
