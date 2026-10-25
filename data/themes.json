@@ -10,12 +10,5 @@
  "entropy": "physics & chemistry",
  "Bayes' theorem": "stats MVP",
  "attention in transformers": "CS & AI",
- "curved spacetime": "physics & chemistry",
- "time dilation": "physics & chemistry",
- "Fourier transform": "math & probability",
- "central limit theorem": "stats MVP",
- "the forgetting curve": "brain & learning",
- "P vs NP": "CS & AI",
- "public-key cryptography": "CS & AI",
- "how memories form (Hebbian learning)": "brain & learning"
+ "curved spacetime": "physics & chemistry"
 }

@@ -1,0 +1,291 @@
+{
+ "id": "2026-10-25-curved-spacetime",
+ "topic": "curved spacetime",
+ "hook_type": "prerequisite wall",
+ "format": "everyday object",
+ "post_after": "2026-10-25T23:00:00+05:30",
+ "approved": true,
+ "duration": 38.86,
+ "caption": "Who ages slower: you on the ground floor, or on the roof? Comment A or B 👇\n\nYou don't need Einstein's maths for curved spacetime. Two people walking perfectly straight north still meet at the pole. Nothing pulled them: the Earth's surface is curved. Gravity works the same way.\n\nSave this for physics class.\n\nFollow for one idea a day ✏️\n\n#generalrelativity #einstein #physics #spacetime #sciencemadesimple",
+ "brief": "briefs/2026-10-25-curved-spacetime.json",
+ "events": [
+  {
+   "text": "No Einstein maths. Curved space in 30 s.",
+   "highlight": [
+    "Curved space"
+   ],
+   "sub": "Two straight lines that still meet.",
+   "big": "g = ?",
+   "type": "use",
+   "component": "hook",
+   "t": 0
+  },
+  {
+   "type": "circle",
+   "c": [
+    540,
+    1000
+   ],
+   "r": 300,
+   "color": "ink",
+   "w": 6,
+   "t": 6.94
+  },
+  {
+   "type": "ellipse",
+   "c": [
+    540,
+    1000
+   ],
+   "rx": 300,
+   "ry": 70,
+   "color": "ink",
+   "w": 4,
+   "t": 7.54
+  },
+  {
+   "type": "dot",
+   "c": [
+    410,
+    1063
+   ],
+   "r": 18,
+   "color": "blue",
+   "t": 8.14
+  },
+  {
+   "type": "dot",
+   "c": [
+    670,
+    1063
+   ],
+   "r": 18,
+   "color": "blue",
+   "t": 8.14
+  },
+  {
+   "type": "polyline",
+   "points": [
+    [
+     410,
+     1063
+    ],
+    [
+     413,
+     997
+    ],
+    [
+     422,
+     931
+    ],
+    [
+     438,
+     868
+    ],
+    [
+     459,
+     812
+    ],
+    [
+     483,
+     765
+    ],
+    [
+     511,
+     730
+    ],
+    [
+     540,
+     709
+    ]
+   ],
+   "color": "blue",
+   "w": 7,
+   "t": 8.39
+  },
+  {
+   "type": "polyline",
+   "points": [
+    [
+     670,
+     1063
+    ],
+    [
+     667,
+     997
+    ],
+    [
+     658,
+     931
+    ],
+    [
+     642,
+     868
+    ],
+    [
+     621,
+     812
+    ],
+    [
+     597,
+     765
+    ],
+    [
+     569,
+     730
+    ],
+    [
+     540,
+     709
+    ]
+   ],
+   "color": "blue",
+   "w": 7,
+   "t": 8.39
+  },
+  {
+   "type": "caption",
+   "t": 6.54,
+   "text": "Two friends walk due north. Both dead straight.",
+   "highlight": [
+    "dead straight."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 10.940000000000001
+  },
+  {
+   "type": "dot",
+   "c": [
+    540,
+    709
+   ],
+   "r": 22,
+   "color": "red",
+   "t": 11.340000000000002
+  },
+  {
+   "type": "write",
+   "text": "they meet!",
+   "x": 540,
+   "y": 640,
+   "size": 56,
+   "color": "red",
+   "align": "center",
+   "t": 11.590000000000002
+  },
+  {
+   "type": "write",
+   "text": "the ground is curved",
+   "x": 540,
+   "y": 1410,
+   "size": 54,
+   "align": "center",
+   "t": 12.490000000000002
+  },
+  {
+   "type": "caption",
+   "t": 10.940000000000001,
+   "text": "Yet they meet at the pole. No force pulled them.",
+   "highlight": [
+    "No force"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 16.44
+  },
+  {
+   "type": "clear",
+   "t": 16.44
+  },
+  {
+   "component": "formula",
+   "text": "mass bends spacetime",
+   "at": [
+    540,
+    800
+   ],
+   "size": 66,
+   "mark": "bends",
+   "type": "use",
+   "t": 17.34
+  },
+  {
+   "component": "formula",
+   "text": "straight paths curve in",
+   "at": [
+    540,
+    950
+   ],
+   "size": 58,
+   "type": "use",
+   "t": 19.14
+  },
+  {
+   "type": "caption",
+   "t": 16.94,
+   "text": "Einstein: mass curves spacetime. Gravity is that curve.",
+   "highlight": [
+    "Gravity is that curve."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 22.41
+  },
+  {
+   "type": "clear",
+   "t": 22.41
+  },
+  {
+   "component": "formula",
+   "text": "A: ground floor",
+   "at": [
+    540,
+    820
+   ],
+   "size": 66,
+   "type": "use",
+   "t": 23.31
+  },
+  {
+   "component": "formula",
+   "text": "B: rooftop",
+   "at": [
+    540,
+    960
+   ],
+   "size": 66,
+   "type": "use",
+   "t": 24.66
+  },
+  {
+   "component": "formula",
+   "text": "comment A or B",
+   "at": [
+    540,
+    1160
+   ],
+   "size": 56,
+   "color": "blue",
+   "type": "use",
+   "t": 25.56
+  },
+  {
+   "type": "caption",
+   "t": 22.91,
+   "text": "It bends time too. Who ages slower: A or B?",
+   "highlight": [
+    "A or B?"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 28.41
+  },
+  {
+   "type": "use",
+   "component": "outro",
+   "t": 28.86,
+   "until": 38.86
+  }
+ ]
+}

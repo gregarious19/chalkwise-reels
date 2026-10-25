@@ -1,0 +1,244 @@
+{
+ "id": "2026-10-25-curved-spacetime",
+ "topic": "curved spacetime",
+ "hook_type": "prerequisite wall",
+ "format": "everyday object",
+ "caption": "Who ages slower: you on the ground floor, or on the roof? Comment A or B 👇\n\nYou don't need Einstein's maths for curved spacetime. Two people walking perfectly straight north still meet at the pole. Nothing pulled them: the Earth's surface is curved. Gravity works the same way.\n\nSave this for physics class.\n\nFollow for one idea a day ✏️\n\n#generalrelativity #einstein #physics #spacetime #sciencemadesimple",
+ "hook": {
+  "text": "No Einstein maths. Curved space in 30 s.",
+  "highlight": [
+   "Curved space"
+  ],
+  "sub": "Two straight lines that still meet.",
+  "big": "g = ?"
+ },
+ "beats": [
+  {
+   "caption": "Two friends walk due north. Both dead straight.",
+   "highlight": [
+    "dead straight."
+   ],
+   "show": [
+    {
+     "type": "circle",
+     "c": [
+      540,
+      1000
+     ],
+     "r": 300,
+     "color": "ink",
+     "w": 6
+    },
+    {
+     "type": "ellipse",
+     "c": [
+      540,
+      1000
+     ],
+     "rx": 300,
+     "ry": 70,
+     "color": "ink",
+     "w": 4
+    },
+    {
+     "type": "dot",
+     "c": [
+      410,
+      1063
+     ],
+     "r": 18,
+     "color": "blue"
+    },
+    {
+     "type": "dot",
+     "c": [
+      670,
+      1063
+     ],
+     "r": 18,
+     "color": "blue",
+     "with_previous": true
+    },
+    {
+     "type": "polyline",
+     "points": [
+      [
+       410,
+       1063
+      ],
+      [
+       413,
+       997
+      ],
+      [
+       422,
+       931
+      ],
+      [
+       438,
+       868
+      ],
+      [
+       459,
+       812
+      ],
+      [
+       483,
+       765
+      ],
+      [
+       511,
+       730
+      ],
+      [
+       540,
+       709
+      ]
+     ],
+     "color": "blue",
+     "w": 7
+    },
+    {
+     "type": "polyline",
+     "points": [
+      [
+       670,
+       1063
+      ],
+      [
+       667,
+       997
+      ],
+      [
+       658,
+       931
+      ],
+      [
+       642,
+       868
+      ],
+      [
+       621,
+       812
+      ],
+      [
+       597,
+       765
+      ],
+      [
+       569,
+       730
+      ],
+      [
+       540,
+       709
+      ]
+     ],
+     "color": "blue",
+     "w": 7,
+     "with_previous": true
+    }
+   ]
+  },
+  {
+   "caption": "Yet they meet at the pole. No force pulled them.",
+   "highlight": [
+    "No force"
+   ],
+   "show": [
+    {
+     "type": "dot",
+     "c": [
+      540,
+      709
+     ],
+     "r": 22,
+     "color": "red"
+    },
+    {
+     "type": "write",
+     "text": "they meet!",
+     "x": 540,
+     "y": 640,
+     "size": 56,
+     "color": "red",
+     "align": "center"
+    },
+    {
+     "type": "write",
+     "text": "the ground is curved",
+     "x": 540,
+     "y": 1410,
+     "size": 54,
+     "align": "center"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Einstein: mass curves spacetime. Gravity is that curve.",
+   "highlight": [
+    "Gravity is that curve."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "mass bends spacetime",
+     "at": [
+      540,
+      800
+     ],
+     "size": 66,
+     "mark": "bends"
+    },
+    {
+     "component": "formula",
+     "text": "straight paths curve in",
+     "at": [
+      540,
+      950
+     ],
+     "size": 58
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "It bends time too. Who ages slower: A or B?",
+   "highlight": [
+    "A or B?"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "A: ground floor",
+     "at": [
+      540,
+      820
+     ],
+     "size": 66
+    },
+    {
+     "component": "formula",
+     "text": "B: rooftop",
+     "at": [
+      540,
+      960
+     ],
+     "size": 66
+    },
+    {
+     "component": "formula",
+     "text": "comment A or B",
+     "at": [
+      540,
+      1160
+     ],
+     "size": 56,
+     "color": "blue"
+    }
+   ]
+  }
+ ],
+ "outro": {}
+}
