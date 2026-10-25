@@ -1,0 +1,136 @@
+{
+ "id": "2026-10-25-p-values",
+ "topic": "p-values",
+ "hook_type": "course pain",
+ "format": "course pain",
+ "post_after": "2026-10-25T15:00:00+05:30",
+ "approved": true,
+ "duration": 39.33,
+ "caption": "7 heads in 10 flips: is p about 1%, 17% or 50%? Comment your pick 👇\n\nYour stats course lost you at p-values? A p-value is just a surprise score: if it was only luck, how often would you see something this weird?\n\nSave this for exam week.\n\nFollow for one idea a day ✏️\n\n#pvalue #statistics #hypothesistesting #statsmadeeasy #studytips",
+ "brief": "briefs/2026-10-25-p-values.json",
+ "events": [
+  {
+   "text": "Quit stats at p-values? 30 s fix.",
+   "highlight": [
+    "p-values?"
+   ],
+   "sub": "It's just a surprise score.",
+   "big": "p = ?",
+   "type": "use",
+   "component": "hook",
+   "t": 0
+  },
+  {
+   "component": "formula",
+   "text": "H H H H H H H H H T",
+   "at": [
+    540,
+    800
+   ],
+   "size": 64,
+   "type": "use",
+   "t": 6.390000000000001
+  },
+  {
+   "type": "caption",
+   "t": 5.99,
+   "text": "9 heads in 10 flips. Fair coin, or rigged?",
+   "highlight": [
+    "rigged?"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 11.3
+  },
+  {
+   "component": "formula",
+   "text": "p = 11/1024 ~ 1%",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 72,
+   "box": true,
+   "type": "use",
+   "t": 11.700000000000001
+  },
+  {
+   "type": "caption",
+   "t": 11.3,
+   "text": "A fair coin does that 11 times in 1024.",
+   "highlight": [
+    "11 times in 1024."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 16.97
+  },
+  {
+   "component": "formula",
+   "text": "NOT the chance it's fair",
+   "at": [
+    540,
+    1220
+   ],
+   "size": 58,
+   "color": "red",
+   "type": "use",
+   "t": 17.369999999999997
+  },
+  {
+   "type": "caption",
+   "t": 16.97,
+   "text": "That's a p-value: how often luck looks this weird.",
+   "highlight": [
+    "p-value:"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 21.919999999999998
+  },
+  {
+   "type": "clear",
+   "t": 21.919999999999998
+  },
+  {
+   "component": "formula",
+   "text": "H H H H H H H T T T",
+   "at": [
+    540,
+    850
+   ],
+   "size": 64,
+   "type": "use",
+   "t": 22.819999999999997
+  },
+  {
+   "component": "formula",
+   "text": "comment + save for exams",
+   "at": [
+    540,
+    1100
+   ],
+   "size": 50,
+   "color": "blue",
+   "type": "use",
+   "t": 24.529999999999998
+  },
+  {
+   "type": "caption",
+   "t": 22.419999999999998,
+   "text": "7 heads in 10: p is 1%, 17% or 50%?",
+   "highlight": [
+    "1%, 17% or 50%?"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 28.88
+  },
+  {
+   "type": "use",
+   "component": "outro",
+   "t": 29.33,
+   "until": 39.33
+  }
+ ]
+}

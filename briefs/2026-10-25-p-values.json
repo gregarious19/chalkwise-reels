@@ -1,0 +1,99 @@
+{
+ "id": "2026-10-25-p-values",
+ "topic": "p-values",
+ "hook_type": "course pain",
+ "format": "course pain",
+ "caption": "7 heads in 10 flips: is p about 1%, 17% or 50%? Comment your pick 👇\n\nYour stats course lost you at p-values? A p-value is just a surprise score: if it was only luck, how often would you see something this weird?\n\nSave this for exam week.\n\nFollow for one idea a day ✏️\n\n#pvalue #statistics #hypothesistesting #statsmadeeasy #studytips",
+ "hook": {
+  "text": "Quit stats at p-values? 30 s fix.",
+  "highlight": [
+   "p-values?"
+  ],
+  "sub": "It's just a surprise score.",
+  "big": "p = ?"
+ },
+ "beats": [
+  {
+   "caption": "9 heads in 10 flips. Fair coin, or rigged?",
+   "highlight": [
+    "rigged?"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "H H H H H H H H H T",
+     "at": [
+      540,
+      800
+     ],
+     "size": 64
+    }
+   ]
+  },
+  {
+   "caption": "A fair coin does that 11 times in 1024.",
+   "highlight": [
+    "11 times in 1024."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "p = 11/1024 ~ 1%",
+     "at": [
+      540,
+      1000
+     ],
+     "size": 72,
+     "box": true
+    }
+   ]
+  },
+  {
+   "caption": "That's a p-value: how often luck looks this weird.",
+   "highlight": [
+    "p-value:"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "NOT the chance it's fair",
+     "at": [
+      540,
+      1220
+     ],
+     "size": 58,
+     "color": "red"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "7 heads in 10: p is 1%, 17% or 50%?",
+   "highlight": [
+    "1%, 17% or 50%?"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "H H H H H H H T T T",
+     "at": [
+      540,
+      850
+     ],
+     "size": 64
+    },
+    {
+     "component": "formula",
+     "text": "comment + save for exams",
+     "at": [
+      540,
+      1100
+     ],
+     "size": 50,
+     "color": "blue"
+    }
+   ]
+  }
+ ],
+ "outro": {}
+}
