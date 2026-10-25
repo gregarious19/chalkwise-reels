@@ -6,7 +6,7 @@ Four 30–60 second Instagram reels a day for Chalkwise, made and posted automat
 Claude (daily, ~09:00 IST)                GitHub Actions
   read data/insights.json  ─────────┐       render.yml   on new spec → MP4 → release reel-<id> (preview link)
   update LEARNINGS.md               │       post.yml     11/15/19/23 IST → posts the next APPROVED due reel → moves spec to scripts/posted/
-  write scripts/queue/<id>.json ────┼──▶    insights.yml 08:00 IST → metrics for every posted reel → data/insights.json
+  write scripts/queue/<id>.json ────┼──▶    insights.yml ~06:37 IST → metrics for every posted reel → data/insights.json
   push, send you a preview          └────── (and refreshes the Instagram token every Monday)
 ```
 

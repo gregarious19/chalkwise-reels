@@ -1,10 +1,10 @@
 name: Pull Instagram insights
 
-# Every day at 08:00 IST: snapshot metrics for all posted reels into data/insights.json.
+# Every day at about 06:37 IST (and on demand: the Claude strategy review triggers it each morning): snapshot metrics for all posted reels into data/insights.json.
 # Every Monday: refresh the Instagram long-lived token (needs the GH_PAT secret to save it).
 on:
   schedule:
-    - cron: "30 2 * * *"    # 02:30 UTC = 08:00 IST
+    - cron: "7 1 * * *"     # 01:07 UTC = 06:37 IST (odd minute: GitHub delays :00/:30 runs by hours)
   workflow_dispatch:
     inputs:
       refresh:
@@ -46,7 +46,7 @@ jobs:
           git diff --cached --quiet || { git commit -m "Insights $(date -u +%F)"; git pull --rebase -q; git push -q; }
 
   refresh-token:
-    if: github.event.schedule == '30 2 * * *' || inputs.refresh
+    if: github.event.schedule == '7 1 * * *' || inputs.refresh
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
