@@ -29,6 +29,12 @@
    "followers_count": 8,
    "media_count": 4,
    "id": "28194897960187724"
+  },
+  {
+   "fetched": "2026-10-25T05:32+00:00",
+   "followers_count": 9,
+   "media_count": 7,
+   "id": "28194897960187724"
   }
  ],
  "2026-10-22-exponential-growth": {
@@ -74,19 +80,31 @@
     "total_interactions": 20,
     "ig_reels_avg_watch_time": 5727,
     "ig_reels_video_view_total_time": 1076781
+   },
+   {
+    "fetched": "2026-10-25T05:32+00:00",
+    "views": 207,
+    "reach": 177,
+    "likes": 8,
+    "comments": 0,
+    "shares": 0,
+    "saved": 6,
+    "total_interactions": 20,
+    "ig_reels_avg_watch_time": 5693,
+    "ig_reels_video_view_total_time": 1087432
    }
   ],
   "latest": {
-   "fetched": "2026-10-24T07:28+00:00",
-   "views": 203,
+   "fetched": "2026-10-25T05:32+00:00",
+   "views": 207,
    "reach": 177,
    "likes": 8,
    "comments": 0,
    "shares": 0,
    "saved": 6,
    "total_interactions": 20,
-   "ig_reels_avg_watch_time": 5727,
-   "ig_reels_video_view_total_time": 1076781
+   "ig_reels_avg_watch_time": 5693,
+   "ig_reels_video_view_total_time": 1087432
   }
  },
  "2026-10-23-birthday-paradox": {
@@ -108,19 +126,133 @@
     "total_interactions": 18,
     "ig_reels_avg_watch_time": 6053,
     "ig_reels_video_view_total_time": 1271227
+   },
+   {
+    "fetched": "2026-10-25T05:32+00:00",
+    "views": 250,
+    "reach": 205,
+    "likes": 9,
+    "comments": 0,
+    "shares": 1,
+    "saved": 3,
+    "total_interactions": 18,
+    "ig_reels_avg_watch_time": 5963,
+    "ig_reels_video_view_total_time": 1341851
    }
   ],
   "latest": {
-   "fetched": "2026-10-24T07:28+00:00",
-   "views": 236,
-   "reach": 195,
+   "fetched": "2026-10-25T05:32+00:00",
+   "views": 250,
+   "reach": 205,
    "likes": 9,
    "comments": 0,
    "shares": 1,
    "saved": 3,
    "total_interactions": 18,
-   "ig_reels_avg_watch_time": 6053,
-   "ig_reels_video_view_total_time": 1271227
+   "ig_reels_avg_watch_time": 5963,
+   "ig_reels_video_view_total_time": 1341851
+  }
+ },
+ "2026-10-23-logarithms": {
+  "topic": "logarithms",
+  "hook_type": "prerequisite wall",
+  "hook": "You don't need calculus for logs.",
+  "duration": 48.62,
+  "posted": "2026-10-24T13:32:18+0000",
+  "permalink": "https://www.instagram.com/reel/De4PxVyjgeS/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-25T05:32+00:00",
+    "views": 483,
+    "reach": 404,
+    "likes": 5,
+    "comments": 0,
+    "shares": 0,
+    "saved": 2,
+    "total_interactions": 8,
+    "ig_reels_avg_watch_time": 9620,
+    "ig_reels_video_view_total_time": 4011639
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-25T05:32+00:00",
+   "views": 483,
+   "reach": 404,
+   "likes": 5,
+   "comments": 0,
+   "shares": 0,
+   "saved": 2,
+   "total_interactions": 8,
+   "ig_reels_avg_watch_time": 9620,
+   "ig_reels_video_view_total_time": 4011639
+  }
+ },
+ "2026-10-24-how-ai-learns": {
+  "topic": "how an AI learns",
+  "hook_type": "curiosity jump",
+  "hook": "How does an AI actually learn? 40 seconds.",
+  "duration": 56.0,
+  "posted": "2026-10-24T17:46:21+0000",
+  "permalink": "https://www.instagram.com/reel/De4s1grkdu5/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-25T05:32+00:00",
+    "views": 216,
+    "reach": 199,
+    "likes": 5,
+    "comments": 0,
+    "shares": 1,
+    "saved": 1,
+    "total_interactions": 12,
+    "ig_reels_avg_watch_time": 2935,
+    "ig_reels_video_view_total_time": 595839
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-25T05:32+00:00",
+   "views": 216,
+   "reach": 199,
+   "likes": 5,
+   "comments": 0,
+   "shares": 1,
+   "saved": 1,
+   "total_interactions": 12,
+   "ig_reels_avg_watch_time": 2935,
+   "ig_reels_video_view_total_time": 595839
+  }
+ },
+ "2026-10-24-why-ice-floats": {
+  "topic": "why ice floats",
+  "hook_type": "everyday mystery",
+  "hook": "Why does ice float in your drink?",
+  "duration": 53.32,
+  "posted": "2026-10-24T10:02:50+0000",
+  "permalink": "https://www.instagram.com/reel/De33zS3FBgW/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-25T05:32+00:00",
+    "views": 468,
+    "reach": 429,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 4,
+    "ig_reels_avg_watch_time": 5185,
+    "ig_reels_video_view_total_time": 2260720
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-25T05:32+00:00",
+   "views": 468,
+   "reach": 429,
+   "likes": 3,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 4,
+   "ig_reels_avg_watch_time": 5185,
+   "ig_reels_video_view_total_time": 2260720
   }
  }
 }
