@@ -1,0 +1,156 @@
+{
+ "id": "2026-10-25-bayes-theorem",
+ "topic": "Bayes' theorem",
+ "hook_type": "wrong-answer reveal",
+ "format": "wrong-answer reveal",
+ "post_after": "2026-10-25T19:00:00+05:30",
+ "approved": true,
+ "duration": 39.63,
+ "caption": "If 1 in 10 messages were scams: 50%, 69% or 90%? Comment your guess 👇\n\nBayes' theorem looks terrifying. The idea is simple: before you trust an alarm, ask how rare the thing is. Rare things make most alarms false.\n\nSave this for your stats exam.\n\nFollow for one idea a day ✏️\n\n#bayestheorem #probability #statistics #statsmadeeasy #studytips",
+ "brief": "briefs/2026-10-25-bayes-theorem.json",
+ "events": [
+  {
+   "text": "99% accurate alarm. Mostly wrong. How?",
+   "highlight": [
+    "99% accurate"
+   ],
+   "sub": "Bayes' theorem, no formula.",
+   "big": "99%?",
+   "type": "use",
+   "component": "hook",
+   "t": 0
+  },
+  {
+   "component": "formula",
+   "text": "100 msgs:  1 scam, 99 fine",
+   "at": [
+    540,
+    700
+   ],
+   "size": 58,
+   "mark": "1 scam",
+   "type": "use",
+   "t": 5.84
+  },
+  {
+   "type": "caption",
+   "t": 5.4399999999999995,
+   "text": "1 in 100 messages is a scam.",
+   "highlight": [
+    "1 in 100"
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 9.77
+  },
+  {
+   "component": "reveal",
+   "wrong": "99%",
+   "right": "only ~17%",
+   "at": [
+    540,
+    900
+   ],
+   "size": 80,
+   "gap": 160,
+   "pause": 1.5,
+   "type": "use",
+   "t": 10.17
+  },
+  {
+   "type": "caption",
+   "t": 9.77,
+   "text": "It flags yours. Chance it's really a scam?",
+   "highlight": [
+    "really a scam?"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 14.98
+  },
+  {
+   "type": "clear",
+   "t": 14.98
+  },
+  {
+   "component": "formula",
+   "text": "flags:  1 scam  +  ~5 fine",
+   "at": [
+    540,
+    760
+   ],
+   "size": 56,
+   "mark": "~5 fine",
+   "type": "use",
+   "t": 15.88
+  },
+  {
+   "component": "formula",
+   "text": "1 real out of ~6 flags",
+   "at": [
+    540,
+    940
+   ],
+   "size": 62,
+   "box": true,
+   "type": "use",
+   "t": 18.22
+  },
+  {
+   "type": "caption",
+   "t": 15.48,
+   "text": "Why? It also flags 5% of fine messages.",
+   "highlight": [
+    "5% of fine"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 22.1
+  },
+  {
+   "type": "clear",
+   "t": 22.1
+  },
+  {
+   "component": "formula",
+   "text": "1 in 10 scams -> ?",
+   "at": [
+    540,
+    850
+   ],
+   "size": 72,
+   "mark": "?",
+   "type": "use",
+   "t": 23.0
+  },
+  {
+   "component": "formula",
+   "text": "comment your guess",
+   "at": [
+    540,
+    1050
+   ],
+   "size": 56,
+   "color": "blue",
+   "type": "use",
+   "t": 24.62
+  },
+  {
+   "type": "caption",
+   "t": 22.6,
+   "text": "If 1 in 10 were scams? 50%, 69% or 90%?",
+   "highlight": [
+    "50%, 69% or 90%?"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 29.18
+  },
+  {
+   "type": "use",
+   "component": "outro",
+   "t": 29.63,
+   "until": 39.629999999999995
+  }
+ ]
+}

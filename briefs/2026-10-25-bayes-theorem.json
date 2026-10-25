@@ -1,0 +1,114 @@
+{
+ "id": "2026-10-25-bayes-theorem",
+ "topic": "Bayes' theorem",
+ "hook_type": "wrong-answer reveal",
+ "format": "wrong-answer reveal",
+ "caption": "If 1 in 10 messages were scams: 50%, 69% or 90%? Comment your guess 👇\n\nBayes' theorem looks terrifying. The idea is simple: before you trust an alarm, ask how rare the thing is. Rare things make most alarms false.\n\nSave this for your stats exam.\n\nFollow for one idea a day ✏️\n\n#bayestheorem #probability #statistics #statsmadeeasy #studytips",
+ "hook": {
+  "text": "99% accurate alarm. Mostly wrong. How?",
+  "highlight": [
+   "99% accurate"
+  ],
+  "sub": "Bayes' theorem, no formula.",
+  "big": "99%?"
+ },
+ "beats": [
+  {
+   "caption": "1 in 100 messages is a scam.",
+   "highlight": [
+    "1 in 100"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "100 msgs:  1 scam, 99 fine",
+     "at": [
+      540,
+      700
+     ],
+     "size": 58,
+     "mark": "1 scam"
+    }
+   ]
+  },
+  {
+   "caption": "It flags yours. Chance it's really a scam?",
+   "highlight": [
+    "really a scam?"
+   ],
+   "show": [
+    {
+     "component": "reveal",
+     "wrong": "99%",
+     "right": "only ~17%",
+     "at": [
+      540,
+      900
+     ],
+     "size": 80,
+     "gap": 160,
+     "pause": 1.5
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Why? It also flags 5% of fine messages.",
+   "highlight": [
+    "5% of fine"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "flags:  1 scam  +  ~5 fine",
+     "at": [
+      540,
+      760
+     ],
+     "size": 56,
+     "mark": "~5 fine"
+    },
+    {
+     "component": "formula",
+     "text": "1 real out of ~6 flags",
+     "at": [
+      540,
+      940
+     ],
+     "size": 62,
+     "box": true
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "If 1 in 10 were scams? 50%, 69% or 90%?",
+   "highlight": [
+    "50%, 69% or 90%?"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "1 in 10 scams -> ?",
+     "at": [
+      540,
+      850
+     ],
+     "size": 72,
+     "mark": "?"
+    },
+    {
+     "component": "formula",
+     "text": "comment your guess",
+     "at": [
+      540,
+      1050
+     ],
+     "size": 56,
+     "color": "blue"
+    }
+   ]
+  }
+ ],
+ "outro": {}
+}
