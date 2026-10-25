@@ -12,7 +12,7 @@ One JSON file per reel in `scripts/queue/`, named `YYYY-MM-DD-slug.json`. `rende
 | `topic` | The concept taught (e.g. "standard deviation"). |
 | `hook_type` | Hook family from the playbook (e.g. "speed promise", "course pain", "prerequisite wall", "myth bust", "everyday mystery"). Used to compare performance. |
 | `format` | Story device (e.g. "two-friends comparison", "everyday object", "wrong-answer reveal"). |
-| `post_after` | ISO time with offset. Set by `make.py --slot`. The post workflow publishes it at the first slot (11:00, 15:00, 19:00, 23:00 IST) at or after this time. |
+| `post_after` | ISO time with offset. Set by `make.py --slot`. The post workflow publishes it at the first slot (every 2 h: 11:00, 13:00 … 23:00, 01:00 … 09:00 IST) at or after this time. |
 | `approved` | Must be `true` for the reel to post. `make.py` writes `false`; the daily run sets it `true` with `approve.py approve` after PASS and a check of the contact sheet. |
 | `hold` | `true` keeps it in the queue without posting, even if approved. |
 | `duration` | Seconds (30 to 60). |

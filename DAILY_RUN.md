@@ -2,12 +2,14 @@
 
 Do these in order. Each step says what to run and what "done" means.
 
-**Every day: 4 reels, posted automatically at 11:00, 15:00, 19:00 and 23:00 IST the same day.** You approve each
+**Every day: 12 reels, posted automatically every 2 hours: 11:00, 13:00, 15:00, 17:00, 19:00, 21:00, 23:00 IST today,
+then 01:00, 03:00, 05:00, 07:00, 09:00 IST the next morning.** You approve each
 reel yourself, but only after `make.py` prints PASS and you've looked at its contact sheet and it's right. Never
 approve a reel that failed a check or that you haven't looked at. Never post by hand: post.yml does it. If the
 founder has put a `PAUSED` file in the repo or held a reel, leave that alone.
 
-Work fast: the 11:00 reel must be pushed and approved by about 10:30 so GitHub can render it in time. Do it first.
+Work fast: the 11:00 reel must be pushed and approved by about 10:30 and the 13:00 reel by about 12:30, so GitHub can
+render them in time. Do them first, then the rest in slot order. Script the next reel while a render runs.
 
 ## 1. Read (5 min)
 
@@ -34,19 +36,20 @@ Done = you have the analyze output (results table, averages, suggestion) and the
 ## 3. Update LEARNINGS.md
 
 Add one line at the top of the Log: `- **YYYY-MM-DD** — <results in one line>. <one learning, only if analyze.py shows
-≥3 reels per variant; otherwise "not enough data">. Today: <4 topics with their hook_types>.`
+≥3 reels per variant; otherwise "not enough data">. Today: <12 topics with their hook_types>.`
 If analyze.py's averages now show a clear winner (hook, format, length or posting slot), update "Current best".
 Never invent numbers: copy them from analyze.py.
 
-## 4. Plan today's 4 reels
+## 4. Plan today's 12 reels
 
-Use analyze.py's "Plan for today's 4 reels": it gives one line per slot (11, 15, 19, 23) saying which hook to use,
-based on how past reels performed. Follow it for hooks. Pick themes, formats and lengths as STRATEGY.md says, and 4
-different topics, none in the "don't repeat" list. Add each new topic to `data/themes.json` with its theme.
+Use analyze.py's "Plan for today's 12 reels": it gives one line per slot (11, 13, 15 … 23, 01 … 09) saying which hook
+to use, based on how past reels performed. Follow it for hooks. Pick themes, formats and lengths as STRATEGY.md says, and
+12 different topics, none in the "don't repeat" list. Add each new topic to `data/themes.json` with its theme.
 
-Skip a slot only if a reel for that slot today is already in the queue (`approve.py list`).
+Skip a slot only if a queued reel already has exactly that slot's posting time (`approve.py list`, "posts after").
+Yesterday's 01:00–09:00 reels still in the queue this morning belong to yesterday's batch, not today's slots.
 
-## 5–7. For each slot, in order 11 → 15 → 19 → 23, make one reel
+## 5–7. For each slot, in order 11 → 13 → 15 → 17 → 19 → 21 → 23 → 01 → 03 → 05 → 07 → 09, make one reel
 
 ### Write the brief
 
@@ -59,7 +62,7 @@ Skip a slot only if a reel for that slot today is already in the queue (`approve
 ### Build and check
 
 ```
-python3 make.py briefs/<id>.json --slot <11|15|19|23>
+python3 make.py briefs/<id>.json --slot <11|13|15|17|19|21|23|1|3|5|7|9>
 ```
 
 - If it prints FAIL, fix each listed problem in the **brief** (never hand-edit `scripts/queue/`) and run again.
@@ -85,16 +88,16 @@ about 20 minutes, drop it (`python3 approve.py drop <id>`), move on to the next 
 
 ## 8. Message the founder
 
-Send the 4 `out/<id>.mp4` files with SendUserFile (status proactive), then one SendUserMessage of at most 10 lines:
+Send the 12 `out/<id>.mp4` files with SendUserFile (status proactive), then one SendUserMessage of at most 18 lines:
 
 ```
 Yesterday: <one line from analyze.py, or "no data yet">
 Learned: <one line, or "not enough data yet">
 Today, posting automatically:
 11:00 <topic> · <hook_type> · <duration>s
-15:00 …
-19:00 …
-23:00 …
+13:00 …
+… one line per slot …
+09:00 …
 Reply "hold <id>" to stop one, or tell me what to change.
 ```
 

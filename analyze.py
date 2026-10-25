@@ -5,7 +5,7 @@
 
 Reads data/insights.json and scripts/posted/*.json. For each posted reel: views, hold rate,
 share+save rate, comment rate. Then averages per hook_type, format, length bucket and posting slot
-(only reels at least 48 h old count toward averages), and a plan for today's 4 reels (one per slot)
+(only reels at least 48 h old count toward averages), and a plan for today's 12 reels (one per slot)
 per the 70/30 rule in CONTENT_PLAYBOOK.md: 3 use the best hook so far, 1 explores.
 """
 import datetime, glob, json, os, random
@@ -13,15 +13,15 @@ import datetime, glob, json, os, random
 HOOKS = ["speed promise", "course pain", "prerequisite wall", "everyday mystery", "myth bust",
          "wrong-answer reveal", "curiosity jump"]
 MIN_PER_VARIANT = 3
-SLOTS = (11, 15, 19, 23)  # IST posting hours; must match make.py and post.yml
+SLOTS = (11, 13, 15, 17, 19, 21, 23, 1, 3, 5, 7, 9)  # IST posting hours in posting order; must match make.py and post.yml
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
 
 
 def slot_of(ts):
     """Posting slot (IST hour) a reel went out in: the latest slot at or before its post time."""
     h = ts.astimezone(IST).hour
-    past = [x for x in SLOTS if x <= h]
-    return f"{past[-1] if past else SLOTS[-1]}:00"
+    past = sorted(x for x in SLOTS if x <= h)
+    return f"{past[-1] if past else max(SLOTS):02d}:00"
 
 
 def load():
@@ -110,30 +110,32 @@ def main():
     if not mature:
         print("Not enough data yet (reels need 48 h).\n")
 
-    print("## Plan for today's 4 reels\n")
+    print(f"## Plan for today's {len(SLOTS)} reels\n")
     recent_topics = [r["topic"] for r in rows[-28:]]
     counts = {h: sum(1 for r in rows if r["hook_type"] == h) for h in HOOKS}
     explore = sorted(HOOKS, key=lambda h: (counts[h], HOOKS.index(h)))  # least-used hooks first
     keep = (f", format **{best['format']}**" if "format" in best else "") + \
            (f", length **{best['len_bucket']}**" if "len_bucket" in best else "")
     day = datetime.date.today().toordinal()
-    explore_slot = SLOTS[day % len(SLOTS)]  # rotate so no slot always gets the experiment
+    # 3 of the 12 slots (25%) explore, spread across the day and rotated so no slot always gets the experiment
+    explore_slots = {SLOTS[(day + k * 4) % len(SLOTS)] for k in range(3)}
+    if "hook_type" in best:
+        explore = [h for h in explore if h != best["hook_type"]]
     plan = []
     for h in SLOTS:
-        if "hook_type" in best and h != explore_slot:
-            plan.append(f"- **{h}:00 IST** — EXPLOIT: hook **{best['hook_type']}**{keep}. Change only the topic.")
+        if "hook_type" in best and h not in explore_slots:
+            plan.append(f"- **{h:02d}:00 IST** — EXPLOIT: hook **{best['hook_type']}**{keep}. Change only the topic.")
         else:
             hook = explore.pop(0)
-            if "hook_type" in best and hook == best["hook_type"]:
-                hook = explore.pop(0)
-            plan.append(f"- **{h}:00 IST** — EXPLORE: try hook **{hook}** (used {counts[hook]} times so far)"
+            explore.append(hook)  # cycle: 12 slots, fewer hooks
+            plan.append(f"- **{h:02d}:00 IST** — EXPLORE: try hook **{hook}** (used {counts[hook]} times so far)"
                         + (f"; keep format **{best['format']}**" if "format" in best else "") + ".")
     print("\n".join(plan))
     if "hook_type" not in best:
-        print("\n(No hook has 3+ mature reels yet, so all 4 explore different hooks.)")
+        print("\n(No hook has 3+ mature reels yet, so every slot explores, cycling through the hooks.)")
     if "slot" in best:
         print(f"\nBest posting slot so far: **{best['slot']}** IST.")
-    print(f"\n- 4 different topics today. Don't repeat these recent topics: {', '.join(t for t in recent_topics if t) or 'none'}.")
+    print(f"\n- {len(SLOTS)} different topics today. Don't repeat these recent topics: {', '.join(t for t in recent_topics if t) or 'none'}.")
 
 if __name__ == "__main__":
     main()

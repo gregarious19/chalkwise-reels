@@ -3,7 +3,7 @@
 
     python3 make.py briefs/<id>.json            build, check, render, contact sheet
     python3 make.py briefs/<id>.json --no-render  build and check only (fast)
-    python3 make.py briefs/<id>.json --slot 15    post today at 15:00 IST (slots: 11, 15, 19, 23)
+    python3 make.py briefs/<id>.json --slot 15    post at 15:00 IST (12 slots, every 2 h from 11:00 to 09:00 next morning)
 
 A brief holds only content (see BRIEF_FORMAT.md). This script works out every start time and
 duration from the reading-pace rules, writes scripts/queue/<id>.json, checks layout, pacing,
@@ -24,24 +24,30 @@ BANNED = ["download now", "try it now", "try it today", "available now", "sign u
 
 
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
-SLOTS = (11, 15, 19, 23)  # posting times, IST. Must match the crons in .github/workflows/post.yml
+# Posting hours, IST, in posting order: every 2 h from 11:00 today to 09:00 the next morning.
+# Hours before 11 belong to the night after the daily run. Must match the crons in .github/workflows/post.yml.
+SLOTS = (11, 13, 15, 17, 19, 21, 23, 1, 3, 5, 7, 9)
 
 
-def slot_time(hour):
-    """Today's posting slot at <hour>:00 IST, as an ISO string."""
-    d = datetime.datetime.now(IST).date()
-    return datetime.datetime(d.year, d.month, d.day, hour, tzinfo=IST).isoformat()
-
-
-def next_slot():
-    """The next posting slot that hasn't started yet (today, or tomorrow's first)."""
-    now = datetime.datetime.now(IST)
-    for h in SLOTS:
-        t = now.replace(hour=h, minute=0, second=0, microsecond=0)
-        if t > now:
-            return t.isoformat()
-    t = (now + datetime.timedelta(days=1)).replace(hour=SLOTS[0], minute=0, second=0, microsecond=0)
+def slot_time(hour, now=None):
+    """This posting day's slot at <hour>:00 IST, as an ISO string. Hours before the first slot (01-09) are the
+    next morning. A slot that has already passed moves to the same hour a day later."""
+    now = now or datetime.datetime.now(IST)
+    t = datetime.datetime(now.year, now.month, now.day, hour, tzinfo=IST)
+    if hour < SLOTS[0]:
+        t += datetime.timedelta(days=1)
+    if t <= now:
+        t += datetime.timedelta(days=1)
     return t.isoformat()
+
+
+def next_slot(now=None):
+    """The next posting slot that hasn't started yet."""
+    now = now or datetime.datetime.now(IST)
+    return min((datetime.datetime(now.year, now.month, now.day, h, tzinfo=IST) + datetime.timedelta(days=k)
+                for h in SLOTS for k in (0, 1) if
+                datetime.datetime(now.year, now.month, now.day, h, tzinfo=IST) + datetime.timedelta(days=k) > now)
+               ).isoformat()
 
 
 def default_dur(e):
@@ -203,7 +209,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("brief")
     ap.add_argument("--no-render", action="store_true")
-    ap.add_argument("--slot", type=int, choices=SLOTS, help="post today at this hour IST (11, 15, 19 or 23)")
+    ap.add_argument("--slot", type=int, choices=SLOTS, help="post at this hour IST (11, 13, 15, 17, 19, 21, 23, then 1, 3, 5, 7, 9 next morning)")
     a = ap.parse_args()
     brief = json.load(open(a.brief))
     if a.slot:

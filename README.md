@@ -5,12 +5,12 @@ Four 30–60 second Instagram reels a day for Chalkwise, made and posted automat
 ```
 Claude (daily, ~09:00 IST)                GitHub Actions
   read data/insights.json  ─────────┐       render.yml   on new spec → MP4 → release reel-<id> (preview link)
-  update LEARNINGS.md               │       post.yml     11/15/19/23 IST → posts the next APPROVED due reel → moves spec to scripts/posted/
+  update LEARNINGS.md               │       post.yml     every 2 h, 11:00–09:00 IST → posts the next APPROVED due reel → moves spec to scripts/posted/
   write scripts/queue/<id>.json ────┼──▶    insights.yml ~06:37 IST → metrics for every posted reel → data/insights.json
   push, send you a preview          └────── (and refreshes the Instagram token every Monday)
 ```
 
-**Posting is automatic.** Each morning Claude makes 4 reels, planned from how past reels performed, and queues one for each slot: 11:00, 15:00, 19:00 and 23:00 IST. Claude approves a reel only after `make.py` passes and it has checked the preview frames; reels that fail never post. You get the 4 videos each morning and can hold or change any of them before its slot.
+**Posting is automatic.** Each morning Claude makes 12 reels, planned from how past reels performed, and queues one for each slot, every 2 hours: 11:00, 13:00 … 23:00 IST, then 01:00 … 09:00 IST the next morning. Claude approves a reel only after `make.py` passes and it has checked the preview frames; reels that fail never post. You get the 12 videos each morning and can hold or change any of them before its slot.
 
 ## Pausing or stopping a reel
 
