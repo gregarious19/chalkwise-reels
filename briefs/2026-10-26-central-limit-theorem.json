@@ -1,0 +1,175 @@
+{
+ "id": "2026-10-26-central-limit-theorem",
+ "topic": "central limit theorem",
+ "hook_type": "speed promise",
+ "format": "everyday object",
+ "caption": "Pick the next scary topic: A) Godel B) P vs NP C) Schrodinger. Comment A, B or C \ud83d\udc47\n\nThe central limit theorem sounds terrifying. It says: add up enough random things and the total forms a bell curve, even if each thing is flat. 30 dice: about 7 in 10 totals land between 96 and 114.\n\nSave this for exam week.\n\nFollow for one idea a day \u270f\ufe0f\n\n#centrallimittheorem #statistics #probability #bellcurve #mathmadeeasy #studytips",
+ "hook": {
+  "text": "Central limit theorem? 30 dice explain it.",
+  "highlight": [
+   "30 dice"
+  ],
+  "sub": "Flat dice in. Bell curve out.",
+  "big": "30 dice"
+ },
+ "beats": [
+  {
+   "caption": "One die: all six faces equal.",
+   "highlight": [
+    "equal."
+   ],
+   "show": [
+    {
+     "component": "bar_chart",
+     "bars": [
+      {
+       "label": "1",
+       "value": 1,
+       "color": "blue"
+      },
+      {
+       "label": "2",
+       "value": 1,
+       "color": "blue"
+      },
+      {
+       "label": "3",
+       "value": 1,
+       "color": "blue"
+      },
+      {
+       "label": "4",
+       "value": 1,
+       "color": "blue"
+      },
+      {
+       "label": "5",
+       "value": 1,
+       "color": "blue"
+      },
+      {
+       "label": "6",
+       "value": 1,
+       "color": "blue"
+      }
+     ],
+     "base": 1250,
+     "height": 420,
+     "show_values": false,
+     "stagger": 0.3
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "30 dice added: totals pile into a bell.",
+   "highlight": [
+    "bell."
+   ],
+   "show": [
+    {
+     "component": "plot",
+     "box": [
+      140,
+      660,
+      960,
+      1130
+     ],
+     "expr": "exp(-u**2/2)",
+     "u0": -3,
+     "u1": 3,
+     "color": "orange",
+     "xlabel": "total of 30 dice",
+     "curve_d": 2.5
+    },
+    {
+     "component": "formula",
+     "text": "105",
+     "at": [
+      540,
+      1290
+     ],
+     "size": 80,
+     "color": "orange",
+     "box": true
+    }
+   ]
+  },
+  {
+   "caption": "Most totals sit near 105. 7 in 10: 96 to 114.",
+   "highlight": [
+    "7 in 10"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "96 to 114 = 7 in 10",
+     "at": [
+      540,
+      1400
+     ],
+     "size": 60,
+     "mark": "7 in 10"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Flat in. Bell out. Add enough pieces.",
+   "highlight": [
+    "Bell out."
+   ],
+   "show": [
+    {
+     "component": "icon",
+     "name": "lightbulb",
+     "at": [
+      540,
+      1000
+     ],
+     "size": 90,
+     "color": "orange"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Real version: pieces must be independent.",
+   "highlight": [
+    "independent."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "independent pieces",
+     "at": [
+      540,
+      850
+     ],
+     "size": 60,
+     "color": "grey"
+    }
+   ]
+  },
+  {
+   "caption": "Save this. Pick next: A Godel, B P vs NP, C Schrodinger?",
+   "highlight": [
+    "Pick next:"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "Comment A, B or C",
+     "at": [
+      540,
+      950
+     ],
+     "size": 64,
+     "color": "blue",
+     "box": true
+    }
+   ]
+  }
+ ],
+ "outro": {}
+}

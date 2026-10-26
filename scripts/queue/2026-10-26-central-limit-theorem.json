@@ -1,0 +1,228 @@
+{
+ "id": "2026-10-26-central-limit-theorem",
+ "topic": "central limit theorem",
+ "hook_type": "speed promise",
+ "format": "everyday object",
+ "post_after": "2026-10-26T15:00:00+05:30",
+ "approved": true,
+ "duration": 49.86,
+ "caption": "Pick the next scary topic: A) Godel B) P vs NP C) Schrodinger. Comment A, B or C 👇\n\nThe central limit theorem sounds terrifying. It says: add up enough random things and the total forms a bell curve, even if each thing is flat. 30 dice: about 7 in 10 totals land between 96 and 114.\n\nSave this for exam week.\n\nFollow for one idea a day ✏️\n\n#centrallimittheorem #statistics #probability #bellcurve #mathmadeeasy #studytips",
+ "brief": "briefs/2026-10-26-central-limit-theorem.json",
+ "events": [
+  {
+   "text": "Central limit theorem? 30 dice explain it.",
+   "highlight": [
+    "30 dice"
+   ],
+   "sub": "Flat dice in. Bell curve out.",
+   "big": "30 dice",
+   "type": "use",
+   "component": "hook",
+   "t": 0
+  },
+  {
+   "component": "bar_chart",
+   "bars": [
+    {
+     "label": "1",
+     "value": 1,
+     "color": "blue"
+    },
+    {
+     "label": "2",
+     "value": 1,
+     "color": "blue"
+    },
+    {
+     "label": "3",
+     "value": 1,
+     "color": "blue"
+    },
+    {
+     "label": "4",
+     "value": 1,
+     "color": "blue"
+    },
+    {
+     "label": "5",
+     "value": 1,
+     "color": "blue"
+    },
+    {
+     "label": "6",
+     "value": 1,
+     "color": "blue"
+    }
+   ],
+   "base": 1250,
+   "height": 420,
+   "show_values": false,
+   "stagger": 0.3,
+   "type": "use",
+   "t": 6.390000000000001
+  },
+  {
+   "type": "caption",
+   "t": 5.99,
+   "text": "One die: all six faces equal.",
+   "highlight": [
+    "equal."
+   ],
+   "y": 330,
+   "size": 70,
+   "until": 10.29
+  },
+  {
+   "type": "clear",
+   "t": 10.29
+  },
+  {
+   "component": "plot",
+   "box": [
+    140,
+    660,
+    960,
+    1130
+   ],
+   "expr": "exp(-u**2/2)",
+   "u0": -3,
+   "u1": 3,
+   "color": "orange",
+   "xlabel": "total of 30 dice",
+   "curve_d": 2.5,
+   "type": "use",
+   "t": 11.19
+  },
+  {
+   "component": "formula",
+   "text": "105",
+   "at": [
+    540,
+    1290
+   ],
+   "size": 80,
+   "color": "orange",
+   "box": true,
+   "type": "use",
+   "t": 14.889999999999999
+  },
+  {
+   "type": "caption",
+   "t": 10.79,
+   "text": "30 dice added: totals pile into a bell.",
+   "highlight": [
+    "bell."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 17.29
+  },
+  {
+   "component": "formula",
+   "text": "96 to 114 = 7 in 10",
+   "at": [
+    540,
+    1400
+   ],
+   "size": 60,
+   "mark": "7 in 10",
+   "type": "use",
+   "t": 17.689999999999998
+  },
+  {
+   "type": "caption",
+   "t": 17.29,
+   "text": "Most totals sit near 105. 7 in 10: 96 to 114.",
+   "highlight": [
+    "7 in 10"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 24.66
+  },
+  {
+   "type": "clear",
+   "t": 24.66
+  },
+  {
+   "component": "icon",
+   "name": "lightbulb",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 90,
+   "color": "orange",
+   "type": "use",
+   "t": 25.56
+  },
+  {
+   "type": "caption",
+   "t": 25.16,
+   "text": "Flat in. Bell out. Add enough pieces.",
+   "highlight": [
+    "Bell out."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 29.01
+  },
+  {
+   "type": "clear",
+   "t": 29.01
+  },
+  {
+   "component": "formula",
+   "text": "independent pieces",
+   "at": [
+    540,
+    850
+   ],
+   "size": 60,
+   "color": "grey",
+   "type": "use",
+   "t": 29.91
+  },
+  {
+   "type": "caption",
+   "t": 29.51,
+   "text": "Real version: pieces must be independent.",
+   "highlight": [
+    "independent."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 32.81
+  },
+  {
+   "component": "formula",
+   "text": "Comment A, B or C",
+   "at": [
+    540,
+    950
+   ],
+   "size": 64,
+   "color": "blue",
+   "box": true,
+   "type": "use",
+   "t": 33.21
+  },
+  {
+   "type": "caption",
+   "t": 32.81,
+   "text": "Save this. Pick next: A Godel, B P vs NP, C Schrodinger?",
+   "highlight": [
+    "Pick next:"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 39.410000000000004
+  },
+  {
+   "type": "use",
+   "component": "outro",
+   "t": 39.86000000000001,
+   "until": 49.86000000000001
+  }
+ ]
+}
