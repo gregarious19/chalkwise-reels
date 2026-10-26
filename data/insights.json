@@ -35,6 +35,12 @@
    "followers_count": 9,
    "media_count": 7,
    "id": "28194897960187724"
+  },
+  {
+   "fetched": "2026-10-26T03:12+00:00",
+   "followers_count": 10,
+   "media_count": 12,
+   "id": "28194897960187724"
   }
  ],
  "2026-10-22-exponential-growth": {
@@ -92,19 +98,31 @@
     "total_interactions": 20,
     "ig_reels_avg_watch_time": 5693,
     "ig_reels_video_view_total_time": 1087432
+   },
+   {
+    "fetched": "2026-10-26T03:12+00:00",
+    "views": 208,
+    "reach": 179,
+    "likes": 8,
+    "comments": 0,
+    "shares": 0,
+    "saved": 6,
+    "total_interactions": 20,
+    "ig_reels_avg_watch_time": 5638,
+    "ig_reels_video_view_total_time": 1088322
    }
   ],
   "latest": {
-   "fetched": "2026-10-25T05:32+00:00",
-   "views": 207,
-   "reach": 177,
+   "fetched": "2026-10-26T03:12+00:00",
+   "views": 208,
+   "reach": 179,
    "likes": 8,
    "comments": 0,
    "shares": 0,
    "saved": 6,
    "total_interactions": 20,
-   "ig_reels_avg_watch_time": 5693,
-   "ig_reels_video_view_total_time": 1087432
+   "ig_reels_avg_watch_time": 5638,
+   "ig_reels_video_view_total_time": 1088322
   }
  },
  "2026-10-23-birthday-paradox": {
@@ -138,19 +156,31 @@
     "total_interactions": 18,
     "ig_reels_avg_watch_time": 5963,
     "ig_reels_video_view_total_time": 1341851
+   },
+   {
+    "fetched": "2026-10-26T03:12+00:00",
+    "views": 253,
+    "reach": 208,
+    "likes": 10,
+    "comments": 0,
+    "shares": 1,
+    "saved": 3,
+    "total_interactions": 20,
+    "ig_reels_avg_watch_time": 5921,
+    "ig_reels_video_view_total_time": 1356036
    }
   ],
   "latest": {
-   "fetched": "2026-10-25T05:32+00:00",
-   "views": 250,
-   "reach": 205,
-   "likes": 9,
+   "fetched": "2026-10-26T03:12+00:00",
+   "views": 253,
+   "reach": 208,
+   "likes": 10,
    "comments": 0,
    "shares": 1,
    "saved": 3,
-   "total_interactions": 18,
-   "ig_reels_avg_watch_time": 5963,
-   "ig_reels_video_view_total_time": 1341851
+   "total_interactions": 20,
+   "ig_reels_avg_watch_time": 5921,
+   "ig_reels_video_view_total_time": 1356036
   }
  },
  "2026-10-23-logarithms": {
@@ -172,19 +202,31 @@
     "total_interactions": 8,
     "ig_reels_avg_watch_time": 9620,
     "ig_reels_video_view_total_time": 4011639
+   },
+   {
+    "fetched": "2026-10-26T03:12+00:00",
+    "views": 1441,
+    "reach": 1200,
+    "likes": 16,
+    "comments": 0,
+    "shares": 1,
+    "saved": 6,
+    "total_interactions": 26,
+    "ig_reels_avg_watch_time": 11485,
+    "ig_reels_video_view_total_time": 14586736
    }
   ],
   "latest": {
-   "fetched": "2026-10-25T05:32+00:00",
-   "views": 483,
-   "reach": 404,
-   "likes": 5,
+   "fetched": "2026-10-26T03:12+00:00",
+   "views": 1441,
+   "reach": 1200,
+   "likes": 16,
    "comments": 0,
-   "shares": 0,
-   "saved": 2,
-   "total_interactions": 8,
-   "ig_reels_avg_watch_time": 9620,
-   "ig_reels_video_view_total_time": 4011639
+   "shares": 1,
+   "saved": 6,
+   "total_interactions": 26,
+   "ig_reels_avg_watch_time": 11485,
+   "ig_reels_video_view_total_time": 14586736
   }
  },
  "2026-10-24-how-ai-learns": {
@@ -206,19 +248,31 @@
     "total_interactions": 12,
     "ig_reels_avg_watch_time": 2935,
     "ig_reels_video_view_total_time": 595839
+   },
+   {
+    "fetched": "2026-10-26T03:12+00:00",
+    "views": 232,
+    "reach": 215,
+    "likes": 5,
+    "comments": 0,
+    "shares": 1,
+    "saved": 1,
+    "total_interactions": 12,
+    "ig_reels_avg_watch_time": 2930,
+    "ig_reels_video_view_total_time": 653569
    }
   ],
   "latest": {
-   "fetched": "2026-10-25T05:32+00:00",
-   "views": 216,
-   "reach": 199,
+   "fetched": "2026-10-26T03:12+00:00",
+   "views": 232,
+   "reach": 215,
    "likes": 5,
    "comments": 0,
    "shares": 1,
    "saved": 1,
    "total_interactions": 12,
-   "ig_reels_avg_watch_time": 2935,
-   "ig_reels_video_view_total_time": 595839
+   "ig_reels_avg_watch_time": 2930,
+   "ig_reels_video_view_total_time": 653569
   }
  },
  "2026-10-24-why-ice-floats": {
@@ -240,19 +294,201 @@
     "total_interactions": 4,
     "ig_reels_avg_watch_time": 5185,
     "ig_reels_video_view_total_time": 2260720
+   },
+   {
+    "fetched": "2026-10-26T03:12+00:00",
+    "views": 638,
+    "reach": 592,
+    "likes": 4,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 6,
+    "ig_reels_avg_watch_time": 6042,
+    "ig_reels_video_view_total_time": 3595513
    }
   ],
   "latest": {
-   "fetched": "2026-10-25T05:32+00:00",
-   "views": 468,
-   "reach": 429,
-   "likes": 3,
+   "fetched": "2026-10-26T03:12+00:00",
+   "views": 638,
+   "reach": 592,
+   "likes": 4,
    "comments": 0,
    "shares": 0,
    "saved": 0,
-   "total_interactions": 4,
-   "ig_reels_avg_watch_time": 5185,
-   "ig_reels_video_view_total_time": 2260720
+   "total_interactions": 6,
+   "ig_reels_avg_watch_time": 6042,
+   "ig_reels_video_view_total_time": 3595513
+  }
+ },
+ "2026-10-24-z-score": {
+  "topic": "z-score",
+  "hook_type": "prerequisite wall",
+  "hook": "Compare 90 marks with 160 marks.",
+  "duration": 56.36,
+  "posted": "2026-10-25T05:39:51+0000",
+  "permalink": "https://www.instagram.com/reel/De5-dnOCqDu/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-26T03:12+00:00",
+    "views": 995,
+    "reach": 881,
+    "likes": 9,
+    "comments": 0,
+    "shares": 5,
+    "saved": 2,
+    "total_interactions": 19,
+    "ig_reels_avg_watch_time": 9534,
+    "ig_reels_video_view_total_time": 8447609
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-26T03:12+00:00",
+   "views": 995,
+   "reach": 881,
+   "likes": 9,
+   "comments": 0,
+   "shares": 5,
+   "saved": 2,
+   "total_interactions": 19,
+   "ig_reels_avg_watch_time": 9534,
+   "ig_reels_video_view_total_time": 8447609
+  }
+ },
+ "2026-10-25-attention-transformers": {
+  "topic": "attention in transformers",
+  "hook_type": "curiosity jump",
+  "hook": "How ChatGPT knows what 'it' means. 45 s.",
+  "duration": 54.03,
+  "posted": "2026-10-25T22:48:54+0000",
+  "permalink": "https://www.instagram.com/reel/De70OoEEW80/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-26T03:12+00:00",
+    "views": 189,
+    "reach": 161,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 1,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 10422,
+    "ig_reels_video_view_total_time": 1688413
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-26T03:12+00:00",
+   "views": 189,
+   "reach": 161,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "saved": 1,
+   "total_interactions": 1,
+   "ig_reels_avg_watch_time": 10422,
+   "ig_reels_video_view_total_time": 1688413
+  }
+ },
+ "2026-10-25-bayes-theorem": {
+  "topic": "Bayes' theorem",
+  "hook_type": "wrong-answer reveal",
+  "hook": "99% accurate alarm. Mostly wrong. How?",
+  "duration": 39.63,
+  "posted": "2026-10-25T19:56:24+0000",
+  "permalink": "https://www.instagram.com/reel/De7ghYGD-UX/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-26T03:12+00:00",
+    "views": 324,
+    "reach": 292,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0,
+    "saved": 1,
+    "total_interactions": 6,
+    "ig_reels_avg_watch_time": 8037,
+    "ig_reels_video_view_total_time": 2314715
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-26T03:12+00:00",
+   "views": 324,
+   "reach": 292,
+   "likes": 3,
+   "comments": 0,
+   "shares": 0,
+   "saved": 1,
+   "total_interactions": 6,
+   "ig_reels_avg_watch_time": 8037,
+   "ig_reels_video_view_total_time": 2314715
+  }
+ },
+ "2026-10-25-entropy": {
+  "topic": "entropy",
+  "hook_type": "everyday mystery",
+  "hook": "Why your room never tidies itself.",
+  "duration": 51.83,
+  "posted": "2026-10-25T13:54:06+0000",
+  "permalink": "https://www.instagram.com/reel/De63C7DgJoj/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-26T03:12+00:00",
+    "views": 443,
+    "reach": 381,
+    "likes": 9,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 12,
+    "ig_reels_avg_watch_time": 7880,
+    "ig_reels_video_view_total_time": 3144146
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-26T03:12+00:00",
+   "views": 443,
+   "reach": 381,
+   "likes": 9,
+   "comments": 0,
+   "shares": 0,
+   "saved": 0,
+   "total_interactions": 12,
+   "ig_reels_avg_watch_time": 7880,
+   "ig_reels_video_view_total_time": 3144146
+  }
+ },
+ "2026-10-25-p-values": {
+  "topic": "p-values",
+  "hook_type": "course pain",
+  "hook": "Quit stats at p-values? 30 s fix.",
+  "duration": 39.33,
+  "posted": "2026-10-25T10:05:52+0000",
+  "permalink": "https://www.instagram.com/reel/De6c8HjlT68/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-26T03:12+00:00",
+    "views": 197,
+    "reach": 167,
+    "likes": 3,
+    "comments": 0,
+    "shares": 1,
+    "saved": 0,
+    "total_interactions": 7,
+    "ig_reels_avg_watch_time": 5759,
+    "ig_reels_video_view_total_time": 1007900
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-26T03:12+00:00",
+   "views": 197,
+   "reach": 167,
+   "likes": 3,
+   "comments": 0,
+   "shares": 1,
+   "saved": 0,
+   "total_interactions": 7,
+   "ig_reels_avg_watch_time": 5759,
+   "ig_reels_video_view_total_time": 1007900
   }
  }
 }
