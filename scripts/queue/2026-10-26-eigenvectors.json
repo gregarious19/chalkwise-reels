@@ -1,0 +1,253 @@
+{
+ "id": "2026-10-26-eigenvectors",
+ "topic": "eigenvectors",
+ "hook_type": "course pain",
+ "format": "course pain",
+ "post_after": "2026-10-26T19:00:00+05:30",
+ "approved": true,
+ "duration": 45.06,
+ "caption": "Which stretch does arrow (1,-1) get: 1, 3 or -1? Comment your pick 👇\n\nQuit linear algebra at eigenvectors? Here is the whole idea: a matrix is a machine that moves arrows, and an eigenvector is an arrow it only stretches, never turns.\n\nSave this for exam week.\n\nFollow for one idea a day ✏️\n\n#eigenvectors #linearalgebra #mathmadeeasy #engineeringmaths #studytips #learnoninstagram",
+ "brief": "briefs/2026-10-26-eigenvectors.json",
+ "events": [
+  {
+   "text": "Quit linear algebra at eigenvectors?",
+   "highlight": [
+    "eigenvectors?"
+   ],
+   "sub": "One arrow holds still.",
+   "big": "eigen?",
+   "type": "use",
+   "component": "hook",
+   "t": 0
+  },
+  {
+   "type": "write",
+   "text": "machine: (x,y) -> (2x+y, x+2y)",
+   "x": 540,
+   "y": 660,
+   "size": 42,
+   "color": "ink",
+   "align": "center",
+   "t": 5.05
+  },
+  {
+   "type": "arrow",
+   "from": [
+    200,
+    1350
+   ],
+   "to": [
+    390,
+    1350
+   ],
+   "color": "blue",
+   "w": 9,
+   "head": 28,
+   "t": 7.75
+  },
+  {
+   "type": "arrow",
+   "from": [
+    200,
+    1350
+   ],
+   "to": [
+    580,
+    1160
+   ],
+   "color": "orange",
+   "w": 9,
+   "head": 28,
+   "t": 8.35
+  },
+  {
+   "type": "write",
+   "text": "it turned",
+   "x": 640,
+   "y": 1170,
+   "size": 50,
+   "color": "orange",
+   "t": 8.95
+  },
+  {
+   "type": "caption",
+   "t": 4.6499999999999995,
+   "text": "Machine: arrow (1,0) goes in, (2,1) comes out.",
+   "highlight": [
+    "(2,1)"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 10.959999999999999
+  },
+  {
+   "type": "arrow",
+   "from": [
+    200,
+    1350
+   ],
+   "to": [
+    390,
+    1160
+   ],
+   "color": "green",
+   "w": 9,
+   "head": 28,
+   "t": 11.36
+  },
+  {
+   "type": "arrow",
+   "from": [
+    200,
+    1350
+   ],
+   "to": [
+    770,
+    780
+   ],
+   "color": "green",
+   "w": 9,
+   "head": 28,
+   "t": 11.959999999999999
+  },
+  {
+   "type": "caption",
+   "t": 10.959999999999999,
+   "text": "Now (1,1) goes in. (3,3) comes out.",
+   "highlight": [
+    "(3,3)"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 15.29
+  },
+  {
+   "type": "write",
+   "text": "no turn. just x3",
+   "x": 70,
+   "y": 950,
+   "size": 46,
+   "color": "green",
+   "t": 15.69
+  },
+  {
+   "type": "caption",
+   "t": 15.29,
+   "text": "Same direction. Just 3 times longer.",
+   "highlight": [
+    "3 times longer."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 18.71
+  },
+  {
+   "type": "clear",
+   "t": 18.71
+  },
+  {
+   "component": "formula",
+   "text": "eigenvector (1,1)",
+   "at": [
+    540,
+    800
+   ],
+   "size": 70,
+   "box": true,
+   "color": "green",
+   "type": "use",
+   "t": 19.61
+  },
+  {
+   "component": "formula",
+   "text": "stretch = 3",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 80,
+   "mark": "3",
+   "type": "use",
+   "t": 21.840000000000003
+  },
+  {
+   "type": "caption",
+   "t": 19.21,
+   "text": "An arrow the machine only stretches is an eigenvector.",
+   "highlight": [
+    "eigenvector."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 24.16
+  },
+  {
+   "component": "icon",
+   "name": "warning",
+   "at": [
+    540,
+    1250
+   ],
+   "size": 90,
+   "color": "orange",
+   "type": "use",
+   "t": 24.56
+  },
+  {
+   "type": "caption",
+   "t": 24.16,
+   "text": "Real version: a pure rotation has none.",
+   "highlight": [
+    "rotation"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 28.01
+  },
+  {
+   "type": "clear",
+   "t": 28.01
+  },
+  {
+   "component": "formula",
+   "text": "(1,-1) in -> ? x longer",
+   "at": [
+    540,
+    900
+   ],
+   "size": 62,
+   "color": "blue",
+   "box": true,
+   "type": "use",
+   "t": 28.91
+  },
+  {
+   "component": "formula",
+   "text": "comment your pick",
+   "at": [
+    540,
+    1150
+   ],
+   "size": 56,
+   "type": "use",
+   "t": 31.680000000000003
+  },
+  {
+   "type": "caption",
+   "t": 28.51,
+   "text": "Save this. Arrow (1,-1) stretches by 1, 3 or -1?",
+   "highlight": [
+    "1, 3 or -1?"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 34.61
+  },
+  {
+   "type": "use",
+   "component": "outro",
+   "t": 35.06,
+   "until": 45.06
+  }
+ ]
+}
