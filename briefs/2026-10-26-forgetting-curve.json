@@ -1,0 +1,149 @@
+{
+ "id": "2026-10-26-forgetting-curve",
+ "topic": "forgetting curve",
+ "hook_type": "everyday mystery",
+ "format": "everyday object",
+ "caption": "Which review matters most: day 1, 3 or 7? Comment your pick \ud83d\udc47\n\nWhy does everything vanish before exam day? The forgetting curve: memory fades fast, then slowly. In a simple model, 3 spaced reviews turn 0.1% into 65% by day 14. Real numbers vary, but spacing really helps.\n\nSave this for exam week.\n\nFollow for one idea a day \u270f\ufe0f\n\n#forgettingcurve #spacedrepetition #studytips #examprep #learnhowtolearn #studygram",
+ "hook": {
+  "text": "Why you forget it all before exam day.",
+  "highlight": [
+   "forget it all"
+  ],
+  "sub": "Day 14: 0.1% vs 65%.",
+  "big": "0.1%"
+ },
+ "beats": [
+  {
+   "caption": "Same lesson. Day 14: 0.1% kept, or 65%.",
+   "highlight": [
+    "0.1%",
+    "65%."
+   ],
+   "show": [
+    {
+     "component": "bar_chart",
+     "bars": [
+      {
+       "label": "none",
+       "value": 0.1,
+       "color": "red"
+      },
+      {
+       "label": "3 revs",
+       "value": 65,
+       "color": "green"
+      }
+     ],
+     "base": 1300,
+     "height": 560,
+     "x0": 260,
+     "x1": 820,
+     "stagger": 1.4,
+     "suffix": "%"
+    }
+   ]
+  },
+  {
+   "caption": "The only difference: reviews on days 1, 3 and 7.",
+   "highlight": [
+    "days 1, 3 and 7."
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "review: day 1, 3, 7",
+     "at": [
+      540,
+      1495
+     ],
+     "size": 50,
+     "color": "green"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Memory fades fast at first, then slowly. This is the forgetting curve.",
+   "highlight": [
+    "forgetting curve."
+   ],
+   "show": [
+    {
+     "component": "plot",
+     "box": [
+      140,
+      660,
+      960,
+      1260
+     ],
+     "expr": "np.exp(-u/2)",
+     "u0": 0,
+     "u1": 14,
+     "ymax": 1,
+     "color": "red",
+     "xlabel": "days",
+     "ylabel": "memory kept",
+     "curve_d": 3
+    }
+   ]
+  },
+  {
+   "caption": "Each review resets it and makes it fade slower.",
+   "highlight": [
+    "slower."
+   ],
+   "show": [
+    {
+     "component": "icon",
+     "name": "brain",
+     "at": [
+      700,
+      820
+     ],
+     "size": 100,
+     "color": "green"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Toy model: real numbers vary. Spacing still helps.",
+   "highlight": [
+    "Spacing still helps."
+   ],
+   "show": [
+    {
+     "component": "icon",
+     "name": "calendar",
+     "at": [
+      540,
+      950
+     ],
+     "size": 100,
+     "color": "blue"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Save this. Which review matters most: 1, 3 or 7?",
+   "highlight": [
+    "1, 3 or 7?"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "comment your pick",
+     "at": [
+      540,
+      950
+     ],
+     "size": 64,
+     "color": "blue",
+     "box": true
+    }
+   ]
+  }
+ ],
+ "outro": {}
+}
