@@ -1,0 +1,129 @@
+{
+ "id": "2026-10-26-fourier-transform",
+ "topic": "Fourier transform",
+ "hook_type": "prerequisite wall",
+ "format": "analogy build",
+ "caption": "Pick the next scary topic: A) Riemann B) CRISPR C) Maxwell. Comment A, B or C \ud83d\udc47\n\nYou don't need calculus to get the Fourier transform. Any messy wave is just simple waves added together, and the transform lists how much of each: a recipe, like a smoothie.\n\nSave this for exam week.\n\nFollow for one idea a day \u270f\ufe0f\n\n#fouriertransform #signalprocessing #mathmadeeasy #physics #engineering #studytips",
+ "hook": {
+  "text": "Fourier transform. No calculus needed.",
+  "highlight": [
+   "No calculus"
+  ],
+  "sub": "Any sound is a smoothie.",
+  "big": "sound=?"
+ },
+ "beats": [
+  {
+   "caption": "This wiggle is a 2 Hz wave plus a 5 Hz wave.",
+   "highlight": [
+    "2 Hz",
+    "5 Hz"
+   ],
+   "show": [
+    {
+     "component": "plot",
+     "box": [
+      140,
+      640,
+      960,
+      1000
+     ],
+     "expr": "sin(2*np.pi*2*u)+0.5*sin(2*np.pi*5*u)",
+     "u0": 0,
+     "u1": 1,
+     "ymax": 1.5,
+     "color": "purple",
+     "curve_d": 2.5
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Fourier transform: the recipe. How much of each wave.",
+   "highlight": [
+    "recipe."
+   ],
+   "show": [
+    {
+     "component": "bar_chart",
+     "bars": [
+      {
+       "label": "2 Hz",
+       "value": 1,
+       "color": "blue"
+      },
+      {
+       "label": "5 Hz",
+       "value": 0.5,
+       "color": "orange"
+      }
+     ],
+     "base": 1350,
+     "height": 560,
+     "x0": 260,
+     "x1": 820,
+     "stagger": 0.8
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Like tasting a smoothie and listing the fruit.",
+   "highlight": [
+    "smoothie"
+   ],
+   "show": [
+    {
+     "component": "icon",
+     "name": "chai",
+     "at": [
+      540,
+      900
+     ],
+     "size": 110,
+     "color": "orange"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Real version: it also tracks timing of each wave.",
+   "highlight": [
+    "timing"
+   ],
+   "show": [
+    {
+     "component": "icon",
+     "name": "warning",
+     "at": [
+      540,
+      1000
+     ],
+     "size": 80,
+     "color": "orange"
+    }
+   ],
+   "clear_after": true
+  },
+  {
+   "caption": "Save this. Next: A Riemann, B CRISPR, C Maxwell?",
+   "highlight": [
+    "A Riemann, B CRISPR, C Maxwell?"
+   ],
+   "show": [
+    {
+     "component": "formula",
+     "text": "Comment A, B or C",
+     "at": [
+      540,
+      900
+     ],
+     "size": 64,
+     "color": "blue",
+     "box": true
+    }
+   ]
+  }
+ ],
+ "outro": {}
+}

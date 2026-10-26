@@ -1,0 +1,178 @@
+{
+ "id": "2026-10-26-fourier-transform",
+ "topic": "Fourier transform",
+ "hook_type": "prerequisite wall",
+ "format": "analogy build",
+ "post_after": "2026-10-26T23:00:00+05:30",
+ "approved": true,
+ "duration": 43.19,
+ "caption": "Pick the next scary topic: A) Riemann B) CRISPR C) Maxwell. Comment A, B or C 👇\n\nYou don't need calculus to get the Fourier transform. Any messy wave is just simple waves added together, and the transform lists how much of each: a recipe, like a smoothie.\n\nSave this for exam week.\n\nFollow for one idea a day ✏️\n\n#fouriertransform #signalprocessing #mathmadeeasy #physics #engineering #studytips",
+ "brief": "briefs/2026-10-26-fourier-transform.json",
+ "events": [
+  {
+   "text": "Fourier transform. No calculus needed.",
+   "highlight": [
+    "No calculus"
+   ],
+   "sub": "Any sound is a smoothie.",
+   "big": "sound=?",
+   "type": "use",
+   "component": "hook",
+   "t": 0
+  },
+  {
+   "component": "plot",
+   "box": [
+    140,
+    640,
+    960,
+    1000
+   ],
+   "expr": "sin(2*np.pi*2*u)+0.5*sin(2*np.pi*5*u)",
+   "u0": 0,
+   "u1": 1,
+   "ymax": 1.5,
+   "color": "purple",
+   "curve_d": 2.5,
+   "type": "use",
+   "t": 5.05
+  },
+  {
+   "type": "caption",
+   "t": 4.6499999999999995,
+   "text": "This wiggle is a 2 Hz wave plus a 5 Hz wave.",
+   "highlight": [
+    "2 Hz",
+    "5 Hz"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 11.49
+  },
+  {
+   "type": "clear",
+   "t": 11.49
+  },
+  {
+   "component": "bar_chart",
+   "bars": [
+    {
+     "label": "2 Hz",
+     "value": 1,
+     "color": "blue"
+    },
+    {
+     "label": "5 Hz",
+     "value": 0.5,
+     "color": "orange"
+    }
+   ],
+   "base": 1350,
+   "height": 560,
+   "x0": 260,
+   "x1": 820,
+   "stagger": 0.8,
+   "type": "use",
+   "t": 12.39
+  },
+  {
+   "type": "caption",
+   "t": 11.99,
+   "text": "Fourier transform: the recipe. How much of each wave.",
+   "highlight": [
+    "recipe."
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 16.94
+  },
+  {
+   "type": "clear",
+   "t": 16.94
+  },
+  {
+   "component": "icon",
+   "name": "chai",
+   "at": [
+    540,
+    900
+   ],
+   "size": 110,
+   "color": "orange",
+   "type": "use",
+   "t": 17.84
+  },
+  {
+   "type": "caption",
+   "t": 17.44,
+   "text": "Like tasting a smoothie and listing the fruit.",
+   "highlight": [
+    "smoothie"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 21.840000000000003
+  },
+  {
+   "type": "clear",
+   "t": 21.840000000000003
+  },
+  {
+   "component": "icon",
+   "name": "warning",
+   "at": [
+    540,
+    1000
+   ],
+   "size": 80,
+   "color": "orange",
+   "type": "use",
+   "t": 22.740000000000002
+  },
+  {
+   "type": "caption",
+   "t": 22.340000000000003,
+   "text": "Real version: it also tracks timing of each wave.",
+   "highlight": [
+    "timing"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 27.290000000000003
+  },
+  {
+   "type": "clear",
+   "t": 27.290000000000003
+  },
+  {
+   "component": "formula",
+   "text": "Comment A, B or C",
+   "at": [
+    540,
+    900
+   ],
+   "size": 64,
+   "color": "blue",
+   "box": true,
+   "type": "use",
+   "t": 28.19
+  },
+  {
+   "type": "caption",
+   "t": 27.790000000000003,
+   "text": "Save this. Next: A Riemann, B CRISPR, C Maxwell?",
+   "highlight": [
+    "A Riemann, B CRISPR, C Maxwell?"
+   ],
+   "y": 330,
+   "size": 62,
+   "until": 32.74
+  },
+  {
+   "type": "use",
+   "component": "outro",
+   "t": 33.190000000000005,
+   "until": 43.190000000000005
+  }
+ ]
+}
