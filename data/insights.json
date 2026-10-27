@@ -53,6 +53,12 @@
    "followers_count": 10,
    "media_count": 14,
    "id": "28194897960187724"
+  },
+  {
+   "fetched": "2026-10-27T06:12+00:00",
+   "followers_count": 10,
+   "media_count": 17,
+   "id": "28194897960187724"
   }
  ],
  "2026-10-22-exponential-growth": {
@@ -146,10 +152,22 @@
     "total_interactions": 20,
     "ig_reels_avg_watch_time": 5638,
     "ig_reels_video_view_total_time": 1088322
+   },
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 208,
+    "reach": 179,
+    "likes": 8,
+    "comments": 0,
+    "shares": 0,
+    "saved": 6,
+    "total_interactions": 20,
+    "ig_reels_avg_watch_time": 5638,
+    "ig_reels_video_view_total_time": 1088322
    }
   ],
   "latest": {
-   "fetched": "2026-10-26T07:44+00:00",
+   "fetched": "2026-10-27T06:12+00:00",
    "views": 208,
    "reach": 179,
    "likes": 8,
@@ -228,10 +246,22 @@
     "total_interactions": 20,
     "ig_reels_avg_watch_time": 5921,
     "ig_reels_video_view_total_time": 1356036
+   },
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 253,
+    "reach": 208,
+    "likes": 10,
+    "comments": 0,
+    "shares": 1,
+    "saved": 3,
+    "total_interactions": 20,
+    "ig_reels_avg_watch_time": 5921,
+    "ig_reels_video_view_total_time": 1356036
    }
   ],
   "latest": {
-   "fetched": "2026-10-26T07:44+00:00",
+   "fetched": "2026-10-27T06:12+00:00",
    "views": 253,
    "reach": 208,
    "likes": 10,
@@ -298,19 +328,31 @@
     "total_interactions": 26,
     "ig_reels_avg_watch_time": 11477,
     "ig_reels_video_view_total_time": 14588266
+   },
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 1445,
+    "reach": 1205,
+    "likes": 16,
+    "comments": 0,
+    "shares": 1,
+    "saved": 6,
+    "total_interactions": 26,
+    "ig_reels_avg_watch_time": 11458,
+    "ig_reels_video_view_total_time": 14598222
    }
   ],
   "latest": {
-   "fetched": "2026-10-26T07:44+00:00",
-   "views": 1441,
-   "reach": 1200,
+   "fetched": "2026-10-27T06:12+00:00",
+   "views": 1445,
+   "reach": 1205,
    "likes": 16,
    "comments": 0,
    "shares": 1,
    "saved": 6,
    "total_interactions": 26,
-   "ig_reels_avg_watch_time": 11477,
-   "ig_reels_video_view_total_time": 14588266
+   "ig_reels_avg_watch_time": 11458,
+   "ig_reels_video_view_total_time": 14598222
   }
  },
  "2026-10-24-how-ai-learns": {
@@ -368,10 +410,22 @@
     "total_interactions": 12,
     "ig_reels_avg_watch_time": 2930,
     "ig_reels_video_view_total_time": 653569
+   },
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 232,
+    "reach": 215,
+    "likes": 5,
+    "comments": 0,
+    "shares": 1,
+    "saved": 1,
+    "total_interactions": 12,
+    "ig_reels_avg_watch_time": 2930,
+    "ig_reels_video_view_total_time": 653569
    }
   ],
   "latest": {
-   "fetched": "2026-10-26T07:44+00:00",
+   "fetched": "2026-10-27T06:12+00:00",
    "views": 232,
    "reach": 215,
    "likes": 5,
@@ -438,19 +492,31 @@
     "total_interactions": 6,
     "ig_reels_avg_watch_time": 6042,
     "ig_reels_video_view_total_time": 3595513
+   },
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 639,
+    "reach": 592,
+    "likes": 4,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 6,
+    "ig_reels_avg_watch_time": 6034,
+    "ig_reels_video_view_total_time": 3596570
    }
   ],
   "latest": {
-   "fetched": "2026-10-26T07:44+00:00",
-   "views": 638,
+   "fetched": "2026-10-27T06:12+00:00",
+   "views": 639,
    "reach": 592,
    "likes": 4,
    "comments": 0,
    "shares": 0,
    "saved": 0,
    "total_interactions": 6,
-   "ig_reels_avg_watch_time": 6042,
-   "ig_reels_video_view_total_time": 3595513
+   "ig_reels_avg_watch_time": 6034,
+   "ig_reels_video_view_total_time": 3596570
   }
  },
  "2026-10-24-z-score": {
@@ -496,19 +562,31 @@
     "total_interactions": 19,
     "ig_reels_avg_watch_time": 9690,
     "ig_reels_video_view_total_time": 10126728
+   },
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 1249,
+    "reach": 1133,
+    "likes": 10,
+    "comments": 0,
+    "shares": 5,
+    "saved": 2,
+    "total_interactions": 20,
+    "ig_reels_avg_watch_time": 9849,
+    "ig_reels_video_view_total_time": 11179402
    }
   ],
   "latest": {
-   "fetched": "2026-10-26T07:44+00:00",
-   "views": 1154,
-   "reach": 1044,
-   "likes": 9,
+   "fetched": "2026-10-27T06:12+00:00",
+   "views": 1249,
+   "reach": 1133,
+   "likes": 10,
    "comments": 0,
    "shares": 5,
    "saved": 2,
-   "total_interactions": 19,
-   "ig_reels_avg_watch_time": 9690,
-   "ig_reels_video_view_total_time": 10126728
+   "total_interactions": 20,
+   "ig_reels_avg_watch_time": 9849,
+   "ig_reels_video_view_total_time": 11179402
   }
  },
  "2026-10-25-attention-transformers": {
@@ -554,19 +632,31 @@
     "total_interactions": 3,
     "ig_reels_avg_watch_time": 10504,
     "ig_reels_video_view_total_time": 2720665
+   },
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 1146,
+    "reach": 1005,
+    "likes": 15,
+    "comments": 0,
+    "shares": 1,
+    "saved": 2,
+    "total_interactions": 18,
+    "ig_reels_avg_watch_time": 13189,
+    "ig_reels_video_view_total_time": 13545247
    }
   ],
   "latest": {
-   "fetched": "2026-10-26T07:44+00:00",
-   "views": 289,
-   "reach": 259,
-   "likes": 2,
+   "fetched": "2026-10-27T06:12+00:00",
+   "views": 1146,
+   "reach": 1005,
+   "likes": 15,
    "comments": 0,
-   "shares": 0,
-   "saved": 1,
-   "total_interactions": 3,
-   "ig_reels_avg_watch_time": 10504,
-   "ig_reels_video_view_total_time": 2720665
+   "shares": 1,
+   "saved": 2,
+   "total_interactions": 18,
+   "ig_reels_avg_watch_time": 13189,
+   "ig_reels_video_view_total_time": 13545247
   }
  },
  "2026-10-25-bayes-theorem": {
@@ -612,19 +702,31 @@
     "total_interactions": 6,
     "ig_reels_avg_watch_time": 8028,
     "ig_reels_video_view_total_time": 2946477
+   },
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 472,
+    "reach": 428,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0,
+    "saved": 1,
+    "total_interactions": 6,
+    "ig_reels_avg_watch_time": 8152,
+    "ig_reels_video_view_total_time": 3505437
    }
   ],
   "latest": {
-   "fetched": "2026-10-26T07:44+00:00",
-   "views": 403,
-   "reach": 362,
+   "fetched": "2026-10-27T06:12+00:00",
+   "views": 472,
+   "reach": 428,
    "likes": 3,
    "comments": 0,
    "shares": 0,
    "saved": 1,
    "total_interactions": 6,
-   "ig_reels_avg_watch_time": 8028,
-   "ig_reels_video_view_total_time": 2946477
+   "ig_reels_avg_watch_time": 8152,
+   "ig_reels_video_view_total_time": 3505437
   }
  },
  "2026-10-25-entropy": {
@@ -670,19 +772,31 @@
     "total_interactions": 12,
     "ig_reels_avg_watch_time": 7856,
     "ig_reels_video_view_total_time": 3865287
+   },
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 630,
+    "reach": 559,
+    "likes": 11,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 14,
+    "ig_reels_avg_watch_time": 8185,
+    "ig_reels_video_view_total_time": 4739322
    }
   ],
   "latest": {
-   "fetched": "2026-10-26T07:44+00:00",
-   "views": 535,
-   "reach": 474,
-   "likes": 9,
+   "fetched": "2026-10-27T06:12+00:00",
+   "views": 630,
+   "reach": 559,
+   "likes": 11,
    "comments": 0,
    "shares": 0,
    "saved": 0,
-   "total_interactions": 12,
-   "ig_reels_avg_watch_time": 7856,
-   "ig_reels_video_view_total_time": 3865287
+   "total_interactions": 14,
+   "ig_reels_avg_watch_time": 8185,
+   "ig_reels_video_view_total_time": 4739322
   }
  },
  "2026-10-25-p-values": {
@@ -728,19 +842,31 @@
     "total_interactions": 8,
     "ig_reels_avg_watch_time": 6055,
     "ig_reels_video_view_total_time": 1138485
+   },
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 227,
+    "reach": 193,
+    "likes": 4,
+    "comments": 0,
+    "shares": 1,
+    "saved": 0,
+    "total_interactions": 8,
+    "ig_reels_avg_watch_time": 6072,
+    "ig_reels_video_view_total_time": 1232671
    }
   ],
   "latest": {
-   "fetched": "2026-10-26T07:44+00:00",
-   "views": 213,
-   "reach": 179,
+   "fetched": "2026-10-27T06:12+00:00",
+   "views": 227,
+   "reach": 193,
    "likes": 4,
    "comments": 0,
    "shares": 1,
    "saved": 0,
    "total_interactions": 8,
-   "ig_reels_avg_watch_time": 6055,
-   "ig_reels_video_view_total_time": 1138485
+   "ig_reels_avg_watch_time": 6072,
+   "ig_reels_video_view_total_time": 1232671
   }
  },
  "2026-10-22-standard-deviation": {
@@ -762,19 +888,24 @@
     "total_interactions": 0,
     "ig_reels_avg_watch_time": 0,
     "ig_reels_video_view_total_time": 0
+   },
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "_errors": [
+     "views: Instagram API error 400 on 18002055932828500/insights: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18002055932828500' does not exist, cannot b",
+     "reach: Instagram API error 400 on 18002055932828500/insights: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18002055932828500' does not exist, cannot b",
+     "likes: Instagram API error 400 on 18002055932828500/insights: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18002055932828500' does not exist, cannot b",
+     "comments: Instagram API error 400 on 18002055932828500/insights: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18002055932828500' does not exist, cannot b",
+     "shares: Instagram API error 400 on 18002055932828500/insights: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18002055932828500' does not exist, cannot b",
+     "saved: Instagram API error 400 on 18002055932828500/insights: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18002055932828500' does not exist, cannot b",
+     "total_interactions: Instagram API error 400 on 18002055932828500/insights: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18002055932828500' does not exist, cannot b",
+     "ig_reels_avg_watch_time: Instagram API error 400 on 18002055932828500/insights: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18002055932828500' does not exist, cannot b",
+     "ig_reels_video_view_total_time: Instagram API error 400 on 18002055932828500/insights: {\"error\":{\"message\":\"Unsupported get request. Object with ID '18002055932828500' does not exist, cannot b"
+    ]
    }
   ],
   "latest": {
-   "fetched": "2026-10-26T07:44+00:00",
-   "views": 0,
-   "reach": 0,
-   "likes": 0,
-   "comments": 0,
-   "shares": 0,
-   "saved": 0,
-   "total_interactions": 0,
-   "ig_reels_avg_watch_time": 0,
-   "ig_reels_video_view_total_time": 0
+   "fetched": "2026-10-27T06:12+00:00"
   }
  },
  "2026-10-25-curved-spacetime": {
@@ -796,19 +927,167 @@
     "total_interactions": 0,
     "ig_reels_avg_watch_time": 0,
     "ig_reels_video_view_total_time": 0
+   },
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 168,
+    "reach": 150,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 1,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 3909,
+    "ig_reels_video_view_total_time": 594271
    }
   ],
   "latest": {
-   "fetched": "2026-10-26T07:44+00:00",
-   "views": 0,
-   "reach": 0,
+   "fetched": "2026-10-27T06:12+00:00",
+   "views": 168,
+   "reach": 150,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "saved": 1,
+   "total_interactions": 1,
+   "ig_reels_avg_watch_time": 3909,
+   "ig_reels_video_view_total_time": 594271
+  }
+ },
+ "2026-10-26-central-limit-theorem": {
+  "topic": "central limit theorem",
+  "hook_type": "speed promise",
+  "hook": "Central limit theorem? 30 dice explain it.",
+  "duration": 49.86,
+  "posted": "2026-10-26T11:30:34+0000",
+  "permalink": "https://www.instagram.com/reel/De9LbFmEc3-/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 173,
+    "reach": 152,
+    "likes": 1,
+    "comments": 0,
+    "shares": 25,
+    "saved": 1,
+    "total_interactions": 28,
+    "ig_reels_avg_watch_time": 4503,
+    "ig_reels_video_view_total_time": 711627
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-27T06:12+00:00",
+   "views": 173,
+   "reach": 152,
+   "likes": 1,
+   "comments": 0,
+   "shares": 25,
+   "saved": 1,
+   "total_interactions": 28,
+   "ig_reels_avg_watch_time": 4503,
+   "ig_reels_video_view_total_time": 711627
+  }
+ },
+ "2026-10-26-eigenvectors": {
+  "topic": "eigenvectors",
+  "hook_type": "course pain",
+  "hook": "Quit linear algebra at eigenvectors?",
+  "duration": 45.06,
+  "posted": "2026-10-26T16:18:07+0000",
+  "permalink": "https://www.instagram.com/reel/De9sTOsD1vF/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 171,
+    "reach": 150,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 0,
+    "total_interactions": 0,
+    "ig_reels_avg_watch_time": 3174,
+    "ig_reels_video_view_total_time": 498376
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-27T06:12+00:00",
+   "views": 171,
+   "reach": 150,
    "likes": 0,
    "comments": 0,
    "shares": 0,
    "saved": 0,
    "total_interactions": 0,
-   "ig_reels_avg_watch_time": 0,
-   "ig_reels_video_view_total_time": 0
+   "ig_reels_avg_watch_time": 3174,
+   "ig_reels_video_view_total_time": 498376
+  }
+ },
+ "2026-10-26-forgetting-curve": {
+  "topic": "forgetting curve",
+  "hook_type": "everyday mystery",
+  "hook": "Why you forget it all before exam day.",
+  "duration": 51.04,
+  "posted": "2026-10-26T21:51:25+0000",
+  "permalink": "https://www.instagram.com/reel/De-SenoFZAu/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 174,
+    "reach": 147,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saved": 1,
+    "total_interactions": 1,
+    "ig_reels_avg_watch_time": 6794,
+    "ig_reels_video_view_total_time": 1032800
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-27T06:12+00:00",
+   "views": 174,
+   "reach": 147,
+   "likes": 0,
+   "comments": 0,
+   "shares": 0,
+   "saved": 1,
+   "total_interactions": 1,
+   "ig_reels_avg_watch_time": 6794,
+   "ig_reels_video_view_total_time": 1032800
+  }
+ },
+ "2026-10-26-fourier-transform": {
+  "topic": "Fourier transform",
+  "hook_type": "prerequisite wall",
+  "hook": "Fourier transform. No calculus needed.",
+  "duration": 43.19,
+  "posted": "2026-10-26T19:33:47+0000",
+  "permalink": "https://www.instagram.com/reel/De-Cupijesu/",
+  "snapshots": [
+   {
+    "fetched": "2026-10-27T06:12+00:00",
+    "views": 170,
+    "reach": 146,
+    "likes": 4,
+    "comments": 0,
+    "shares": 0,
+    "saved": 1,
+    "total_interactions": 5,
+    "ig_reels_avg_watch_time": 5885,
+    "ig_reels_video_view_total_time": 870980
+   }
+  ],
+  "latest": {
+   "fetched": "2026-10-27T06:12+00:00",
+   "views": 170,
+   "reach": 146,
+   "likes": 4,
+   "comments": 0,
+   "shares": 0,
+   "saved": 1,
+   "total_interactions": 5,
+   "ig_reels_avg_watch_time": 5885,
+   "ig_reels_video_view_total_time": 870980
   }
  }
 }
